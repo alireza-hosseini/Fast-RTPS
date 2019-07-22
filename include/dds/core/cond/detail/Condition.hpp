@@ -20,12 +20,15 @@
  */
 
 #include <dds/core/cond/TCondition.hpp>
-#include <foo/bar/core/cond/ConditionImpl.hpp>
+
+//TODO: Fix this file when Condition is implemented
+//#include <fastdds/dds/core/cond/ConditionImpl.hpp>
+
 namespace dds {
 	namespace core {
 		namespace cond {
 			namespace detail {
-				typedef dds::core::cond::TCondition<foo::bar::core::cond::Condition> Condition;
+				//typedef dds::core::cond::TCondition<eprosima::fastdds::dds::core::cond::Condition> Condition;
 			}
 		}
 	}

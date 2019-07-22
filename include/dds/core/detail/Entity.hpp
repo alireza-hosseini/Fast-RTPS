@@ -20,10 +20,12 @@
  */
 
 #include <dds/core/TEntity.hpp>
-#include <foo/bar/core/EntityDelegate.hpp>
+
+//TODO: Fix this file when Entity is implemented (if it does)
+//#include <fastdds/dds/core/EntityDelegate.hpp>
 
 namespace dds { namespace core { namespace detail {
-    typedef dds::core::TEntity<foo::bar::EntityDelegate> Entity;
+    //typedef dds::core::TEntity<eprosima::fastdds::dds::EntityDelegate> Entity;
 } } }
 
 #endif /* OMG_DDS_CORE_DETAIL_ENTITY_HPP_ */

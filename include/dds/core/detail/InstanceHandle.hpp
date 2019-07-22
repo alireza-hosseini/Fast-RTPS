@@ -20,10 +20,12 @@
  */
 
 #include <dds/core/TInstanceHandle.hpp>
-#include <foo/bar/core/InstanceHandleImpl.hpp>
+
+//TODO: Fix this file when InstanceHandle is implemented
+//#include <fastdds/dds/core/InstanceHandle.hpp>
 
 namespace dds { namespace core { namespace detail {
-      typedef dds::core::TInstanceHandle<foo::bar::core::InstanceHandleImpl> InstanceHandle;
+      //typedef dds::core::TInstanceHandle<eprosima:fastdds::core::InstanceHandleImpl> InstanceHandle;
 } } }
 
 #endif /* !defined(OMG_DDS_CORE_DETAIL_INSTANCE_HANDLE_HPP_) */
