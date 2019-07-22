@@ -20,13 +20,15 @@
  */
 
 #include <dds/core/cond/TWaitSet.hpp>
-#include <foo/bar/core/cond/WaitSet.hpp>
+
+//TODO: Fix this file when WaitSet is implemented
+//#include <fastdds/dds/core/cond/WaitSet.hpp>
 
 namespace dds {
 	namespace core {
 		namespace cond {
 			namespace detail {
-				typedef dds::core::cond::TWaitSet<foo::bar::core::cond::WaitSet> WaitSet;
+				//typedef dds::core::cond::TWaitSet<eprosima::fastdds::core::cond::WaitSet> WaitSet;
 			}
 		}
 	}

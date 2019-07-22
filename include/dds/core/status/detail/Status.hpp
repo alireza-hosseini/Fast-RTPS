@@ -20,42 +20,55 @@
  */
 
 #include <dds/core/status/TStatus.hpp>
-#include <foo/bar/core/status/Status.hpp>
 
+//TODO: Fix this file when all Statuses are implemented
+//#include <fastdds/dds/core/status/Status.hpp>
+
+#include <fastrtps/qos/LivelinessChangedStatus.h>
+#include <fastrtps/qos/LivelinessLostStatus.h>
+#include <fastrtps/qos/DeadlineMissedStatus.h>
+#include <fastrtps/qos/ParameterList.h>
+#include <fastrtps/qos/ParameterTypes.h>
+#include <fastrtps/qos/QosPolicies.h>
+#include <fastrtps/qos/ReaderQos.h>
+#include <fastrtps/qos/WriterQos.h>
+#include <fastrtps/qos/SampleRejectedStatus.hpp>
+#include <fastrtps/qos/IncompatibleQosStatus.hpp>
+#include <fastrtps/qos/SampleLostStatus.hpp>
 
 namespace dds { namespace core { namespace status { namespace detail {
-    typedef dds::core::status::TInconsistentTopicStatus< foo::bar::core::InconsistentTopicStatusImpl >
-    InconsistentTopicStatus;
+    //typedef dds::core::status::TInconsistentTopicStatus<eprosima::fastrtps::InconsistentTopicStatus>
+    //InconsistentTopicStatus;
     
-    typedef dds::core::status::TLivelinessChangedStatus <foo::bar::core::LivelinessChangedStatusImpl>
+    typedef dds::core::status::TLivelinessChangedStatus<eprosima::fastrtps::LivelinessChangedStatus>
     LivelinessChangedStatus;
     
-    typedef dds::core::status::TLivelinessLostStatus<foo::bar::core::LivelinessLostStatusImpl>
+    typedef dds::core::status::TLivelinessLostStatus<eprosima::fastrtps::LivelinessLostStatus>
     LivelinessLostStatus;
     
-    typedef dds::core::status::TOfferedDeadlineMissedStatus<foo::bar::core::OfferedDeadlineMissedStatusImpl>
+    typedef dds::core::status::TOfferedDeadlineMissedStatus<eprosima::fastrtps::OfferedDeadlineMissedStatus>
     OfferedDeadlineMissedStatus;
     
-    typedef dds::core::status::TOfferedIncompatibleQosStatus<foo::bar::core::OfferedIncompatibleQosStatusImpl>
+    typedef dds::core::status::TOfferedIncompatibleQosStatus<eprosima::fastrtps::OfferedIncompatibleQosStatus>
     OfferedIncompatibleQosStatus;
     
-    typedef dds::core::status::TPublicationMatchedStatus<foo::bar::core::PublicationMatchedStatusImpl>
-    PublicationMatchedStatus;
+    //typedef dds::core::status::TPublicationMatchedStatus<eprosima::fastrtps::PublicationMatchedStatus>
+    //PublicationMatchedStatus;
     
-    typedef dds::core::status::TSampleRejectedStatus< foo::bar::core::SampleRejectedStatusImpl >
+    typedef dds::core::status::TSampleRejectedStatus<eprosima::fastrtps::SampleRejectedStatus>
     SampleRejectedStatus;
     
-    typedef dds::core::status::TRequestedDeadlineMissedStatus<foo::bar::core::RequestedDeadlineMissedStatusImpl>
+    typedef dds::core::status::TRequestedDeadlineMissedStatus<eprosima::fastrtps::RequestedDeadlineMissedStatus>
     RequestedDeadlineMissedStatus;
     
-    typedef dds::core::status::TRequestedIncompatibleQosStatus<foo::bar::core::RequestedIncompatibleQosStatusImpl>
+    typedef dds::core::status::TRequestedIncompatibleQosStatus<eprosima::fastrtps::RequestedIncompatibleQosStatus>
     RequestedIncompatibleQosStatus;
     
-    typedef dds::core::status::TSampleLostStatus<foo::bar::core::SampleLostStatusImpl>
+    typedef dds::core::status::TSampleLostStatus<eprosima::fastrtps::SampleLostStatus>
     SampleLostStatus;
     
-    typedef dds::core::status::TSubscriptionMatchedStatus<foo::bar::core::SubscriptionMatchedStatusImpl>
-    SubscriptionMatchedStatus;
+    //typedef dds::core::status::TSubscriptionMatchedStatus<eprosima::fastrtps::SubscriptionMatchedStatus>
+    //SubscriptionMatchedStatus;
 } } } } // namespace dds::core::status::detail
 
 

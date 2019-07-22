@@ -21,12 +21,14 @@
  */
 
 #include <dds/core/TQosProvider.hpp>
-#include <foo/bar/core/QosProvider>
+
+//TODO: Fix this file when QosProvider is implemented
+//#include <fastdds/dds/core/QosProvider>
 
 namespace dds {
    namespace core {
       namespace detail {
-         typedef dds::core::TQosProvider<foo:bar::QosProvider> QosProvider;
+         //typedef dds::core::TQosProvider<eprosima::fastdds::dds::core::QosProvider> QosProvider;
       }
    }
 }

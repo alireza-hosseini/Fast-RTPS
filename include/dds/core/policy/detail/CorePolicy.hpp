@@ -19,90 +19,94 @@
  * limitations under the License.
  */
 
-#include <foo/bar/core/policy/CorePolicy.hpp>
+//TODO: Fix this file when Policies are implemented
+//For now, we use fastrtps Policies. Change typedef when new dds policies are created
+//#include <fastdds/dds/core/policy/CorePolicy.hpp>
+#include <fastrtps/qos/QosPolicies.h>
+
 #include <dds/core/policy/TCorePolicy.hpp>
 
 
 namespace dds { namespace core { namespace policy { namespace detail {
 #ifdef OMG_DDS_EXTENSIBLE_AND_DYNAMIC_TOPIC_TYPE_SUPPORT
-    typedef dds::core::policy::TDataRepresentation<foo::bar::core::policy::DataRepresentation>
+    typedef dds::core::policy::TDataRepresentation<eprosima::fastrtps::DataRepresentationQosPolicy>
     DataRepresentation;
 #endif // OMG_DDS_EXTENSIBLE_AND_DYNAMIC_TOPIC_TYPE_SUPPORT
     
-    typedef dds::core::policy::TDeadline<foo::bar::core::policy::Deadline>
+    typedef dds::core::policy::TDeadline<eprosima::fastrtps::DeadlineQosPolicy>
     Deadline;
     
-    typedef dds::core::policy::TDestinationOrder<foo::bar::core::policy::DestinationOrder>
+    typedef dds::core::policy::TDestinationOrder<eprosima::fastrtps::DestinationOrderQosPolicy>
     DestinationOrder;
     
-    typedef dds::core::policy::TDurability<foo::bar::core::policy::Durability>
+    typedef dds::core::policy::TDurability<eprosima::fastrtps::DurabilityQosPolicy>
     Durability;
     
 #ifdef  OMG_DDS_PERSISTENCE_SUPPORT
-    typedef dds::core::policy::TDurabilityService<foo::bar::core::policy::DurabilityService>
+    typedef dds::core::policy::TDurabilityService<eprosima::fastrtps::DurabilityServiceQosPolicy>
     DurabilityService;
 #endif  // OMG_DDS_PERSISTENCE_SUPPORT
     
-    typedef dds::core::policy::TEntityFactory<foo::bar::core::policy::EntityFactory>
-    EntityFactory;
+    //typedef dds::core::policy::TEntityFactory<eprosima::fastrtps::EntityFactory>
+    //EntityFactory;
     
-    typedef dds::core::policy::TGroupData<foo::bar::core::policy::GroupData>
+    typedef dds::core::policy::TGroupData<eprosima::fastrtps::GroupDataQosPolicy>
     GroupData;
     
-    typedef dds::core::policy::THistory<foo::bar::core::policy::History>
+    typedef dds::core::policy::THistory<eprosima::fastrtps::HistoryQosPolicy>
     History;
     
-    typedef dds::core::policy::TLatencyBudget<foo::bar::core::policy::LatencyBudget>
+    typedef dds::core::policy::TLatencyBudget<eprosima::fastrtps::LatencyBudgetQosPolicy>
     LatencyBudget;
     
-    typedef dds::core::policy::TLifespan<foo::bar::core::policy::Lifespan>
+    typedef dds::core::policy::TLifespan<eprosima::fastrtps::LifespanQosPolicy>
     Lifespan;
     
-    typedef dds::core::policy::TLiveliness<foo::bar::core::policy::Liveliness>
+    typedef dds::core::policy::TLiveliness<eprosima::fastrtps::LivelinessQosPolicy>
     Liveliness;
     
-    typedef dds::core::policy::TOwnership<foo::bar::core::policy::Ownership>
+    typedef dds::core::policy::TOwnership<eprosima::fastrtps::OwnershipQosPolicy>
     Ownership;
     
 #ifdef  OMG_DDS_OWNERSHIP_SUPPORT
-    typedef dds::core::policy::TOwnershipStrength<foo::bar::core::policy::OwnershipStrength>
+    typedef dds::core::policy::TOwnershipStrength<eprosima::fastrtps::OwnershipStrengthQosPolicy>
     OwnershipStrength;
-#endif  // OMG_DDS_OWNERSHIP_SUPPORT
+#endif   //OMG_DDS_OWNERSHIP_SUPPORT
     
-    typedef dds::core::policy::TPartition<foo::bar::core::policy::Partition>
+    typedef dds::core::policy::TPartition<eprosima::fastrtps::PartitionQosPolicy>
     Partition;
     
-    typedef dds::core::policy::TPresentation<foo::bar::core::policy::Presentation>
+    typedef dds::core::policy::TPresentation<eprosima::fastrtps::PresentationQosPolicy>
     Presentation;
         
-    typedef dds::core::policy::TReaderDataLifecycle<foo::bar::core::policy::ReaderDataLifecycle>
-    ReaderDataLifecycle;
+    //typedef dds::core::policy::TReaderDataLifecycle<eprosima::fastrtps::ReaderDataLifecycle>
+    //ReaderDataLifecycle;
     
-    typedef dds::core::policy::TReliability<foo::bar::core::policy::Reliability>
+    typedef dds::core::policy::TReliability<eprosima::fastrtps::ReliabilityQosPolicy>
     Reliability;
     
-    typedef dds::core::policy::TResourceLimits<foo::bar::core::policy::ResourceLimits>
+    typedef dds::core::policy::TResourceLimits<eprosima::fastrtps::ResourceLimitsQosPolicy>
     ResourceLimits;
     
-    typedef dds::core::policy::TTimeBasedFilter<foo::bar::core::policy::TimeBasedFilter>
+    typedef dds::core::policy::TTimeBasedFilter<eprosima::fastrtps::TimeBasedFilterQosPolicy>
     TimeBasedFilter;
     
-    typedef dds::core::policy::TTopicData<foo::bar::core::policy::TopicData>
+    typedef dds::core::policy::TTopicData<eprosima::fastrtps::TopicDataQosPolicy>
     TopicData;
     
-    typedef dds::core::policy::TTransportPriority<foo::bar::core::policy::TransportPriority>
+    typedef dds::core::policy::TTransportPriority<eprosima::fastrtps::TransportPriorityQosPolicy>
     TransportPriority;
     
 #ifdef OMG_DDS_EXTENSIBLE_AND_DYNAMIC_TOPIC_TYPE_SUPPORT
-    typedef dds::core::policy::TTypeConsistencyEnforcement<foo::bar::core::policy::TypeConsistencyEnforcement>
+    typedef dds::core::policy::TTypeConsistencyEnforcement<eprosima::fastrtps::TypeConsistencyEnforcementQosPolicy>
     TypeConsistencyEnforcement;
 #endif // OMG_DDS_EXTENSIBLE_AND_DYNAMIC_TOPIC_TYPE_SUPPORT
     
-    typedef dds::core::policy::TUserData<foo::bar::core::policy::UserData>
+    typedef dds::core::policy::TUserData<eprosima::fastrtps::UserDataQosPolicy>
     UserData;
     
-    typedef dds::core::policy::TWriterDataLifecycle<foo::bar::core::policy::WriterDataLifecycle>
-    WriterDataLifecycle;
+    //typedef dds::core::policy::TWriterDataLifecycle<eprosima::fastrtps::WriterDataLifecycle>
+    //WriterDataLifecycle;
 } } } } // namespace dds::core::policy::detail
 
 

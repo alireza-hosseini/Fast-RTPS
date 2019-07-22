@@ -9,7 +9,5 @@
 #include <dds/pub/ddspub.hpp>
 
 #include <dds/core/QosProvider.hpp>
-#include <org/opensplice/topic/TopicTraits.hpp>
-
 
 #endif /* __OMG_DDS_DDS_HPP__ */

@@ -20,13 +20,15 @@
  */
 
 #include <dds/core/cond/TGuardCondition.hpp>
-#include <foo/bar/core/cond/GuardConditionImpl.hpp>
+
+//TODO: Fix this file when GuardCondition is implemented
+//#include <fastdds/dds/core/cond/GuardConditionImpl.hpp>
 
 namespace dds {
 	namespace core {
 		namespace cond {
 			namespace detail {
-				typedef dds::core::cond::TGuardCondition<foo::bar::core::cond::GuardConditionl> GuardCondition;
+				//typedef dds::core::cond::TGuardCondition<eprosima::fastdds::dds::core::cond::GuardConditionl> GuardCondition;
 			}
 		}
 	}
