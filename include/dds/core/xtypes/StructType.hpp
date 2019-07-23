@@ -5,13 +5,13 @@
 #include <dds/core/xtypes/detail/StructType.hpp>
 
 namespace dds {
-  namespace core {
-    namespace xtypes {
-      typedef TStructType<detail::StructType> StructType;
-    }
-  }
+namespace core {
+namespace xtypes {
+
+typedef TStructType<detail::StructType> StructType;
+
+}
+}
 }
 
-
-
-#endif /* OMG_DDS_CORE_XTYPES_STRUCT_TYPE_HPP_ */
+#endif // OMG_DDS_CORE_XTYPES_STRUCT_TYPE_HPP_
