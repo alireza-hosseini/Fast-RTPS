@@ -5,11 +5,13 @@
 #include <dds/core/xtypes/detail/TypeProvider.hpp>
 
 namespace dds {
-  namespace core {
-    namespace xtypes {
-      typedef TTypeProvider<detail::TypeProvider> TypeProvider;
-    }
-  }
+namespace core {
+namespace xtypes {
+
+typedef TTypeProvider<detail::TypeProvider> TypeProvider;
+
+}
+}
 }
 
-#endif /* OMG_DDS_CORE_XTYPES_TYPE_PROVIDER_HPP_ */
+#endif // OMG_DDS_CORE_XTYPES_TYPE_PROVIDER_HPP_
