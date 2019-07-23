@@ -21,20 +21,29 @@
 
 #include <dds/core/Value.hpp>
 
-namespace dds { namespace core { namespace policy {
+namespace dds {
+namespace core {
+namespace policy {
 
-  template <typename D>
-  class TQosPolicyCount : public dds::core::Value<D> {
-  public:
-    TQosPolicyCount(QosPolicyId policy_id, int32_t count);
+template <typename D>
+class TQosPolicyCount : public dds::core::Value<D>
+{
+    public:
 
-    TQosPolicyCount(const TQosPolicyCount& other);
-  public:
+    TQosPolicyCount(
+            QosPolicyId policy_id,
+            int32_t count);
+
+    TQosPolicyCount(
+            const TQosPolicyCount& other);
+
     QosPolicyId policy_id() const;
 
     int32_t count() const;
-  };
+};
 
-} } }
+}
+}
+}
 
-#endif // !defined(OMG_TDDS_CORE_POLICY_QOS_POLICY_COUNT_HPP_)
+#endif // OMG_TDDS_CORE_POLICY_QOS_POLICY_COUNT_HPP_
