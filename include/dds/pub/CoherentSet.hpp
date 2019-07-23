@@ -11,4 +11,4 @@ typedef dds::pub::detail::CoherentSet CoherentSet;
 }
 } 
 
-#endif /* OMG_DDS_PUB_COHERENT_SET_HPP_ */
+#endif // OMG_DDS_PUB_COHERENT_SET_HPP_

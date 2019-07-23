@@ -429,4 +429,4 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
     void assert_liveliness();
 };
 
-#endif /* OMG_DDS_PUB_DATA_WRITER_HPP_ */
+#endif // OMG_DDS_PUB_DATA_WRITER_HPP_

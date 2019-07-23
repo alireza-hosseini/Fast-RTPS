@@ -63,4 +63,4 @@ inline dds::sub::functors::NextInstanceManipulatorFunctor next_instance(
 }
 
 
-#endif /* OMG_DDS_SUB_DATA_READER_HPP_ */
+#endif // OMG_DDS_SUB_DATA_READER_HPP_

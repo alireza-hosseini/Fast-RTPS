@@ -39,4 +39,4 @@ class MultiTopic;
 }
 }
 
-#endif /* OMG_DDS_TOPIC_MULTI_TOPIC_HPP_ */
+#endif // OMG_DDS_TOPIC_MULTI_TOPIC_HPP_

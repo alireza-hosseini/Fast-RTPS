@@ -33,4 +33,4 @@ typedef detail::ReadCondition ReadCondition;
 }
 }
 
-#endif /* OMG_DDS_SUB_COND_READ_CONDITION_HPP_ */
+#endif // OMG_DDS_SUB_COND_READ_CONDITION_HPP_

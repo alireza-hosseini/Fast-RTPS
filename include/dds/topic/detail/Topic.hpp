@@ -44,4 +44,4 @@ class Topic;
 }
 }
 
-#endif /* OMG_DDS_TOPIC_DETAIL_TOPIC_HPP_ */
+#endif // OMG_DDS_TOPIC_DETAIL_TOPIC_HPP_

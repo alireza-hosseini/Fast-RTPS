@@ -72,4 +72,4 @@ class dds::sub::Sample : public dds::core::Value< DELEGATE<T> >
 
 };
 
-#endif /* OMG_DDS_SUB_TSAMPLE_HPP_ */
+#endif // OMG_DDS_SUB_TSAMPLE_HPP_

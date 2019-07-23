@@ -28,9 +28,9 @@ namespace dds {
 namespace domain {
 
 class DomainParticipantListener :
-      public virtual dds::pub::PublisherListener,
-      public virtual dds::sub::SubscriberListener,
-      public virtual dds::topic::AnyTopicListener
+    public virtual dds::pub::PublisherListener,
+    public virtual dds::sub::SubscriberListener,
+    public virtual dds::topic::AnyTopicListener
 {
   public:
 
@@ -40,10 +40,10 @@ class DomainParticipantListener :
 
 
 class NoOpDomainParticipantListener :
-      public virtual DomainParticipantListener,
-      public virtual dds::pub::NoOpPublisherListener,
-      public virtual dds::sub::NoOpSubscriberListener,
-      public virtual dds::topic::NoOpAnyTopicListener
+    public virtual DomainParticipantListener,
+    public virtual dds::pub::NoOpPublisherListener,
+    public virtual dds::sub::NoOpSubscriberListener,
+    public virtual dds::topic::NoOpAnyTopicListener
 {
   public:
 
@@ -54,4 +54,4 @@ class NoOpDomainParticipantListener :
 }
 }
 
-#endif /* OMG_DDS_DOMAIN_DOMAINPARTICIPANT_LISTENER_HPP_ */
+#endif // OMG_DDS_DOMAIN_DOMAINPARTICIPANT_LISTENER_HPP_

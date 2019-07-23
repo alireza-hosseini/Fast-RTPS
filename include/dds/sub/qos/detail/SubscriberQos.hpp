@@ -35,4 +35,4 @@ typedef ::dds::core::qos::TEntityQos< ::fastdds::dds::SubscriberQos> SubscriberQ
 }
 }
 
-#endif /* OMG_DDS_SUB_QOS_DETAIL_SUBSCRIBER_QOS_HPP_ */
+#endif // OMG_DDS_SUB_QOS_DETAIL_SUBSCRIBER_QOS_HPP_

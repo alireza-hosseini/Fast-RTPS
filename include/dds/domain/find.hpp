@@ -37,4 +37,4 @@ namespace domain {
 } 
 }
 
-#endif /* OMG_DDS_DOMAIN_FIND_HPP_ */
+#endif // OMG_DDS_DOMAIN_FIND_HPP_ 

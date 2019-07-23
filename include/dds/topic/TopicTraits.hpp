@@ -70,4 +70,4 @@ struct dds::topic::topic_type_support
     } \
     }
 
-#endif /* OMG_DDS_TOPIC_TOPIC_TRAITS_HPP_ */
+#endif // OMG_DDS_TOPIC_TOPIC_TRAITS_HPP_

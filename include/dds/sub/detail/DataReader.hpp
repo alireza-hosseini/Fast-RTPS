@@ -3,4 +3,4 @@
 
 // DataReader Delegate implementation goes here.
 
-#endif /* OMG_TDDS_SUB_DETAIL_DATA_READER_HPP_ */
+#endif // OMG_TDDS_SUB_DETAIL_DATA_READER_HPP_

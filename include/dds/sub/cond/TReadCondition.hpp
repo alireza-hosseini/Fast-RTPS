@@ -85,6 +85,6 @@ class dds::sub::cond::TReadCondition : public dds::core::cond::TCondition<DELEGA
 };
 
 
-#endif /* OMG_DDS_SUB_TCOND_READ_CONDITION_HPP_ */
+#endif // OMG_DDS_SUB_TCOND_READ_CONDITION_HPP_
 
 

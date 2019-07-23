@@ -289,4 +289,4 @@ class DataState
 };
 
 
-#endif /* OMG_DDS_SUB_DATA_STATE_HPP_ */
+#endif // OMG_DDS_SUB_DATA_STATE_HPP_

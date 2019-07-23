@@ -131,4 +131,4 @@ std::ostream& operator << (
 
 // #endif 
 
-#endif /* OMG_DDS_SUB_PACKAGE_INCLUDE_HPP_ */
+#endif // OMG_DDS_SUB_PACKAGE_INCLUDE_HPP_

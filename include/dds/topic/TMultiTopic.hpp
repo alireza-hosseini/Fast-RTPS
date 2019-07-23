@@ -73,4 +73,4 @@ class MultiTopic : public TopicDescription <T, DELEGATE>
 }
 }
 
-#endif /* OMG_DDS_T_TOPIC_CONTENT_FILTERED_TOPIC_HPP_ */
+#endif // OMG_DDS_T_TOPIC_CONTENT_FILTERED_TOPIC_HPP_ 

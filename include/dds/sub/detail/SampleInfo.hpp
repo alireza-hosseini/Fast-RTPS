@@ -15,5 +15,5 @@ typedef dds::sub::TSampleInfo<eprosima::fastrtps::SampleInfo> SampleInfo;
 }
 }
 
-#endif /* OMG_DDS_SUB_DETAIL_SAMPLE_INFO_HPP_ */
+#endif // OMG_DDS_SUB_DETAIL_SAMPLE_INFO_HPP_
 

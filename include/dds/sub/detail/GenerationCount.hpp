@@ -16,4 +16,4 @@ namespace detail {
 }
 }
 
-#endif /* OMG_DDS_SUB_DETAIL_GENERATION_COUNT_HPP_ */
+#endif // OMG_DDS_SUB_DETAIL_GENERATION_COUNT_HPP_

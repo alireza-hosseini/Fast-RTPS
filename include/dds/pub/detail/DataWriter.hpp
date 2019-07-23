@@ -55,4 +55,4 @@ class dds::pub::detail::DataWriter : public  foo::bar::core::EntityDelegate
 
 
 
-#endif /* OMG_DDS_PUB_DETAIL_DATA_WRITER_HPP_ */
+#endif // OMG_DDS_PUB_DETAIL_DATA_WRITER_HPP_

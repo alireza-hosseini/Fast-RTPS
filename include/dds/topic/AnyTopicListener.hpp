@@ -53,4 +53,4 @@ class NoOpAnyTopicListener : public virtual AnyTopicListener
 }
 }
 
-#endif /* OMG_DDS_TOPIC_ANY_TOPIC_LISTENER_HPP_ */
+#endif // OMG_DDS_TOPIC_ANY_TOPIC_LISTENER_HPP_

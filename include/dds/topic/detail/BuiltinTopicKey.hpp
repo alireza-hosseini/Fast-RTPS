@@ -34,4 +34,4 @@ namespace detail {
 }
 }
 
-#endif /* OMG_DDS_TOPIC_DETAIL_BUILTIN_TOPIC_KEY_HPP_ */
+#endif // OMG_DDS_TOPIC_DETAIL_BUILTIN_TOPIC_KEY_HPP_ 

@@ -81,4 +81,4 @@ class NoOpDataWriterListener : public virtual DataWriterListener<T>
 } 
 }
 
-#endif /* OMG_DDS_PUB_DATA_WRITER_LISTENER_HPP_ */
+#endif // OMG_DDS_PUB_DATA_WRITER_LISTENER_HPP_

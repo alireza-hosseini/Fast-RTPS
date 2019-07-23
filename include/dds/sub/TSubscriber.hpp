@@ -138,4 +138,4 @@ class dds::sub::TSubscriber : public dds::core::TEntity<DELEGATE>
 
 };
 
-#endif /* OMG_TDDS_SUB_SUBSCRIBER_HPP_ */
+#endif // OMG_TDDS_SUB_SUBSCRIBER_HPP_

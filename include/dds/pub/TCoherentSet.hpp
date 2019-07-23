@@ -89,5 +89,5 @@ class dds::pub::TCoherentSet : public dds::core::Value<DELEGATE>
 };
 
 
-#endif /* OMG_TDDS_PUB_COHERENT_SET_HPP_ */
+#endif // OMG_TDDS_PUB_COHERENT_SET_HPP_
 

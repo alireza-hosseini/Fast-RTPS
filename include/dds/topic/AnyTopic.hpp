@@ -78,4 +78,4 @@ class dds::topic::AnyTopic
 
 };
 
-#endif /* OMG_DDS_TOPIC_ANY_TOPIC_HPP_ */
+#endif // OMG_DDS_TOPIC_ANY_TOPIC_HPP_

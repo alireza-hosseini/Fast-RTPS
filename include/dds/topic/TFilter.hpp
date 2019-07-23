@@ -94,4 +94,4 @@ class dds::topic::TFilter: public dds::core::Value<D>
 
 };
 
-#endif /* DDS_TOPIC_TFILTER__HPP_ */
+#endif // DDS_TOPIC_TFILTER__HPP_

@@ -85,4 +85,4 @@ class dds::topic::TopicDescription : public ::dds::core::TEntity< DELEGATE<T> >
 
 };
 
-#endif /* OMG_DDS_T_TOPIC_TOPIC_DESCRIPTION_HPP_ */
+#endif // OMG_DDS_T_TOPIC_TOPIC_DESCRIPTION_HPP_

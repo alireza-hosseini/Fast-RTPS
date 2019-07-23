@@ -168,7 +168,7 @@ class dds::topic::Topic : public dds::topic::TopicDescription <T, DELEGATE>
         dds::topic::TopicListener<T>* listener = NULL,
         const dds::core::status::StatusMask& mask = dds::core::status::StatusMask::all());
 
-#endif /* OMG_DDS_X_TYPE_DYNAMIC_TYPE_SUPPORT */
+#endif // OMG_DDS_X_TYPE_DYNAMIC_TYPE_SUPPORT
 
   public:
 
@@ -210,4 +210,4 @@ class dds::topic::Topic : public dds::topic::TopicDescription <T, DELEGATE>
 
 };
 
-#endif /* OMG_DDS_TTOPIC_TOPIC_HPP_ */
+#endif // OMG_DDS_TTOPIC_TOPIC_HPP_

@@ -31,4 +31,4 @@ typedef dds::sub::qos::detail::SubscriberQos SubscriberQos;
 } 
 } 
 
-#endif /* OMG_DDS_SUB_QOS_SUBSCRIBER_QOS_HPP_ */
+#endif // OMG_DDS_SUB_QOS_SUBSCRIBER_QOS_HPP_

@@ -16,4 +16,4 @@ class Filter;
 }
 }
 
-#endif /* DDS_TOPIC_DETAIL_QUERY_HPP_ */
+#endif // DDS_TOPIC_DETAIL_QUERY_HPP_

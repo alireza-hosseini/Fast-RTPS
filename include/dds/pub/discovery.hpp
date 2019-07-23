@@ -110,4 +110,4 @@ namespace pub {
 } 
 }
 
-#endif /* OMG_DDS_PUB_DISCOVERY_HPP_ */
+#endif // OMG_DDS_PUB_DISCOVERY_HPP_

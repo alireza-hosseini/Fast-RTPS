@@ -50,4 +50,4 @@ class dds::pub::NoOpPublisherListener :
 };
 
 
-#endif /* OMG_DDS_PUB_PUBLISHER_LISTENER_HPP_ */
+#endif // OMG_DDS_PUB_PUBLISHER_LISTENER_HPP_

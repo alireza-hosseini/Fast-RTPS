@@ -34,4 +34,4 @@ class dds::sub::TRank : public dds::core::Value<DELEGATE>
   		
 };
 
-#endif /* OMG_DDS_SUB_TRANK_HPP_ */
+#endif // OMG_DDS_SUB_TRANK_HPP_

@@ -116,4 +116,4 @@ class dds::pub::AnyDataWriter
     dds::core::smart_ptr_traits<detail::DWHolderBase>::ref_type holder_;
 };
 
-#endif /* OMG_DDS_PUB_ANY_DATA_WRITER_HPP_ */
+#endif // OMG_DDS_PUB_ANY_DATA_WRITER_HPP_

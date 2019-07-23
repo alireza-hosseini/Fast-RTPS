@@ -31,4 +31,4 @@ typedef dds::topic::qos::detail::TopicQos TopicQos;
 }
 } 
 
-#endif /* OMG_DDS_TOPIC_QOS_TOPIC_QOS_HPP_ */
+#endif // OMG_DDS_TOPIC_QOS_TOPIC_QOS_HPP_

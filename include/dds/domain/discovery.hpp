@@ -65,4 +65,4 @@ namespace domain {
 } 
 }
 
-#endif /* OMG_DDS_DOMAIN_DISCOVERY_HPP_ */
+#endif // OMG_DDS_DOMAIN_DISCOVERY_HPP_

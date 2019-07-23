@@ -16,4 +16,4 @@ namespace detail {
 }
 }
 
-#endif /* OMG_DDS_SUB_DETAIL_RANK_HPP */
+#endif // OMG_DDS_SUB_DETAIL_RANK_HPP

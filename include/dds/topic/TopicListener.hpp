@@ -53,4 +53,4 @@ class NoOpTopicListener : public virtual TopicListener<T> {
 }
 }
 
-#endif /* OMG_DDS_TOPIC_TOPIC_LISTENER_HPP_ */
+#endif // OMG_DDS_TOPIC_TOPIC_LISTENER_HPP_

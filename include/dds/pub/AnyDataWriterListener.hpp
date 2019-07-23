@@ -81,4 +81,4 @@ class dds::pub::NoOpAnyDataWriterListener : public virtual dds::pub::AnyDataWrit
 };
 
 
-#endif /* OMG_DDS_PUB_ANY_DATA_WRITER_LISTENER_HPP_ */
+#endif // OMG_DDS_PUB_ANY_DATA_WRITER_LISTENER_HPP_

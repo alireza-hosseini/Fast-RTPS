@@ -224,7 +224,7 @@ class dds::sub::DataReader : public dds::core::TEntity< DELEGATE<T> >
         dds::sub::DataReaderListener<T>* listener = NULL,
         const dds::core::status::StatusMask& mask = ::dds::core::status::StatusMask::all());
 
-  #endif /* OMG_DDS_CONTENT_SUBSCRIPTION_SUPPORT */
+  #endif // OMG_DDS_CONTENT_SUBSCRIPTION_SUPPORT
 
   #ifdef OMG_DDS_MULTI_TOPIC_SUPPORT
 
@@ -260,7 +260,7 @@ class dds::sub::DataReader : public dds::core::TEntity< DELEGATE<T> >
         dds::sub::DataReaderListener<T>* listener = NULL,
         const dds::core::status::StatusMask& mask = ::dds::core::status::StatusMask::all());
 
-  #endif /* OMG_DDS_MULTI_TOPIC_SUPPORT */
+  #endif // OMG_DDS_MULTI_TOPIC_SUPPORT
 
   public:
 
@@ -536,4 +536,4 @@ class dds::sub::DataReader : public dds::core::TEntity< DELEGATE<T> >
 
 };
 
-#endif /* OMG_DDS_SUB_TDATA_READER_HPP_ */
+#endif // OMG_DDS_SUB_TDATA_READER_HPP_

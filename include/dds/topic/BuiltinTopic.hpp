@@ -35,4 +35,4 @@ typedef dds::topic::detail::SubscriptionBuiltinTopicData SubscriptionBuiltinTopi
 } 
 } 
 
-#endif /* OMG_DDS_TOPIC_BUILTIN_TOPIC_HPP_ */
+#endif // OMG_DDS_TOPIC_BUILTIN_TOPIC_HPP_

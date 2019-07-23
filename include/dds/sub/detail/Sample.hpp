@@ -33,4 +33,4 @@ namespace detail {
 }
 }
 
-#endif /* OMG_DDS_PUB_DETAIL_SAMPLE_HPP_ */
+#endif // OMG_DDS_PUB_DETAIL_SAMPLE_HPP_
