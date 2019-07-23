@@ -76,7 +76,9 @@ class dds::pub::detail::DWHolder : public DWHolderBase
         { 
         }
 
-        virtual ~DWHolder() {}
+        virtual ~DWHolder() 
+        {
+        }
 
     public:
 
@@ -117,9 +119,14 @@ class dds::pub::detail::DWHolder : public DWHolderBase
             dw_.close();
         }
 
-        virtual void retain(bool b) {}
+        virtual void retain(bool b) 
+        {
+        }
 
-        const dds::pub::DataWriter<T>& get() const { return dw_; }
+        const dds::pub::DataWriter<T>& get() const 
+        { 
+            return dw_;
+        }
 
     private:
         
