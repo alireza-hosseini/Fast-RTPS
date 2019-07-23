@@ -21,8 +21,14 @@
 
 #include <dds/core/cond/detail/GuardCondition.hpp>
 
-namespace dds { namespace core { namespace cond {
+namespace dds {
+namespace core {
+namespace cond {
+
   typedef dds::core::cond::detail::GuardCondition GuardCondition;
-} } }
+
+}
+}
+}
 
 #endif /* OMG_DDS_CORE_COND_GUARDCONDITION_HPP_ */

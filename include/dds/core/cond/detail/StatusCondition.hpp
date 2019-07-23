@@ -19,22 +19,21 @@
  * limitations under the License.
  */
 
-
 #include <dds/core/cond/StatusCondition.hpp>
 
 //TODO: Fix this file when StatusCondition is implemented
 //#include <fastdds/dds/core/cond/StatusCondition.hpp>
 
 namespace dds {
-	namespace core {
-		namespace cond {
-			namespace detail {
-				//typedef dds::core::cond::StatusCondition<eprosima::fastdds::core::cond::StatusCondition> StatusCondition;
-			}
-		}
-	}
+namespace core {
+namespace cond {
+namespace detail {
+
+    //typedef dds::core::cond::StatusCondition<eprosima::fastdds::core::cond::StatusCondition> StatusCondition;
+
+}
+}
+}
 }
 
 #endif  /* OMG_DDS_CORE_DETAIL_STATUS_CONDITION_HPP_ */
-
-

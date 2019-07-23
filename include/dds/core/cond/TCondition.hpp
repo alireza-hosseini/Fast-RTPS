@@ -10,7 +10,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ *         http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -21,15 +21,16 @@
 
 #include <dds/core/Reference.hpp>
 
-
 namespace dds {
-  namespace core {
-    namespace cond {
-      template <typename DELEGATE>
-      class TCondition;
-    }
-  }
+namespace core {
+namespace cond {
+
+    template <typename DELEGATE>
+    class TCondition;
 }
+}
+}
+
 /**
  * A Condition is a root class for all the conditions that may be attached
  * to a WaitSet. This basic class is specialized in three classes that are
@@ -38,24 +39,23 @@ namespace dds {
  *
  */
 template <typename DELEGATE>
-class dds::core::cond::TCondition : public dds::core::Reference<DELEGATE> {
-public:
-  OMG_DDS_REF_TYPE(TCondition, dds::core::Reference, DELEGATE)
+class dds::core::cond::TCondition : public dds::core::Reference<DELEGATE>
+{
+    public:
 
-public:
-  ~TCondition();
+    OMG_DDS_REF_TYPE(TCondition, dds::core::Reference, DELEGATE)
 
-public:
-  /**
-   * Dispatches the functors that have been registered with the condition.
-   */
-  void dispatch();
+    ~TCondition();
 
-  /**
-   * This operation retrieves the trigger_value of the Condition.
-   */
-  bool trigger_value() const;
+    /**
+     * Dispatches the functors that have been registered with the condition.
+     */
+    void dispatch();
 
+    /**
+     * This operation retrieves the trigger_value of the Condition.
+     */
+    bool trigger_value() const;
 };
 
 #endif /* OMG_TDDS_DDS_CORE_CONDITION_HPP_ */

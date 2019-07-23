@@ -25,14 +25,15 @@
 //#include <fastdds/dds/core/cond/GuardConditionImpl.hpp>
 
 namespace dds {
-	namespace core {
-		namespace cond {
-			namespace detail {
-				//typedef dds::core::cond::TGuardCondition<eprosima::fastdds::dds::core::cond::GuardConditionl> GuardCondition;
-			}
-		}
-	}
-}
+namespace core {
+namespace cond {
+namespace detail {
 
+    //typedef dds::core::cond::TGuardCondition<eprosima::fastdds::dds::core::cond::GuardConditionl> GuardCondition;
+
+}
+}
+}
+}
 
 #endif /* OMG_DDS_CORE_DETAIL_GUARDCONDITION_HPP_ */

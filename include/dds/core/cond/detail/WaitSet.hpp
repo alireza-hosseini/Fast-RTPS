@@ -25,13 +25,15 @@
 //#include <fastdds/dds/core/cond/WaitSet.hpp>
 
 namespace dds {
-	namespace core {
-		namespace cond {
-			namespace detail {
-				//typedef dds::core::cond::TWaitSet<eprosima::fastdds::core::cond::WaitSet> WaitSet;
-			}
-		}
-	}
+namespace core {
+namespace cond {
+namespace detail {
+
+    //typedef dds::core::cond::TWaitSet<eprosima::fastdds::core::cond::WaitSet> WaitSet;
+
+}
+}
+}
 }
 
 #endif /* OMG_DDS_CORE_DETAIL_WAITSET_HPP_ */

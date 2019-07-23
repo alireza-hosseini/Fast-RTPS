@@ -10,7 +10,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ *         http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -23,51 +23,50 @@
 
 
 namespace dds {
-  namespace core {
-    namespace cond {
-      template <typename DELEGATE>
-      class TGuardCondition;
-    }
-  }
+namespace core {
+namespace cond {
+
+    template <typename DELEGATE>
+    class TGuardCondition;
+
+}
+}
 }
 
 /**
  * A GuardCondition object is a specific Condition whose trigger_value is
  * completely under the control of the application.
- *  When first created the trigger_value is set to FALSE.
+ * When first created the trigger_value is set to FALSE.
  * The purpose of the GuardCondition is to provide the means for the
  * application to manually wake up a WaitSet. This is accomplished by
  * attaching the GuardCondition to the WaitSet and then setting the
  * trigger_value by means of the set trigger_value operation.
  */
 template <typename DELEGATE>
-class dds::core::cond::TGuardCondition : public TCondition<DELEGATE> {
-public:
-  OMG_DDS_REF_TYPE_NODC(TGuardCondition, TCondition, DELEGATE)
+class dds::core::cond::TGuardCondition : public TCondition<DELEGATE>
+{
+    public:
 
-public:
-  TGuardCondition();
+    OMG_DDS_REF_TYPE_NODC(TGuardCondition, TCondition, DELEGATE)
 
-  ~TGuardCondition();
+    TGuardCondition();
 
-public:
+    ~TGuardCondition();
 
-  /**
-   * Registers a custom handler with this condition.
-   */
-  template <typename Functor>
-  void handler(const Functor& func);
+    /**
+     * Registers a custom handler with this condition.
+     */
+    template <typename Functor>
+    void handler(const Functor& func);
 
-  /**
-   * Resets the handler for this condition. After the invocation of this
-   * method no handler will be registered with this condition.
-   */
-  void reset_handler();
+    /**
+     * Resets the handler for this condition. After the invocation of this
+     * method no handler will be registered with this condition.
+     */
+    void reset_handler();
 
-public:
-
-  void trigger_value(bool value);
-
+    //TODO: Document this function
+    void trigger_value(bool value);
 };
 
 #endif /* OMG_TDDS_CORE_GUARD_CONDITION_HPP_ */
