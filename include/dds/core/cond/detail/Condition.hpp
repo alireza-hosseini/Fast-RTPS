@@ -25,15 +25,15 @@
 //#include <fastdds/dds/core/cond/ConditionImpl.hpp>
 
 namespace dds {
-	namespace core {
-		namespace cond {
-			namespace detail {
-				//typedef dds::core::cond::TCondition<eprosima::fastdds::dds::core::cond::Condition> Condition;
-			}
-		}
-	}
+namespace core {
+namespace cond {
+namespace detail {
+
+    //typedef dds::core::cond::TCondition<eprosima::fastdds::dds::core::cond::Condition> Condition;
+
+}
+}
+}
 }
 
 #endif  /* OMG_DDS_CORE_CONDITION_DETAIL_HPP_ */
-
-
