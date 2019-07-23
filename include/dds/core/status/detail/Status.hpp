@@ -36,40 +36,47 @@
 #include <fastrtps/qos/IncompatibleQosStatus.hpp>
 #include <fastrtps/qos/SampleLostStatus.hpp>
 
-namespace dds { namespace core { namespace status { namespace detail {
-    //typedef dds::core::status::TInconsistentTopicStatus<eprosima::fastrtps::InconsistentTopicStatus>
-    //InconsistentTopicStatus;
-    
-    typedef dds::core::status::TLivelinessChangedStatus<eprosima::fastrtps::LivelinessChangedStatus>
-    LivelinessChangedStatus;
-    
-    typedef dds::core::status::TLivelinessLostStatus<eprosima::fastrtps::LivelinessLostStatus>
-    LivelinessLostStatus;
-    
-    typedef dds::core::status::TOfferedDeadlineMissedStatus<eprosima::fastrtps::OfferedDeadlineMissedStatus>
-    OfferedDeadlineMissedStatus;
-    
-    typedef dds::core::status::TOfferedIncompatibleQosStatus<eprosima::fastrtps::OfferedIncompatibleQosStatus>
-    OfferedIncompatibleQosStatus;
-    
-    //typedef dds::core::status::TPublicationMatchedStatus<eprosima::fastrtps::PublicationMatchedStatus>
-    //PublicationMatchedStatus;
-    
-    typedef dds::core::status::TSampleRejectedStatus<eprosima::fastrtps::SampleRejectedStatus>
-    SampleRejectedStatus;
-    
-    typedef dds::core::status::TRequestedDeadlineMissedStatus<eprosima::fastrtps::RequestedDeadlineMissedStatus>
-    RequestedDeadlineMissedStatus;
-    
-    typedef dds::core::status::TRequestedIncompatibleQosStatus<eprosima::fastrtps::RequestedIncompatibleQosStatus>
-    RequestedIncompatibleQosStatus;
-    
-    typedef dds::core::status::TSampleLostStatus<eprosima::fastrtps::SampleLostStatus>
-    SampleLostStatus;
-    
-    //typedef dds::core::status::TSubscriptionMatchedStatus<eprosima::fastrtps::SubscriptionMatchedStatus>
-    //SubscriptionMatchedStatus;
-} } } } // namespace dds::core::status::detail
+namespace dds {
+namespace core {
+namespace status {
+namespace detail {
 
+//typedef dds::core::status::TInconsistentTopicStatus<eprosima::fastrtps::InconsistentTopicStatus>
+//InconsistentTopicStatus;
 
-#endif /* OMG_DDS_CORE_STATUS_DETAIL_STATUS_HPP_ */
+typedef dds::core::status::TLivelinessChangedStatus<eprosima::fastrtps::LivelinessChangedStatus>
+LivelinessChangedStatus;
+
+typedef dds::core::status::TLivelinessLostStatus<eprosima::fastrtps::LivelinessLostStatus>
+LivelinessLostStatus;
+
+typedef dds::core::status::TOfferedDeadlineMissedStatus<eprosima::fastrtps::OfferedDeadlineMissedStatus>
+OfferedDeadlineMissedStatus;
+
+typedef dds::core::status::TOfferedIncompatibleQosStatus<eprosima::fastrtps::OfferedIncompatibleQosStatus>
+OfferedIncompatibleQosStatus;
+
+//typedef dds::core::status::TPublicationMatchedStatus<eprosima::fastrtps::PublicationMatchedStatus>
+//PublicationMatchedStatus;
+
+typedef dds::core::status::TSampleRejectedStatus<eprosima::fastrtps::SampleRejectedStatus>
+SampleRejectedStatus;
+
+typedef dds::core::status::TRequestedDeadlineMissedStatus<eprosima::fastrtps::RequestedDeadlineMissedStatus>
+RequestedDeadlineMissedStatus;
+
+typedef dds::core::status::TRequestedIncompatibleQosStatus<eprosima::fastrtps::RequestedIncompatibleQosStatus>
+RequestedIncompatibleQosStatus;
+
+typedef dds::core::status::TSampleLostStatus<eprosima::fastrtps::SampleLostStatus>
+SampleLostStatus;
+
+//typedef dds::core::status::TSubscriptionMatchedStatus<eprosima::fastrtps::SubscriptionMatchedStatus>
+//SubscriptionMatchedStatus;
+
+}
+}
+}
+}
+
+#endif // OMG_DDS_CORE_STATUS_DETAIL_STATUS_HPP_
