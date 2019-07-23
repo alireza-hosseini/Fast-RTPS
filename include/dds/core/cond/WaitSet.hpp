@@ -25,7 +25,7 @@ namespace dds {
 namespace core {
 namespace cond {
 
-  typedef dds::core::cond::detail::WaitSet WaitSet;
+typedef dds::core::cond::detail::WaitSet WaitSet;
 
 }
 }
