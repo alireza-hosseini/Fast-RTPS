@@ -3,27 +3,36 @@
 
 #include <dds/core/Value.hpp>
 
-namespace dds { namespace domain {
-  template <typename DELEGATE>
-  class TDomainId;
-} }
+namespace dds { 
+namespace domain {
 
+template<typename DELEGATE>
+class TDomainId;
 
-template <typename DELEGATE>
-class dds::domain::TDomainId : public dds::core::Value<DELEGATE> {
-public:
+} 
+}
 
-  template <typename ARG0>
-  TDomainId(ARG0 id) : dds::core::Value<DELEGATE>(id);
+template<typename DELEGATE>
+class dds::domain::TDomainId : public dds::core::Value<DELEGATE> 
+{
+	public:
 
-  template <typename ARG0, typename ARG1>
-  TDomainId(ARG0 arg0, ARG1 arg1);
+	  template<typename ARG0>
+	  TDomainId(ARG0 id) : dds::core::Value<DELEGATE>(id);
 
-  operator uint32_t () const;
+	  template<
+	  		typename ARG0, 
+	  		typename ARG1>
+	  TDomainId(
+	  		ARG0 arg0, 
+	  		ARG1 arg1);
 
-  uint32_t value() const;
+	  operator uint32_t () const;
 
-  static const TDomainId default_domain();
+	  uint32_t value() const;
+
+	  static const TDomainId default_domain();
+
 };
 
 #endif /* OMG_DDS_DOMAIN_T_DOMAIN_ID_HPP_ */

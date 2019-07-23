@@ -23,7 +23,8 @@
 #include <dds/sub/Subscriber.hpp>
 
 
-namespace dds { namespace domain {
+namespace dds { 
+namespace domain {
 
   /**
    * This function allows to express the will to ignore the entity
@@ -37,7 +38,9 @@ namespace dds { namespace domain {
    *                has to be ignored
    *
    */
-  void ignore(const dds::domain::DomainParticipant& dp, const dds::core::InstanceHandle& handle);
+  void ignore(
+      const dds::domain::DomainParticipant& dp, 
+      const dds::core::InstanceHandle& handle);
 
   /**
    * This function allows to express the will to ignore a series of entities
@@ -54,8 +57,12 @@ namespace dds { namespace domain {
    *
    */
   template <typename FwdIterator>
-  void ignore(const dds::domain::DomainParticipant& dp, FwdIterator begin, FwdIterator end);
+  void ignore(
+      const dds::domain::DomainParticipant& dp, 
+      FwdIterator begin, 
+      FwdIterator end);
 
+} 
+}
 
-} }
 #endif /* OMG_DDS_DOMAIN_DISCOVERY_HPP_ */

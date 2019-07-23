@@ -21,8 +21,8 @@
 
 #include <dds/domain/DomainParticipant.hpp>
 
-namespace dds { namespace domain {
-
+namespace dds { 
+namespace domain {
 
   /**
    * This operation retrieves a previously created <code>DomainParticipant</code>
@@ -31,9 +31,10 @@ namespace dds { namespace domain {
    *
    * @param id the domain id
    */
-  OMG_DDS_API
-  DomainParticipant find(uint32_t id);
+  OMG_DDS_API DomainParticipant find(
+  		uint32_t id);
 
-} }
+} 
+}
 
 #endif /* OMG_DDS_DOMAIN_FIND_HPP_ */
