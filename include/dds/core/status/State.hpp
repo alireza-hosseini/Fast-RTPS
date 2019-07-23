@@ -22,121 +22,166 @@
 #include <bitset>
 #include <dds/core/macros.hpp>
 
+namespace dds {
+namespace core {
+namespace status {
 
-namespace dds { namespace core { namespace status {
+class SampleRejectedState : public std::bitset<OMG_DDS_STATE_BIT_COUNT>
+{
+    public:
 
-
-  class SampleRejectedState : public std::bitset<OMG_DDS_STATE_BIT_COUNT> {
-  public:
     typedef std::bitset<OMG_DDS_STATE_BIT_COUNT> MaskType;
 
-  public:
-    SampleRejectedState() : MaskType() { }
-    SampleRejectedState(const SampleRejectedState& src) : MaskType(static_cast<int>(src.to_ulong())) { }
-    SampleRejectedState(const MaskType& src) : MaskType(static_cast<int>(src.to_ulong())) { }
-
-  public:
-    inline static const SampleRejectedState not_rejected() {
-      return SampleRejectedState(0u);
-    }
-    inline static const SampleRejectedState rejected_by_samples_limit() {
-      return SampleRejectedState(0x0001 << 1u);
-    }
-    inline static const SampleRejectedState rejected_by_instances_limit() {
-      return SampleRejectedState(0x0001 << 0u);
-    }
-    inline static const SampleRejectedState rejected_by_samples_per_instance_limit() {
-      return SampleRejectedState(0x0001 << 2u);
+    SampleRejectedState()
+        : MaskType()
+    {
     }
 
-  private:
+    SampleRejectedState(
+            const SampleRejectedState& src)
+        : MaskType(static_cast<int>(src.to_ulong()))
+    {
+    }
+
+    SampleRejectedState(
+            const MaskType& src)
+        : MaskType(static_cast<int>(src.to_ulong()))
+    {
+    }
+
+    inline static const SampleRejectedState not_rejected()
+    {
+        return SampleRejectedState(0u);
+    }
+
+    inline static const SampleRejectedState rejected_by_samples_limit()
+    {
+        return SampleRejectedState(0x0001 << 1u);
+    }
+
+    inline static const SampleRejectedState rejected_by_instances_limit()
+    {
+        return SampleRejectedState(0x0001 << 0u);
+    }
+
+    inline static const SampleRejectedState rejected_by_samples_per_instance_limit()
+    {
+        return SampleRejectedState(0x0001 << 2u);
+    }
+
+private:
     // @TODO
     // -- This Ctor should be fixed as currently there is this 
-    // -- cast only to avoid an error when compiling with the  MS vC++ compiler
-    SampleRejectedState(uint32_t s) 
-    : MaskType((uint64_t)s)
-    { } 
+    // -- cast only to avoid an error when compiling with the    MS vC++ compiler
+    SampleRejectedState(
+            uint32_t s)
+        : MaskType((uint64_t)s)
+    {
+    }
+};
 
-  };
+// StatusMask create_status_mask(uint64_t);
 
+class StatusMask : public std::bitset<OMG_DDS_STATUS_COUNT>
+{
+    public:
 
-  // StatusMask create_status_mask(uint64_t);
-
-  class StatusMask : public std::bitset<OMG_DDS_STATUS_COUNT> {
-  public:
     typedef std::bitset<OMG_DDS_STATUS_COUNT> MaskType;
 
-  public:
-    StatusMask() { }
-    explicit StatusMask(uint64_t mask) : std::bitset<OMG_DDS_STATUS_COUNT>(mask) { }
-    StatusMask(const StatusMask& other) : MaskType(static_cast<int>(other.to_ulong())) { }
-    ~StatusMask() { }
+    StatusMask(){}
 
-  public:
-    inline static const StatusMask all() {
-      return StatusMask(0x7fe7u);
+    explicit StatusMask(
+            uint64_t mask)
+        : std::bitset<OMG_DDS_STATUS_COUNT>(mask)
+    {
     }
 
-    inline static const StatusMask none() {
-      return StatusMask(0u);
+    StatusMask(
+            const StatusMask& other)
+        : MaskType(static_cast<int>(other.to_ulong()))
+    {
     }
 
-  public:
-    inline static const StatusMask inconsistent_topic() {
-      return StatusMask(0x00000001 << 0u);
+    ~StatusMask() {}
+
+    inline static const StatusMask all()
+    {
+        return StatusMask(0x7fe7u);
     }
 
-    inline static const StatusMask offered_deadline_missed() {
-      return StatusMask(0x00000001 << 1u);
+    inline static const StatusMask none()
+    {
+        return StatusMask(0u);
     }
 
-    inline static const StatusMask requested_deadline_missed() {
-      return StatusMask(0x00000001 << 2u);
+    inline static const StatusMask inconsistent_topic()
+    {
+        return StatusMask(0x00000001 << 0u);
     }
 
-    inline static const StatusMask offered_incompatible_qos() {
-      return StatusMask(0x00000001 << 5u);
+    inline static const StatusMask offered_deadline_missed()
+    {
+        return StatusMask(0x00000001 << 1u);
     }
 
-    inline static const StatusMask requested_incompatible_qos() {
-      return StatusMask(0x00000001 << 6u);
+    inline static const StatusMask requested_deadline_missed()
+    {
+        return StatusMask(0x00000001 << 2u);
     }
 
-    inline static const StatusMask sample_lost() {
-      return StatusMask(0x00000001 << 7u);
+    inline static const StatusMask offered_incompatible_qos()
+    {
+        return StatusMask(0x00000001 << 5u);
     }
 
-    inline static const StatusMask sample_rejected() {
-      return StatusMask(0x00000001 << 8u);
+    inline static const StatusMask requested_incompatible_qos()
+    {
+        return StatusMask(0x00000001 << 6u);
     }
 
-    inline static const StatusMask data_on_readers() {
-      return StatusMask(0x00000001 << 9u);
+    inline static const StatusMask sample_lost()
+    {
+        return StatusMask(0x00000001 << 7u);
     }
 
-    inline static const StatusMask data_available() {
-      return StatusMask(0x00000001 << 10u);
+    inline static const StatusMask sample_rejected()
+    {
+        return StatusMask(0x00000001 << 8u);
     }
 
-    inline static const StatusMask liveliness_lost() {
-      return StatusMask(0x00000001 << 11u);
+    inline static const StatusMask data_on_readers()
+    {
+        return StatusMask(0x00000001 << 9u);
     }
 
-    inline static const StatusMask liveliness_changed() {
-      return StatusMask(0x00000001 << 12u);
+    inline static const StatusMask data_available()
+    {
+        return StatusMask(0x00000001 << 10u);
     }
 
-    inline static const StatusMask publication_matched() {
-      return StatusMask(0x00000001 << 13u);
+    inline static const StatusMask liveliness_lost()
+    {
+        return StatusMask(0x00000001 << 11u);
     }
 
-    inline static const StatusMask subscription_matched() {
-      return StatusMask(0x00000001 << 14u);
+    inline static const StatusMask liveliness_changed()
+    {
+        return StatusMask(0x00000001 << 12u);
     }
 
-  };
+    inline static const StatusMask publication_matched()
+    {
+        return StatusMask(0x00000001 << 13u);
+    }
 
-} } } /* namespace dds / core / status*/
+    inline static const StatusMask subscription_matched()
+    {
+        return StatusMask(0x00000001 << 14u);
+    }
+};
 
+}
+}
+}
 
-#endif /* OMG_DDS_CORE_STATUS_STATE_HPP_ */
+#endif // OMG_DDS_CORE_STATUS_STATE_HPP_
