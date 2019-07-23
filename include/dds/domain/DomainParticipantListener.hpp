@@ -25,28 +25,33 @@
 
 
 namespace dds {
-  namespace domain {
+namespace domain {
 
-    class DomainParticipantListener :
+class DomainParticipantListener :
       public virtual dds::pub::PublisherListener,
       public virtual dds::sub::SubscriberListener,
       public virtual dds::topic::AnyTopicListener
-    {
-    public:
-      virtual ~DomainParticipantListener() { }
-    };
+{
+  public:
+
+    virtual ~DomainParticipantListener() { }
+    
+};
 
 
-    class NoOpDomainParticipantListener :
+class NoOpDomainParticipantListener :
       public virtual DomainParticipantListener,
       public virtual dds::pub::NoOpPublisherListener,
       public virtual dds::sub::NoOpSubscriberListener,
       public virtual dds::topic::NoOpAnyTopicListener
-    {
-    public:
-      virtual ~NoOpDomainParticipantListener();
-    };
+{
+  public:
 
-  }}
+    virtual ~NoOpDomainParticipantListener();
+
+};
+
+}
+}
 
 #endif /* OMG_DDS_DOMAIN_DOMAINPARTICIPANT_LISTENER_HPP_ */

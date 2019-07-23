@@ -20,15 +20,16 @@
  */
 
 #include <dds/domain/TDomainParticipant.hpp>
-#include <foo/bar/domain/DomainParticipant.hpp>
+#include <fastdds/dds/domain/DomainParticipant.hpp>
 
 namespace dds {
-	namespace domain {
-		namespace detail {
-		typedef dds::domain::TDomainParticipant< foo::bar::domain::DomainParticipant>
-		DomainParticipant;
-		}
-	}
+namespace domain {
+namespace detail {
+
+typedef dds::domain::TDomainParticipant<eprosima::fastdds::dds::domain::DomainParticipant> DomainParticipant;
+
+}	
+}
 }
 
 #endif /* OMG_DDS_DOMAIN_DETAIL_DOMAINPARTICIPANT_HPP_ */
