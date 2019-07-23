@@ -28,7 +28,7 @@ namespace dds {
 namespace core {
 namespace cond {
 
-template <typename DELEGATE>
+template<typename DELEGATE>
 class TStatusCondition;
 
 }
@@ -44,7 +44,7 @@ class TStatusCondition;
  * The enabled_statuses and its relation to Listener and WaitSet is detailed
  * in Trigger State of the StatusCondition.
  */
-template <typename DELEGATE>
+template<typename DELEGATE>
 class dds::core::cond::TStatusCondition : public dds::core::cond::TCondition<DELEGATE>
 {
     public:

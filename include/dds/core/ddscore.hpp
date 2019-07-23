@@ -12,4 +12,4 @@
 #include <dds/core/cond/StatusCondition.hpp>
 #include <dds/core/cond/WaitSet.hpp>
 
-#endif /* OMG_DDS_CORE_PACKAGE_INCLUDE_HPP_ */
+#endif // OMG_DDS_CORE_PACKAGE_INCLUDE_HPP_

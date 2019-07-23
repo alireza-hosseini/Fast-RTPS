@@ -24,8 +24,14 @@
 //TODO: Fix this file when Entity is implemented (if it does)
 //#include <fastdds/dds/core/EntityDelegate.hpp>
 
-namespace dds { namespace core { namespace detail {
-    //typedef dds::core::TEntity<eprosima::fastdds::dds::EntityDelegate> Entity;
-} } }
+namespace dds {
+namespace core {
+namespace detail {
 
-#endif /* OMG_DDS_CORE_DETAIL_ENTITY_HPP_ */
+//typedef dds::core::TEntity<eprosima::fastdds::dds::EntityDelegate> Entity;
+
+}
+}
+}
+
+#endif // OMG_DDS_CORE_DETAIL_ENTITY_HPP_

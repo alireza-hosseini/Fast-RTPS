@@ -28,7 +28,7 @@ namespace dds {
 namespace core {
 namespace cond {
 
-template <typename DELEGATE>
+template<typename DELEGATE>
 class TWaitSet;
 
 }
@@ -43,7 +43,7 @@ class TWaitSet;
  * and could be used to wait on Condition objects associated with different
  * DomainParticipant objects.
  */
-template <typename DELEGATE>
+template<typename DELEGATE>
 class dds::core::cond::TWaitSet : public dds::core::Reference<DELEGATE>
 {
     public:

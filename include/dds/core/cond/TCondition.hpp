@@ -25,7 +25,7 @@ namespace dds {
 namespace core {
 namespace cond {
 
-template <typename DELEGATE>
+template<typename DELEGATE>
 class TCondition;
 
 }
@@ -39,7 +39,7 @@ class TCondition;
  * StatusCondition (Section 7.1.2.1.9), and ReadCondition (Section 7.1.2.5.8).
  *
  */
-template <typename DELEGATE>
+template<typename DELEGATE>
 class dds::core::cond::TCondition : public dds::core::Reference<DELEGATE>
 {
     public:

@@ -1,77 +1,97 @@
-#ifndef OMG_DDS_CORE_XTYPES_TMEMBER_TYPE_HPP
-#define OMG_DDS_CORE_XTYPES_TMEMBER_TYPE_HPP
+#ifndef OMG_DDS_CORE_XTYPES_TMEMBER_TYPE_HPP_
+#define OMG_DDS_CORE_XTYPES_TMEMBER_TYPE_HPP_
 
 namespace dds {
-  namespace core {
-    namespace xtypes {
-      template <typename DELEGATE>
-      class TMemberType;
+namespace core {
+namespace xtypes {
 
-      template <typename T>
-      bool isOptional(const TMemberType<T>& m);
+template<typename DELEGATE>
+class TMemberType;
 
-      template <typename T>
-      bool isShared(const TMemberType<T>& m);
+template<typename T>
+bool isOptional(
+        const TMemberType<T>& m);
 
-      template <typename T>
-      bool isKey(const TMemberType<T>& m);
+template<typename T>
+bool isShared(
+        const TMemberType<T>& m);
 
-      template <typename T>
-      bool isMustUnderstand(const TMemberType<T>& m);
+template<typename T>
+bool isKey(
+        const TMemberType<T>& m);
 
-      template <typename T>
-      bool isBitset(const TMemberType<T>& m);
+template<typename T>
+bool isMustUnderstand(
+        const TMemberType<T>& m);
 
-      template <typename T>
-      bool hasBitbound(const TMemberType<T>& m);
+template<typename T>
+bool isBitset(
+        const TMemberType<T>& m);
 
-      template <typename T>
-      int32_t getBitbound(const TMemberType<T>& m);
+template<typename T>
+bool hasBitbound(
+        const TMemberType<T>& m);
 
-      template <typename T>
-      bool hasId(const TMemberType<T>& m);
+template<typename T>
+int32_t getBitbound(
+        const TMemberType<T>& m);
 
-      template <typename T>
-      int32_t getId(const TMemberType<T>& m);
-    }
-  }
+template<typename T>
+bool hasId(
+        const TMemberType<T>& m);
+
+template<typename T>
+int32_t getId(
+        const TMemberType<T>& m);
+
+}
+}
 }
 
 /**
  * This class represents a dynamic type member.
  */
-template <typename DELEGATE>
-class dds::core::xtypes::TMemberType : public dds::core::Reference<DELEGATE> {
-public:
-  OMG_DDS_REF_TYPE(TMemberType, dds::core::Reference, DELEGATE)
+template<typename DELEGATE>
+class dds::core::xtypes::TMemberType : public dds::core::Reference<DELEGATE>
+{
+    public:
 
-public:
-  TMemberType(const std::string& name, const dds::core::xtypes::DynamicType& type);
+    OMG_DDS_REF_TYPE(
+            TMemberType,
+            dds::core::Reference,
+            DELEGATE)
 
-  TMemberType(const std::string& name,
-      const dds::core::xtypes::DynamicType& type,
-      const Annotation& annotation
-  );
+    TMemberType(
+            const std::string& name,
+            const dds::core::xtypes::DynamicType& type);
 
-  template <typename AnnotationIter>
-  TMemberType(const std::string& name,
-          const dds::core::xtypes::DynamicType& type,
-          const AnnotationIter& begin,
-          const AnnotationIter& end);
-
-
-  TMemberType(const std::string& name,
-        const dds::core::xtypes::DynamicType& type,
-        const std::vector<Annotation>& annotations
+    TMemberType(
+            const std::string& name,
+            const dds::core::xtypes::DynamicType& type,
+            const Annotation& annotation
     );
 
-public:
-  const std::string& name() const;
-  const dds::core::xtypes::DynamicType& type() const;
+    template<typename AnnotationIter>
+    TMemberType(
+            const std::string& name,
+            const dds::core::xtypes::DynamicType& type,
+            const AnnotationIter& begin,
+            const AnnotationIter& end);
 
-public:
-  TMemberType add_annotation(const Annotation& annotation);
-  TMemberType remove_annotation(const Annotation& annotation);
+    TMemberType(
+            const std::string& name,
+            const dds::core::xtypes::DynamicType& type,
+            const std::vector<Annotation>& annotations);
+
+    const std::string& name() const;
+
+    const dds::core::xtypes::DynamicType& type() const;
+
+    TMemberType add_annotation(
+            const Annotation& annotation);
+
+    TMemberType remove_annotation(
+            const Annotation& annotation);
 };
 
-#endif /* OMG_DDS_CORE_XTYPES_TMEMBER_TYPE_HPP */
+#endif // OMG_DDS_CORE_XTYPES_TMEMBER_TYPE_HPP_

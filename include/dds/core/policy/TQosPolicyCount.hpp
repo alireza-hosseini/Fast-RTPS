@@ -25,7 +25,7 @@ namespace dds {
 namespace core {
 namespace policy {
 
-template <typename D>
+template<typename D>
 class TQosPolicyCount : public dds::core::Value<D>
 {
     public:

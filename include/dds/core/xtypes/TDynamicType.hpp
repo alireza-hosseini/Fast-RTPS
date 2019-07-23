@@ -25,66 +25,93 @@
 #include <dds/core/Reference.hpp>
 #include <dds/core/xtypes/Annotations.hpp>
 
-#if defined (OMG_DDS_X_TYPES_DYNANIC_TYPE_SUPPORT)
+#ifdef OMG_DDS_X_TYPES_DYNANIC_TYPE_SUPPORT
 
 namespace dds {
-  namespace core {
-    namespace xtypes {
-      template <typename DELEGATE>
-      class TDynamicType;
+namespace core {
+namespace xtypes {
 
-      template <typename T>
-      bool isPrimitiveType(const TDynamicType<T>& t);
+template<typename DELEGATE>
+class TDynamicType;
 
-      template <typename T>
-      bool isConstructedType(const TDynamicType<T>& t);
+template<typename T>
+bool isPrimitiveType(
+        const TDynamicType<T>& t);
 
-      template <typename T>
-      bool isCollectionType(const TDynamicType<T>& t);
+template<typename T>
+bool isConstructedType(
+        const TDynamicType<T>& t);
 
-      template <typename T>
-      bool isAggregationType(const TDynamicType<T>& t);
-    }
-  }
+template<typename T>
+bool isCollectionType(
+        const TDynamicType<T>& t);
+
+template<typename T>
+bool isAggregationType(
+        const TDynamicType<T>& t);
+
 }
-
+}
+}
 
 /**
  * Base class for all dynamic types.
  */
-template <typename DELEGATE>
-class dds::core::xtypes::TDynamicType : public dds::core::Reference<DELEGATE> {
-public:
-  OMG_DDS_REF_TYPE(TDynamicType, dds::core::Reference, DELEGATE)
+template<typename DELEGATE>
+class dds::core::xtypes::TDynamicType : public dds::core::Reference<DELEGATE>
+{
+    public:
 
-protected:
-  TDynamicType(const std::string& name, TypeKind kind);
-  TDynamicType(const std::string& name, TypeKind kind, const Annotation& annotation);
-  TDynamicType(const std::string& name, TypeKind kind, const std::vector<Annotation>& annotations);
-  template <typename FWI>
-  TDynamicType(const std::string& name, TypeKind kind, const FWI& annotation_begin, const FWI& annotation_end);
-  TDynamicType(const DyamicType& other);
-  ~TDynamicType();
-public:
-  /**
-   * Get the type kind.
-   */
-  TypeKind kind() const;
+    OMG_DDS_REF_TYPE(
+            TDynamicType,
+            dds::core::Reference,
+            DELEGATE)
 
-  /**
-   * Get the type name.
-   */
-  const std::string& name() const;
+    protected:
 
-  const std::vector<Annotation>& annotations() const;
+    TDynamicType(
+            const std::string& name,
+            TypeKind kind);
 
-public:
-  bool operator == (const DynamicType& that) const;
+    TDynamicType(
+            const std::string& name,
+            TypeKind kind,
+            const Annotation& annotation);
 
+    TDynamicType(
+            const std::string& name,
+            TypeKind kind,
+            const std::vector<Annotation>& annotations);
+
+    template<typename FWI>
+    TDynamicType(
+            const std::string& name,
+            TypeKind kind,
+            const FWI& annotation_begin,
+            const FWI& annotation_end);
+
+    TDynamicType(
+            const DyamicType& other);
+
+    ~TDynamicType();
+
+    public:
+    /**
+     * Get the type kind.
+     */
+    TypeKind kind() const;
+
+    /**
+     * Get the type name.
+     */
+    const std::string& name() const;
+
+    const std::vector<Annotation>& annotations() const;
+
+    bool operator==(
+            const DynamicType& that) const;
 };
 
+#endif // OMG_DDS_EXTENSIBLE_AND_DYNAMIC_TOPIC_TYPE_SUPPORT
 
-#endif  // defined(OMG_DDS_EXTENSIBLE_AND_DYNAMIC_TOPIC_TYPE_SUPPORT)
-
-
-#endif // !defined(OMG_DDS_CORE_XTYPES_T_DYNAMIC_TYPE_HPP_)
+#endif // OMG_DDS_CORE_XTYPES_T_DYNAMIC_TYPE_HPP_
