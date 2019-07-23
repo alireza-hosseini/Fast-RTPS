@@ -22,34 +22,51 @@
 #include <dds/core/Time.hpp>
 #include <dds/core/InstanceHandle.hpp>
 
-namespace dds { namespace topic {
-  template <typename T>
-  class TopicInstance;
-} }
+namespace dds { 
+namespace topic {
+  
+template<typename T>
+class TopicInstance;
 
-template <typename T>
-class dds::topic::TopicInstance {
-public:
-  TopicInstance();
-  TopicInstance(const ::dds::core::InstanceHandle& h);
-  TopicInstance(const ::dds::core::InstanceHandle& h, const T& the_sample);
+}
+}
 
-public:
-  operator const ::dds::core::InstanceHandle() const;
+template<typename T>
+class dds::topic::TopicInstance 
+{
+  public:
 
-  const ::dds::core::InstanceHandle handle() const;
+    TopicInstance();
 
-  void handle(const ::dds::core::InstanceHandle& h);
-  const T& sample() const;
+    TopicInstance(
+        const ::dds::core::InstanceHandle& h);
 
-  T& sample();
+    TopicInstance(
+        const ::dds::core::InstanceHandle& h, 
+        const T& the_sample);
 
-  void sample(const T& the_sample);
+  public:
 
-private:
-  ::dds::core::InstanceHandle h_;
-  T sample_;
+    operator const ::dds::core::InstanceHandle() const;
+
+    const ::dds::core::InstanceHandle handle() const;
+
+    void handle(
+        const ::dds::core::InstanceHandle& h);
+
+    const T& sample() const;
+
+    T& sample();
+
+    void sample(
+        const T& the_sample);
+
+  private:
+
+    ::dds::core::InstanceHandle h_;
+  
+    T sample_;
+
 };
-
 
 #endif /* OMG_DDS_TOPIC_TOPIC_INSTANCE_HPP_ */

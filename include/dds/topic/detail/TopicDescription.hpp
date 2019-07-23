@@ -21,14 +21,19 @@
 
 #include <string>
 
-#include <org/opensplice/core/EntityDelegate.hpp>
 #include <dds/domain/DomainParticipant.hpp>
 
-namespace dds { namespace topic { namespace detail {
-    template <typename T>
-    class TopicDescription;
+namespace dds { 
+namespace topic { 
+namespace detail {
 
-    // Vendors should provide implementation.
-} } }
+template<typename T>
+class TopicDescription;
+
+// Vendors should provide implementation.
+
+}
+}
+}
     
 #endif /* OMG_DDS_TOPIC_DETAIL_PARENT_HPP_ */

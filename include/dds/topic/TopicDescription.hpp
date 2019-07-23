@@ -22,11 +22,15 @@
 #include <dds/topic/detail/TopicDescription.hpp>
 #include <dds/topic/TTopicDescription.hpp>
 
-namespace dds { namespace topic {
-  template <typename T,
-  template <typename Q> class DELEGATE = dds::topic::detail::TopicDescription>
-  class TopicDescription;
-} }
+namespace dds { 
+namespace topic {
 
+template<
+		typename T,
+  		template <typename Q> class DELEGATE = dds::topic::detail::TopicDescription>
+class TopicDescription;
+
+}
+}
 
 #endif /* OMG_DDS_TOPIC_TOPIC_DESCRIPTION_HPP_ */

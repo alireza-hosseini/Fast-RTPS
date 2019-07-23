@@ -22,16 +22,19 @@
 #include <string>
 
 
-namespace dds { namespace topic {
+namespace dds {
+namespace topic {
 
-  /**
-   *  Allows to find Topic<T>, AnyTopic, ContentFilteredTopic<T>, etc.
-   *  This operation never results in network look-up.
-   */
-  template <typename TOPIC>
-  TOPIC
-  find(const dds::domain::DomainParticipant& dp, const std::string& topic_name);
+/**
+ *  Allows to find Topic<T>, AnyTopic, ContentFilteredTopic<T>, etc.
+ *  This operation never results in network look-up.
+ */
+template <typename TOPIC>
+TOPIC find(
+		const dds::domain::DomainParticipant& dp, 
+		const std::string& topic_name);
 
-} }
+}
+}
 
 #endif /* OMG_DDS_TOPIC_FIND_HPP_ */

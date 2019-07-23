@@ -22,11 +22,16 @@
 #include <dds/core/TEntity.hpp>
 #include <dds/topic/TopicTraits.hpp>
 
-namespace dds { namespace topic {
-  template <typename T,
-  template <typename Q> class DELEGATE>
-  class TopicDescription;
-} }
+namespace dds {
+namespace topic {
+
+template<
+    typename T,
+    template <typename Q> class DELEGATE>
+class TopicDescription;
+
+} 
+}
 
 
 /**
@@ -37,36 +42,47 @@ namespace dds { namespace topic {
  * association with a TypeSupport. TopicDescription has also a
  * name that allows it to be retrieved locally.
  */
-template <typename T, template <typename Q> class DELEGATE>
-class dds::topic::TopicDescription : public ::dds::core::TEntity< DELEGATE<T> > {
-public:
-  typedef T DataType;
+template<
+  typename T, 
+  template <typename Q> class DELEGATE>
+class dds::topic::TopicDescription : public ::dds::core::TEntity< DELEGATE<T> > 
+{
+  public:
 
-public:
-  OMG_DDS_REF_TYPE(TopicDescription, ::dds::core::TEntity, DELEGATE<T>)
+    typedef T DataType;
 
-public:
-  virtual ~TopicDescription();
+  public:
 
-public:
-  /**
-   * Get the name used to create the TopicDescription.
-   */
-  const std::string& name() const;
+    OMG_DDS_REF_TYPE(
+        TopicDescription, 
+        ::dds::core::TEntity, 
+        DELEGATE<T>)
 
-  /**
-   * The type_name used to create the TopicDescription.
-   */
-  const std::string& type_name() const;
+  public:
 
-  const dds::domain::DomainParticipant& domain_participant() const;
+    virtual ~TopicDescription();
 
-protected:
+  public:
 
-  TopicDescription(const dds::domain::DomainParticipant& dp,
-      const std::string& name,
-      const std::string& type_name = dds::topic::topic_type_name<T>::value());
+    /**
+     * Get the name used to create the TopicDescription.
+     */
+    const std::string& name() const;
+
+    /**
+     * The type_name used to create the TopicDescription.
+     */
+    const std::string& type_name() const;
+
+    const dds::domain::DomainParticipant& domain_participant() const;
+
+  protected:
+
+    TopicDescription(
+        const dds::domain::DomainParticipant& dp,
+        const std::string& name,
+        const std::string& type_name = dds::topic::topic_type_name<T>::value());
+
 };
-
 
 #endif /* OMG_DDS_T_TOPIC_TOPIC_DESCRIPTION_HPP_ */
