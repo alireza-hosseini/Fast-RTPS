@@ -1,7 +1,6 @@
 #ifndef OMG_DDS_CORE_OPTIONAL_HPP_
 #define OMG_DDS_CORE_OPTIONAL_HPP_
 
-
 /* Copyright 2010, Object Management Group, Inc.
  * Copyright 2010, PrismTech, Inc.
  * Copyright 2010, Real-Time Innovations, Inc.
@@ -20,19 +19,23 @@
  * limitations under the License.
  */
 
-namespace dds { namespace core {
+namespace dds {
+namespace core {
 
-  /**
-   * The optional class is used to wrap attributes annotated with the
-   * @optional annotation. This class provides a simple and safe way of
-   * accessing, setting and resetting the stored attribute.
-   */
-  template <typename T, template <typename Q> class DELEGATE>
-  class optional : public dds::core::Value< DELEGATE<T> > {
-  public:
+/**
+ * The optional class is used to wrap attributes annotated with the
+ * @optional annotation. This class provides a simple and safe way of
+ * accessing, setting and resetting the stored attribute.
+ */
+template<
+    typename T,
+    template<typename Q> class DELEGATE>
+class optional : public dds::core::Value< DELEGATE<T> >
+{
+    public:
+
     optional(const T& t);
 
-  public:
     /**
      * Returns true only if the attribute is set.
      */
@@ -44,15 +47,17 @@ namespace dds { namespace core {
     void reset();
 
     /**
-     *  Get the attribute. An exception is thrown if the attribute is not set.
+     *    Get the attribute. An exception is thrown if the attribute is not set.
      */
     const T& get() const;
 
     /**
-     *  Get the attribute. An exception is thrown if the attribute is not set.
+     *    Get the attribute. An exception is thrown if the attribute is not set.
      */
     T& get();
-  };
+};
 
-} }
+}
+}
+
 #endif /* OMG_DDS_CORE_OPTIONAL_HPP_ */

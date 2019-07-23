@@ -19,82 +19,130 @@
  * limitations under the License.
  */
 
-
 namespace dds {
-  namespace core {
-    template <typename D>
-    class Value;
-  }
+namespace core {
+
+template<typename D>
+class Value;
+
+}
 }
 
 /**
  * This class provides the basic behavior for Value types. 
  */
-template <typename D>
-class dds::core::Value {
-protected:
-  Value();
-  Value(const Value& p);
+template<typename D>
+class dds::core::Value
+{
+    protected:
 
-public:
-  template <typename ARG>
-  Value(const ARG& arg);
+    Value();
 
-  // -- We can't assume that the compiler supports variadic templates,
-  // -- `yet. this code should be refactored to take advantage of compier that
-  // -- do support variadic templates.
-  template <typename ARG1, typename ARG2>
-  Value(const ARG1& arg1, const ARG2& arg2);
+    Value(
+            const Value& p);
 
-  template <typename ARG1, typename ARG2, typename ARG3>
-  Value(const ARG1& arg1, const ARG2& arg2, const ARG3& arg3);
+    public:
 
-  template <typename ARG1, typename ARG2, typename ARG3, typename ARG4>
-  Value(const ARG1& arg1, const ARG2& arg2, const ARG3& arg3, const ARG4& arg4);
+    template<typename ARG>
+    Value(
+            const ARG& arg);
 
-  template <typename ARG1, typename ARG2, typename ARG3, typename ARG4, typename ARG5>
-  Value(const ARG1& arg1, const ARG2& arg2, const ARG3& arg3, const ARG4& arg4, const ARG5& arg5);
+    // -- We can't assume that the compiler supports variadic templates,
+    // -- `yet. this code should be refactored to take advantage of compier that
+    // -- do support variadic templates.
+    template<
+        typename ARG1,
+        typename ARG2>
+    Value(
+            const ARG1& arg1,
+            const ARG2& arg2);
 
-  template <typename ARG1, typename ARG2, typename ARG3, typename ARG4, typename ARG5, typename ARG6>
-  Value(const ARG1& arg1, const ARG2& arg2, const ARG3& arg3, const ARG4& arg4, const ARG5& arg5, const ARG6& arg6);
+    template<
+        typename ARG1,
+        typename ARG2,
+        typename ARG3>
+    Value(
+            const ARG1& arg1,
+            const ARG2& arg2,
+            const ARG3& arg3);
 
-public:
-  ~Value();
+    template<
+        typename ARG1,
+        typename ARG2,
+        typename ARG3,
+        typename ARG4>
+    Value(
+            const ARG1& arg1,
+            const ARG2& arg2,
+            const ARG3& arg3,
+            const ARG4& arg4);
 
-public:
-  Value& operator=(const Value& other);
+    template<
+        typename ARG1,
+        typename ARG2,
+        typename ARG3,
+        typename ARG4,
+        typename ARG5>
+    Value(
+            const ARG1& arg1,
+            const ARG2& arg2,
+            const ARG3& arg3,
+            const ARG4& arg4,
+            const ARG5& arg5);
 
-  bool operator==(const Value& other) const;
+    template<
+        typename ARG1,
+        typename ARG2,
+        typename ARG3,
+        typename ARG4,
+        typename ARG5,
+        typename ARG6>
+    Value(
+            const ARG1& arg1,
+            const ARG2& arg2,
+            const ARG3& arg3,
+            const ARG4& arg4,
+            const ARG5& arg5,
+            const ARG6& arg6);
 
-  bool operator !=(const Value& other) const;
+    ~Value();
 
-public:
-  /**
-   * Return the delegate.
-   */
-  const D* operator->() const;
+    Value& operator=(
+            const Value& other);
 
-  /**
-   * Return the delegate.
-   */
-  D* operator->();
+    bool operator==(
+            const Value& other) const;
 
-  /**
-   * Return the delegate.
-   */
-  const D& delegate() const;
+    bool operator !=(
+            const Value& other) const;
 
-  /**
-   * Return the delegate.
-   */
-  D& delegate();
+    /**
+     * Return the delegate.
+     */
+    const D* operator->() const;
 
-  operator D& ();
+    /**
+     * Return the delegate.
+     */
+    D* operator->();
 
-  operator const D& () const;
-protected:
-  D d_;
+    /**
+     * Return the delegate.
+     */
+    const D& delegate() const;
+
+    /**
+     * Return the delegate.
+     */
+    D& delegate();
+
+    operator D& ();
+
+    operator const D& () const;
+
+    protected:
+
+    D d_;
 };
 
-
-#endif /* OMG_DDS_CORE_VALUE_HPP_ */
+#endif // OMG_DDS_CORE_VALUE_HPP_

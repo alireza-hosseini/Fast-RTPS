@@ -21,16 +21,20 @@
 
 #include <dds/core/types.hpp>
 
-namespace dds { namespace core {
+namespace dds {
+namespace core {
 
-  /**
-   * This class represents a time interval.
-   */
-  class OMG_DDS_API Duration {
-  public:
+/**
+ * This class represents a time interval.
+ */
+class OMG_DDS_API Duration
+{
+    public:
+
     static const Duration zero();       // {0, 0}
+
     static const Duration infinite();   // {0x7fffffff, 0x7fffffff}
-  public:
+
     /**
      * Create a duration elapsing zero seconds.
      */
@@ -39,40 +43,61 @@ namespace dds { namespace core {
     /**
      * Create a duration elapsing a specific amount of time.
      */
-    explicit Duration(int32_t sec, uint32_t nanosec = 0);
+    explicit Duration(
+            int32_t sec,
+            uint32_t nanosec = 0);
 
     ~Duration();
 
-  public:
-    static const Duration from_microsecs(int64_t microseconds);
-    static const Duration from_millisecs(int64_t milliseconds);
-    static const Duration from_secs(double seconds);
+    static const Duration from_microsecs(
+            int64_t microseconds);
 
-  public:
+    static const Duration from_millisecs(
+            int64_t milliseconds);
+
+    static const Duration from_secs(
+            double seconds);
+
     int32_t sec() const;
-    void    sec(int32_t s);
+
+    void sec(
+            int32_t s);
 
     uint32_t nanosec() const;
-    void     nanosec(uint32_t ns);
 
-  public:
-    int compare(const Duration& that) const;
+    void nanosec(
+            uint32_t ns);
 
-    bool operator >(const Duration& that) const;
-    bool operator >=(const Duration& that) const;
+    int compare(
+            const Duration& that) const;
 
-    bool operator ==(const Duration& that) const;
+    bool operator>(
+            const Duration& that) const;
 
-    bool operator <=(const Duration& that) const;
-    bool operator <(const Duration& that) const;
+    bool operator>=(
+            const Duration& that) const;
 
-  public:
-    Duration& operator+=(const Duration &a_ti);
-    Duration& operator-=(const Duration &a_ti);
+    bool operator==(
+            const Duration& that) const;
 
-    const Duration operator +(const Duration& other) const;
-    const Duration operator -(const Duration& other) const;
-  public:
+    bool operator<=(
+            const Duration& that) const;
+
+    bool operator<(
+            const Duration& that) const;
+
+    Duration& operator+=(
+            const Duration &a_ti);
+
+    Duration& operator-=(
+            const Duration &a_ti);
+
+    const Duration operator+(
+            const Duration& other) const;
+
+    const Duration operator-(
+            const Duration& other) const;
+
     /**
      * Returns this <code>Duration</code> in milli-seconds.
      *
@@ -84,7 +109,7 @@ namespace dds { namespace core {
      * Returns this <code>Duration</code> in micro-seconds.
      *
      * @return the duration in micro-seconds
-     */    
+     */
     int64_t to_microsecs() const;
 
     /**
@@ -94,21 +119,28 @@ namespace dds { namespace core {
      */
     double to_secs() const;
 
-  private:
+    private:
+
     uint32_t sec_;
+
     uint32_t nsec_;
-  };
+};
 
-  const Duration operator *(uint32_t lhs,
-      const Duration& rhs);
+const Duration operator*(
+        uint32_t lhs,
+        const Duration& rhs);
 
-  const Duration operator *(const Duration& lhs,
-      uint32_t rhs);
+const Duration operator*(
+        const Duration& lhs,
+        uint32_t rhs);
 
 
-  const Duration operator /(const Duration& lhs,
-      uint32_t rhs);
+const Duration operator/(
+        const Duration& lhs,
+        uint32_t rhs);
 
-} } /* namespace dds / namespace core  */
-#endif /* OMG_DDS_CORE_DURATION_HPP_ */
+}
+}
+
+#endif // OMG_DDS_CORE_DURATION_HPP_
 
