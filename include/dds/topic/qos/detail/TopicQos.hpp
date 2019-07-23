@@ -20,10 +20,20 @@
  */
 
 #include <dds/core/TEntityQos.hpp>
-#include <foo/bar/topic/qos/TopicQos.hpp>
+//TODO: Fix this file when TopicQos is implemented
+//#include <foo/bar/topic/qos/TopicQos.hpp>
 
-namespace dds { namespace topic { namespace qos { namespace detail {
-	typedef ::dds::core::qos::TEntityQos< ::foo::bar::topic::qos::TopicQos> TopicQos;
-} } } }
+namespace dds { 
+namespace topic { 
+namespace qos { 
+namespace detail {
+
+//TODO: Change foo::bar and set the corresponding path of namespaces when TopicQos is implemented
+//typedef ::dds::core::qos::TEntityQos< ::foo::bar::topic::qos::TopicQos> TopicQos;
+
+}
+}
+}
+}
 
 #endif /* OMG_DDS_TOPIC_QOS_DETAIL_TOPIC_QOS_HPP_ */

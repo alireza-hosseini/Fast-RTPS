@@ -24,14 +24,19 @@
 #include <dds/topic/detail/AnyTopicDescription.hpp>
 
 
-namespace dds { namespace topic {
+namespace dds { 
+namespace topic {
 
-  class AnyTopicDescription {
+class AnyTopicDescription 
+{
   public:
-    template <typename T>
-    inline AnyTopicDescription(const dds::topic::TopicDescription<T>& t);
+
+    template<typename T>
+    inline AnyTopicDescription(
+        const dds::topic::TopicDescription<T>& t);
 
   public:
+
     const dds::domain::DomainParticipant& domain_participant() const;
 
     const std::string& name() const;
@@ -39,29 +44,40 @@ namespace dds { namespace topic {
     const std::string& type_name() const;
 
   protected:
-    inline AnyTopicDescription(detail::TDHolderBase* holder);
+
+    inline AnyTopicDescription(
+        detail::TDHolderBase* holder);
 
   public:
-    inline AnyTopicDescription& swap(AnyTopicDescription& rhs);
 
-    template <typename T>
-    AnyTopicDescription& operator =(const dds::topic::Topic<T>& rhs);
+    inline AnyTopicDescription& swap(
+        AnyTopicDescription& rhs);
 
-    inline AnyTopicDescription& operator =(const AnyTopicDescription& rhs);
+    template<typename T>
+    AnyTopicDescription& operator =(
+        const dds::topic::Topic<T>& rhs);
+
+    inline AnyTopicDescription& operator =(
+        const AnyTopicDescription& rhs);
 
   public:
-    template <typename T>
+
+    template<typename T>
     const dds::topic::TopicDescription<T>& get();
 
   public:
+
     const detail::TDHolderBase* operator->() const;
 
     detail::TDHolderBase* operator->();
 
   protected:
-    dds::core::smart_ptr_traits<detail::TDHolderBase>::ref_type holder_;
-  };
 
-}}
+    dds::core::smart_ptr_traits<detail::TDHolderBase>::ref_type holder_;
+
+};
+
+}
+}
 
 #endif /* OMG_DDS_TOPIC_ANY_TOPIC_DESCRIPTION_HPP_ */

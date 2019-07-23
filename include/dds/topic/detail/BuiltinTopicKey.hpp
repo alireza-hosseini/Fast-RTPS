@@ -19,11 +19,19 @@
  * limitations under the License.
  */
 
-#include <foo/bar/topic/BuiltinTopicKey.hpp>
+//TODO: Fix this file when BuiltinTopicKey is implemented
+//#include <foo/bar/topic/BuiltinTopicKey.hpp>
 #include <dds/topic/TBuiltinTopicKey.hpp>
 
-namespace dds { namespace topic { namespace detail {
-      typedef dds::topic::TBuiltinTopicKey<foo::bar::topic::BuiltinTopicKey> BuiltinTopicKey;
-} } }
+namespace dds { 
+namespace topic { 
+namespace detail {
+      
+//TODO: Change foo::bar and set the corresponding path of namespaces when BuiltinTopicKey is implemented
+//typedef dds::topic::TBuiltinTopicKey<foo::bar::topic::BuiltinTopicKey> BuiltinTopicKey;
+
+}
+}
+}
 
 #endif /* OMG_DDS_TOPIC_DETAIL_BUILTIN_TOPIC_KEY_HPP_ */

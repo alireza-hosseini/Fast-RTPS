@@ -29,62 +29,81 @@
 #ifdef OMG_DDS_CONTENT_SUBSCRIPTION_SUPPORT
 
 namespace dds {
-  namespace topic {
-    template <typename T, template <typename Q> class DELEGATE>
-    class ContentFilteredTopic;
-  }
+namespace topic {
+
+template<
+    typename T, 
+    template <typename Q> class DELEGATE>
+class ContentFilteredTopic;
+
+}
 }
 
 
 /**
  * This class represents a content-filtered topic.
  */
-template <typename T, template <typename Q> class DELEGATE>
-class dds::topic::ContentFilteredTopic : public TopicDescription <T, DELEGATE> {
-public:
-  OMG_DDS_REF_TYPE_T(ContentFilteredTopic, TopicDescription, T, DELEGATE)
+template<
+    typename T, 
+    template <typename Q> class DELEGATE>
+class dds::topic::ContentFilteredTopic : public TopicDescription <T, DELEGATE> 
+{
+  public:
 
-public:
-  /**
-   * Creates a <code>ContentFilteredTopic</code> be used as to
-   * perform content-based subscriptions.
-   * The ContentFilteredTopic only relates to samples published
-   * under that Topic, filtered according to their content. The
-   * filtering is done by means of evaluating a logical expression
-   * that involves the values of some of the data-fields in the sample.
-   *
-   * @param topic the related <code>Topic</code>.
-   * @param filter the filter expression.
-   *
-   */
-  ContentFilteredTopic(const Topic<T>& topic, const std::string& name, const dds::topic::Filter& filter);
+    OMG_DDS_REF_TYPE_T(
+        ContentFilteredTopic, 
+        TopicDescription, 
+        T, 
+        DELEGATE)
 
-  virtual ~ContentFilteredTopic();
+  public:
 
-public:
-  /**
-   * Get the filter expression.
-   */
-  const std::string& filter_expression() const;
+    /**
+     * Creates a <code>ContentFilteredTopic</code> be used as to
+     * perform content-based subscriptions.
+     * The ContentFilteredTopic only relates to samples published
+     * under that Topic, filtered according to their content. The
+     * filtering is done by means of evaluating a logical expression
+     * that involves the values of some of the data-fields in the sample.
+     *
+     * @param topic the related <code>Topic</code>.
+     * @param filter the filter expression.
+     *
+     */
+    ContentFilteredTopic(
+        const Topic<T>& topic, 
+        const std::string& name, 
+        const dds::topic::Filter& filter);
 
-  /**
-   * Get the filter expression parameters.
-   */
-  const dds::core::StringSeq filter_parameters() const;
+    virtual ~ContentFilteredTopic();
 
-  /**
-   * Copies the filter expression parameters into the provided container.
-   */
-  template <typename FWDIterator>
-  void filter_parameters(const FWDIterator& begin, const FWDIterator& end);
+  public:
 
-  /**
-   * Get the related topic.
-   */
-  const dds::topic::Topic<T>& topic() const;
+    /**
+     * Get the filter expression.
+     */
+    const std::string& filter_expression() const;
+
+    /**
+     * Get the filter expression parameters.
+     */
+    const dds::core::StringSeq filter_parameters() const;
+
+    /**
+     * Copies the filter expression parameters into the provided container.
+     */
+    template<typename FWDIterator>
+    void filter_parameters(
+        const FWDIterator& begin, 
+        const FWDIterator& end);
+
+    /**
+     * Get the related topic.
+     */
+    const dds::topic::Topic<T>& topic() const;
+
 };
 
 #endif  // OMG_DDS_CONTENT_SUBSCRIPTION_SUPPORT
-
 
 #endif /* OMG_DDS_T_TOPIC_CONTENT_FILTERED_TOPIC_HPP_ */

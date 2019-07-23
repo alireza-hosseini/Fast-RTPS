@@ -19,25 +19,28 @@
  * limitations under the License.
  */
 
-#include <foo/bar/topic/BuiltinTopicImpl.hpp>
+//TODO: Fix this file when BuiltinTopicImpl is implemented
+//#include <foo/bar/topic/BuiltinTopicImpl.hpp>
 #include <dds/topic/TBuiltinTopic.hpp>
 
-namespace dds { namespace topic { namespace detail {
+namespace dds { 
+namespace topic { 
+namespace detail {
     
-    typedef dds::topic::TParticipantBuiltinTopicData<foo::bar::topic::ParticipantBuiltinTopicDataImpl>
-    ParticipantBuiltinTopicData;
+//TODO: Change foo::bar and set the corresponding path of namespaces when ParticipantBuiltinTOpicDataImpl is implemented
+//typedef dds::topic::TParticipantBuiltinTopicData<foo::bar::topic::ParticipantBuiltinTopicDataImpl> ParticipantBuiltinTopicData;
     
+//TODO: Change foo::bar and set the corresponding path of namespaces when TopicBuiltinTOpicDataImpl is implemented
+//typedef dds::topic::TTopicBuiltinTopicData<foo::bar::topic::TopicBuiltinTopicDataImpl> TopicBuiltinTopicData;
     
-    typedef dds::topic::TTopicBuiltinTopicData<foo::bar::topic::TopicBuiltinTopicDataImpl>
-    TopicBuiltinTopicData;
+//TODO: Change foo::bar and set the corresponding path of namespaces when PublicationBuiltinTopicDataImpl is implemented
+//typedef dds::topic::TPublicationBuiltinTopicData<foo::bar::topic::PublicationBuiltinTopicDataImpl> PublicationBuiltinTopicData;
     
-    typedef dds::topic::TPublicationBuiltinTopicData<foo::bar::topic::PublicationBuiltinTopicDataImpl>
-    PublicationBuiltinTopicData;
-    
-    typedef dds::topic::TSubscriptionBuiltinTopicData<foo::bar::topic::SubscriptionBuiltinTopicDataImpl>
-    SubscriptionBuiltinTopicData;
+//TODO: Change foo::bar and set the corresponding path of namespaces when SubscriptionBuiltinTopicDataImpl is implemented
+//typedef dds::topic::TSubscriptionBuiltinTopicData<foo::bar::topic::SubscriptionBuiltinTopicDataImpl> SubscriptionBuiltinTopicData;
 
-} } }
-
+}
+}
+}
 
 #endif /* OMG_DDS_TOPIC_DETAIL_BUILTIN_TOPIC_HPP_ */
