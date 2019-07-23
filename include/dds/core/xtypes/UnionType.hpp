@@ -11,10 +11,10 @@ namespace dds {
 namespace core {
 namespace xtypes {
 
-template <typename DELEGATE>
+template<typename DELEGATE>
 class TUnionForwardDeclaration;
 
-template <typename T, template <typename Q> class DELEGATE = detail::UnionType >
+template<typename T, template<typename Q> class DELEGATE = detail::UnionType >
 class UnionType;
 
 }
@@ -24,7 +24,7 @@ class UnionType;
 /**
  * Declares a forward declaration for an union type.
  */
-template <typename DELEGATE>
+template<typename DELEGATE>
 class dds::core::xtypes::TUnionForwardDeclaration : public dds::core::xtypes::DynamicType<DELEGATE>
 {
     public:
@@ -33,7 +33,7 @@ class dds::core::xtypes::TUnionForwardDeclaration : public dds::core::xtypes::Dy
             const std::string& name);
 };
 
-template <
+template<
     typename T,
     typename DELEGATE>
 class dds::core::xtypes::UnionType : public dds::core::xtypes::DynamicType<DELEGATE<T> >

@@ -29,7 +29,7 @@ namespace dds {
 namespace core {
 namespace status {
 
-template <typename D>
+template<typename D>
 class TInconsistentTopicStatus : public dds::core::Value<D>
 {
     public:
@@ -41,7 +41,7 @@ class TInconsistentTopicStatus : public dds::core::Value<D>
     int32_t total_count_change() const;
 };
 
-template <typename D>
+template<typename D>
 class TSampleLostStatus : public dds::core::Value<D>
 {
     public:
@@ -54,7 +54,7 @@ class TSampleLostStatus : public dds::core::Value<D>
 };
 
 
-template <typename D>
+template<typename D>
 class TSampleRejectedStatus : public dds::core::Value<D>
 {
     public:
@@ -70,7 +70,7 @@ class TSampleRejectedStatus : public dds::core::Value<D>
     const dds::core::InstanceHandle last_instance_handle() const;
 };
 
-template <typename D>
+template<typename D>
 class TLivelinessLostStatus : public dds::core::Value<D>
 {
     public:
@@ -82,7 +82,7 @@ class TLivelinessLostStatus : public dds::core::Value<D>
     int32_t total_count_change() const;
 };
 
-template <typename D>
+template<typename D>
 class TLivelinessChangedStatus : public dds::core::Value<D>
 {
     public:
@@ -100,7 +100,7 @@ class TLivelinessChangedStatus : public dds::core::Value<D>
     const dds::core::InstanceHandle last_publication_handle() const;
 };
 
-template <typename D>
+template<typename D>
 class TOfferedDeadlineMissedStatus : public dds::core::Value<D>
 {
     public:
@@ -114,7 +114,7 @@ class TOfferedDeadlineMissedStatus : public dds::core::Value<D>
     const dds::core::InstanceHandle last_instance_handle() const;
 };
 
-template <typename D>
+template<typename D>
 class TRequestedDeadlineMissedStatus : public dds::core::Value<D>
 {
     public:
@@ -128,7 +128,7 @@ class TRequestedDeadlineMissedStatus : public dds::core::Value<D>
     const dds::core::InstanceHandle last_instance_handle() const;
 };
 
-template <typename D>
+template<typename D>
 class TOfferedIncompatibleQosStatus : public dds::core::Value<D>
 {
     public:
@@ -147,7 +147,7 @@ class TOfferedIncompatibleQosStatus : public dds::core::Value<D>
             dds::core::policy::QosPolicyCountSeq& dst) const;
 };
 
-template <typename D>
+template<typename D>
 class TRequestedIncompatibleQosStatus : public dds::core::Value<D>
 {
     public:
@@ -166,7 +166,7 @@ class TRequestedIncompatibleQosStatus : public dds::core::Value<D>
             dds::core::policy::QosPolicyCountSeq& dst) const;
 };
 
-template <typename D>
+template<typename D>
 class TPublicationMatchedStatus : public dds::core::Value<D>
 {
     public:
@@ -187,7 +187,7 @@ class TPublicationMatchedStatus : public dds::core::Value<D>
     const dds::core::InstanceHandle last_subscription_handle() const;
 };
 
-template <typename D>
+template<typename D>
 class TSubscriptionMatchedStatus : public dds::core::Value<D>
 {
     public:

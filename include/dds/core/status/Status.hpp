@@ -38,7 +38,7 @@ class DataOnReadersStatus
 };
 
 // This trait is used to get the state associated with each status
-template <typename STATUS>
+template<typename STATUS>
 StatusMask get_status();
 
 typedef ::dds::core::status::detail::InconsistentTopicStatus

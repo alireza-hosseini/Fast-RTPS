@@ -24,7 +24,7 @@
 namespace dds {
 namespace core {
 
-template <typename DELEGATE>
+template<typename DELEGATE>
 class TEntityQos;
 
 }
@@ -33,7 +33,7 @@ class TEntityQos;
 /* Acts as a container for Qos policies allowing to set and retrieve all
  * the policies of an entity as a unit.
  */
-template <typename DELEGATE>
+template<typename DELEGATE>
 class dds::core::TEntityQos : public dds::core::Value<DELEGATE>
 {
     public:
@@ -42,7 +42,7 @@ class dds::core::TEntityQos : public dds::core::Value<DELEGATE>
 
     TEntityQos(const TEntityQos& other);
 
-    template <typename T>
+    template<typename T>
     TEntityQos(
             const TEntityQos<T>& qos);
 
@@ -55,7 +55,7 @@ class dds::core::TEntityQos : public dds::core::Value<DELEGATE>
      *
      * @param p the policy to be set for this QoS instance.
      */
-    template <typename POLICY>
+    template<typename POLICY>
     TEntityQos& policy(
             const POLICY& p);
 
@@ -65,7 +65,7 @@ class dds::core::TEntityQos : public dds::core::Value<DELEGATE>
      *
      * @return
      */
-    template <typename POLICY>
+    template<typename POLICY>
     const POLICY& policy() const;
 
     /**
@@ -74,18 +74,18 @@ class dds::core::TEntityQos : public dds::core::Value<DELEGATE>
      *
      * @return
      */
-    template <typename POLICY>
+    template<typename POLICY>
     POLICY& policy();
 
-    template <typename POLICY>
+    template<typename POLICY>
     TEntityQos& operator<<(
             const POLICY& p);
 
-    template <typename POLICY>
+    template<typename POLICY>
     const TEntityQos& operator>>(
             POLICY& p) const;
 
-    template <typename T>
+    template<typename T>
     TEntityQos<DELEGATE>& operator=(
             const TEntityQos<T>& other);
 
