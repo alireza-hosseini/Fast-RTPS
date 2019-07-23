@@ -10,7 +10,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *         http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -28,13 +28,12 @@ namespace dds {
 namespace core {
 namespace cond {
 
-    template <typename DELEGATE>
-    class TWaitSet;
+template <typename DELEGATE>
+class TWaitSet;
 
 }
 }
 }
-
 
 /**
  * A WaitSet object allows an application to wait until one or more of
@@ -51,7 +50,9 @@ class dds::core::cond::TWaitSet : public dds::core::Reference<DELEGATE>
 
     typedef std::vector<dds::core::cond::Condition> ConditionSeq;
 
-    OMG_DDS_REF_TYPE(TWaitSet, dds::core::Reference, DELEGATE)
+    OMG_DDS_REF_TYPE(
+            TWaitSet,
+            dds::core::Reference, DELEGATE)
 
     /**
      * Creates a new waitset.
@@ -88,7 +89,8 @@ class dds::core::cond::TWaitSet : public dds::core::Reference<DELEGATE>
      *
      * @return a vector containing the triggered conditions
      */
-    const ConditionSeq wait(const dds::core::Duration& timeout);
+    const ConditionSeq wait(
+            const dds::core::Duration& timeout);
 
     /**
      * This operation allows an application thread to wait for the occurrence
@@ -148,7 +150,8 @@ class dds::core::cond::TWaitSet : public dds::core::Reference<DELEGATE>
      *
      * @return a vector containing the triggered conditions
      */
-    ConditionSeq& wait(ConditionSeq& triggered,
+    ConditionSeq& wait(
+            ConditionSeq& triggered,
             const dds::core::Duration& timeout);
 
     /**
@@ -179,7 +182,8 @@ class dds::core::cond::TWaitSet : public dds::core::Reference<DELEGATE>
      *
      * @return a vector containing the triggered conditions
      */
-    ConditionSeq& wait(ConditionSeq& triggered);
+    ConditionSeq& wait(
+            ConditionSeq& triggered);
 
     /**
      * Waits for at least one of the attached conditions to    trigger and then
@@ -193,17 +197,20 @@ class dds::core::cond::TWaitSet : public dds::core::Reference<DELEGATE>
      * dispatches the events, or, times out and unblocks.
      *
      */
-    void dispatch(const dds::core::Duration& timeout);
+    void dispatch(
+            const dds::core::Duration& timeout);
 
     /**
      * A synonym for attach_condition.
      */
-    WaitSet& operator +=(const dds::core::cond::Condition& cond);
+    WaitSet& operator+=(
+            const dds::core::cond::Condition& cond);
 
     /**
      * A synonym for detach_condition.
      */
-    WaitSet& operator -=(const dds::core::cond::Condition& cond);
+    WaitSet& operator-=(
+            const dds::core::cond::Condition& cond);
 
     /**
      * Attaches a Condition to the WaitSet. It is possible to attach a
@@ -215,7 +222,8 @@ class dds::core::cond::TWaitSet : public dds::core::Reference<DELEGATE>
      *
      * @param cond the condition to be attached to this waitset.
      */
-    WaitSet& attach_condition(const dds::core::cond::Condition& cond);
+    WaitSet& attach_condition(
+            const dds::core::cond::Condition& cond);
 
     /**
      * Detaches a Condition from the WaitSet. If the Condition was not
@@ -225,7 +233,8 @@ class dds::core::cond::TWaitSet : public dds::core::Reference<DELEGATE>
      * @return true if the condition was found and detached, false if the
      *                 condition was not part of the WaitSet.
      */
-    bool detach_condition(const dds::core::cond::Condition& cond);
+    bool detach_condition(
+            const dds::core::cond::Condition& cond);
 
     /**
      * This operation retrieves the list of attached conditions.
@@ -239,8 +248,8 @@ class dds::core::cond::TWaitSet : public dds::core::Reference<DELEGATE>
      *
      * @return the list of attached conditions.
      */
-    ConditionSeq& conditions(ConditionSeq& conds) const;
+    ConditionSeq& conditions(
+            ConditionSeq& conds) const;
 };
 
-#endif /* OMG_TDDS_CORE_WAIT_SET_HPP_ */
-
+#endif // OMG_TDDS_CORE_WAIT_SET_HPP_

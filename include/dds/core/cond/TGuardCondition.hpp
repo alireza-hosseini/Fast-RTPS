@@ -10,7 +10,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *         http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -26,8 +26,8 @@ namespace dds {
 namespace core {
 namespace cond {
 
-    template <typename DELEGATE>
-    class TGuardCondition;
+template <typename DELEGATE>
+class TGuardCondition;
 
 }
 }
@@ -47,7 +47,9 @@ class dds::core::cond::TGuardCondition : public TCondition<DELEGATE>
 {
     public:
 
-    OMG_DDS_REF_TYPE_NODC(TGuardCondition, TCondition, DELEGATE)
+    OMG_DDS_REF_TYPE_NODC(
+            TGuardCondition,
+            TCondition, DELEGATE)
 
     TGuardCondition();
 
@@ -57,7 +59,8 @@ class dds::core::cond::TGuardCondition : public TCondition<DELEGATE>
      * Registers a custom handler with this condition.
      */
     template <typename Functor>
-    void handler(const Functor& func);
+    void handler(
+            const Functor& func);
 
     /**
      * Resets the handler for this condition. After the invocation of this
@@ -65,8 +68,8 @@ class dds::core::cond::TGuardCondition : public TCondition<DELEGATE>
      */
     void reset_handler();
 
-    //TODO: Document this function
-    void trigger_value(bool value);
+    void trigger_value(
+            bool value);
 };
 
-#endif /* OMG_TDDS_CORE_GUARD_CONDITION_HPP_ */
+#endif // OMG_TDDS_CORE_GUARD_CONDITION_HPP_

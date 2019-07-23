@@ -10,7 +10,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *         http://www.apache.org/licenses/LICENSE-2.0
+ *     http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -28,8 +28,8 @@ namespace dds {
 namespace core {
 namespace cond {
 
-    template <typename DELEGATE>
-    class TStatusCondition;
+template <typename DELEGATE>
+class TStatusCondition;
 
 }
 }
@@ -56,7 +56,8 @@ class dds::core::cond::TStatusCondition : public dds::core::cond::TCondition<DEL
      * WaitSet Class) so that the application can wait for specific
      * status changes that affect the Entity.
      */
-    TStatusCondition(const dds::core::Entity& e);
+    TStatusCondition(
+            const dds::core::Entity& e);
 
     /**
      * This operation defines the list of communication statuses that
@@ -72,7 +73,8 @@ class dds::core::cond::TStatusCondition : public dds::core::cond::TCondition<DEL
      * @param status the enabled statuses
      */
     void
-    enabled_statuses(const ::dds::core::status::StatusMask& status) const;
+    enabled_statuses(
+            const ::dds::core::status::StatusMask& status) const;
 
     /**
      * This operation retrieves the list of communication statuses that are
@@ -84,10 +86,7 @@ class dds::core::cond::TStatusCondition : public dds::core::cond::TCondition<DEL
      */
     const ::dds::core::status::StatusMask enabled_statuses() const;
 
-    //TODO: Document this function
     const dds::core::Entity& entity() const;
 };
 
-#endif    /* OMG_DDS_CORE_T_STATUS_CONDITION_HPP_ */
-
-
+#endif // OMG_DDS_CORE_T_STATUS_CONDITION_HPP_

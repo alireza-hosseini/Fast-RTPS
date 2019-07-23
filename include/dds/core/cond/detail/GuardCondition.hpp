@@ -29,11 +29,11 @@ namespace core {
 namespace cond {
 namespace detail {
 
-    //typedef dds::core::cond::TGuardCondition<eprosima::fastdds::dds::core::cond::GuardConditionl> GuardCondition;
+//typedef dds::core::cond::TGuardCondition<eprosima::fastdds::dds::core::cond::GuardConditionl> GuardCondition;
 
 }
 }
 }
 }
 
-#endif /* OMG_DDS_CORE_DETAIL_GUARDCONDITION_HPP_ */
+#endif // OMG_DDS_CORE_DETAIL_GUARDCONDITION_HPP_

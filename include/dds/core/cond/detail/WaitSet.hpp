@@ -29,11 +29,11 @@ namespace core {
 namespace cond {
 namespace detail {
 
-    //typedef dds::core::cond::TWaitSet<eprosima::fastdds::core::cond::WaitSet> WaitSet;
+//typedef dds::core::cond::TWaitSet<eprosima::fastdds::core::cond::WaitSet> WaitSet;
 
 }
 }
 }
 }
 
-#endif /* OMG_DDS_CORE_DETAIL_WAITSET_HPP_ */
+#endif // OMG_DDS_CORE_DETAIL_WAITSET_HPP_
