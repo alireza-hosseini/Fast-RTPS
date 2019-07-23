@@ -25,46 +25,57 @@
 
 
 namespace dds { 
-  namespace sub {
+namespace sub {
 
-    class AnyDataReader;
+class AnyDataReader;
 
-    /**
-     * Extracts a typed <code>DataReader</code> from an
-     * <code>AnyDataReader</code>.
-     */
-    template <typename T>
-    DataReader<T> get(const AnyDataReader& adr);
-  }
+/**
+ * Extracts a typed <code>DataReader</code> from an
+ * <code>AnyDataReader</code>.
+ */
+template<typename T>
+DataReader<T> get(
+    const AnyDataReader& adr);
+  
+}
 }
 
-class dds::sub::AnyDataReader {
-public:
-  template <typename T>
-  AnyDataReader(const dds::sub::DataReader<T>& dr);
+class dds::sub::AnyDataReader 
+{
+  public:
 
-  inline const detail::DRHolderBase* operator->() const;
+    template<typename T>
+    AnyDataReader(
+        const dds::sub::DataReader<T>& dr);
 
-  inline detail::DRHolderBase* operator->();
+    inline const detail::DRHolderBase* operator->() const;
 
+    inline detail::DRHolderBase* operator->();
 
-public:
-  inline AnyDataReader& swap(AnyDataReader& rhs);
+  public:
 
-  template <typename T>
-  AnyDataReader& operator =(const DataReader<T>& rhs);
+    inline AnyDataReader& swap(
+        AnyDataReader& rhs);
 
-  inline AnyDataReader& operator =(AnyDataReader rhs);
+    template<typename T>
+    AnyDataReader& operator =(
+        const DataReader<T>& rhs);
 
-public:
-  /**
-   * Get a typed <code>DataReader</code> from this.
-   */
-  template <typename T>
-  dds::sub::DataReader<T> get();
+    inline AnyDataReader& operator =(
+        AnyDataReader rhs);
 
-private:
-  dds::core::smart_ptr_traits<detail::DRHolderBase>::ref_type holder_;
+  public:
+
+    /**
+     * Get a typed <code>DataReader</code> from this.
+     */
+    template<typename T>
+    dds::sub::DataReader<T> get();
+
+  private:
+
+    dds::core::smart_ptr_traits<detail::DRHolderBase>::ref_type holder_;
+    
 };
 
 #endif /* OMG_DDS_SUB_ANY_DATA_READER_HPP_ */

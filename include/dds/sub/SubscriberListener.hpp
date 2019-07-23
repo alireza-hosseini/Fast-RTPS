@@ -20,30 +20,41 @@
  */
 
 
-namespace dds { namespace sub {
+namespace dds { 
+namespace sub {
 
-
-  class SubscriberListener : public virtual AnyDataReaderListener {
+class SubscriberListener : public virtual AnyDataReaderListener 
+{
   public:
+
       typedef ::dds::core::smart_ptr_traits<SubscriberListener>::ref_type ref_type;
 
   public:
+
     virtual ~SubscriberListener();
 
   public:
-    virtual void on_data_on_readers(Subscriber& sub) = 0;
-  };
 
-  class NoOpSubscriberListener :
-  public virtual SubscriberListener,
-  public virtual NoOpAnyDataReaderListener {
+    virtual void on_data_on_readers(
+        Subscriber& sub) = 0;
+
+};
+
+class NoOpSubscriberListener :
+    public virtual SubscriberListener,
+    public virtual NoOpAnyDataReaderListener 
+{
   public:
+
     virtual ~NoOpSubscriberListener();
 
   public:
-    virtual void on_data_on_readers(Subscriber& sub);
-  };
 
-} }
+    virtual void on_data_on_readers(
+        Subscriber& sub);
+};
+
+}
+}
 
 #endif /* OMG_DDS_SUB_SUBSCRIBER_LISTENER_HPP_ */

@@ -20,11 +20,21 @@
  */
 
 #include <dds/core/TEntityQos.hpp>
-#include <foo/bar/sub/qos/DataReaderQos.hpp>
+//TODO: Fix this file when DataReaderQos is implemented
+//#include <foo/bar/sub/qos/DataReaderQos.hpp>
 
-namespace dds { namespace sub { namespace qos { namespace detail {
-	typedef ::dds::core::qos::TEntityQos< ::foo::bar::sub::qos::DataReaderQos> DataReaderQos;
-} } } }
+namespace dds { 
+namespace sub { 
+namespace qos { 
+namespace detail {
+
+//TODO: Change foo::bar and set the corresponding path of namespaces when DataReaderQos is implemented
+//typedef ::dds::core::qos::TEntityQos< ::foo::bar::sub::qos::DataReaderQos> DataReaderQos;
+
+}
+}
+}
+}
 
 
 #endif /* OMG_DDS_SUB_QOS_DETAIL_DATA_READER_QOS_HPP_ */

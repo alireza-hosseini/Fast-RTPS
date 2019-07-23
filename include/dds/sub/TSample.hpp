@@ -23,38 +23,53 @@
 #include <dds/sub/SampleInfo.hpp>
 
 namespace dds {
-  namespace sub {
-    template <typename T, template <typename Q> class DELEGATE>
-    class Sample;
-  }
+namespace sub {
+
+template<
+    typename T,
+    template <typename Q> class DELEGATE>
+class Sample;
+
+}
 }
 
 /**
  * This class encapsulate the data and meta-data associated with
  * DDS samples.
  */
-template <typename T, template <typename Q> class DELEGATE>
+template<
+    typename T, 
+    template <typename Q> class DELEGATE>
 class dds::sub::Sample : public dds::core::Value< DELEGATE<T> >
 {
-public:
-  typedef T DataType;
+  public:
+    typedef T DataType;
 
-public:
-  /**
-   * Create a sample with invalid data.
-   */
-  Sample() : dds::core::Value< DELEGATE<T> >();
+  public:
 
-  Sample(const T& data, const SampleInfo& info);
+    /**
+     * Create a sample with invalid data.
+     */
+    Sample() 
+      : dds::core::Value< DELEGATE<T> >();
 
-  Sample(const Sample& other);
+    Sample(
+        const T& data, 
+        const SampleInfo& info);
 
-  const DataType& data() const;
-  void data(const DataType& d);
+    Sample(
+        const Sample& other);
 
-  const SampleInfo& info() const;
-  void info(const SampleInfo& i);
+    const DataType& data() const;
+
+    void data(
+        const DataType& d);
+
+    const SampleInfo& info() const;
+
+    void info(
+        const SampleInfo& i);
+
 };
-
 
 #endif /* OMG_DDS_SUB_TSAMPLE_HPP_ */

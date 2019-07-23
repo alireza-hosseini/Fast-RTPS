@@ -19,14 +19,18 @@
  * limitations under the License.
  */
 #include <dds/sub/TSample.hpp>
-#include <foo/bar/sub/Sample.hpp>
+//TODO: Fix this file when Sample is implemented
+//#include <foo/bar/sub/Sample.hpp>
 
 namespace dds {
-  namespace sub {
-    namespace detail {
-      typedef dds::sub::TSample<foo::bar::sub::Sample> Sample;
-    }
-  }
+namespace sub {
+namespace detail {
+  
+//TODO: Change foo::bar and set the corresponding path of namespaces when Sample is implemented    
+//typedef dds::sub::TSample<foo::bar::sub::Sample> Sample;
+    
+}
+}
 }
 
 #endif /* OMG_DDS_PUB_DETAIL_SAMPLE_HPP_ */
