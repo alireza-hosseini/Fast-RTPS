@@ -81,7 +81,9 @@ class dds::domain::TDomainParticipant : public ::dds::core::TEntity<DELEGATE>
      *           <code>DomainParticipant</code>.
      *
      */
-    TDomainParticipant(uint32_t did) : ::dds::core::TEntity<DELEGATE>(new DELEGATE(did));
+    TDomainParticipant(
+            uint32_t did) 
+        : ::dds::core::TEntity<DELEGATE>(new DELEGATE(did));
 
     /**
      * Create a new <code>DomainParticipant</code> object.
@@ -94,7 +96,8 @@ class dds::domain::TDomainParticipant : public ::dds::core::TEntity<DELEGATE>
      * @param id the id of the domain joined by this <code>DomainParticipant</code>.
      * @param qos the QoS settings for this <code>DomainParticipant</code>
      */
-    TDomainParticipant(uint32_t id,
+    TDomainParticipant(
+        uint32_t id,
         const dds::domain::qos::DomainParticipantQos& qos,
         dds::domain::DomainParticipantListener* listener = NULL,
         const dds::core::status::StatusMask& mask = dds::core::status::StatusMask::all());

@@ -21,29 +21,36 @@
 
 
 #include <dds/topic/Topic.hpp>
-#include <foo/bar/core/EntityDelegate.hpp>
-#include <foo/bar/topic/TopicTraits.hpp>
+//TODO: Fix this file when EntityDelegate is implemented
+//#include <foo/bar/core/EntityDelegate.hpp>
+//TODO: Fix this file when TopicTraits is implemented
+//#include <foo/bar/topic/TopicTraits.hpp>
 
 
 
 namespace dds {
-	namespace pub {
+namespace pub {
 
-    	template <typename T>
-    	class DataWriterListener;
+template<typename T>
+class DataWriterListener;
 
-    	namespace detail {
-    		template <typename T>
-    			class DataWriter;
-    	}
-	}
+namespace detail {
+
+template<typename T>
+	class DataWriter;
+    	
+}
+}
 }
 
-template <typename T>
-class dds::pub::detail::DataWriter : public  foo::bar::core::EntityDelegate  {
-public:
-  // Vendor implementation should go here.
-};
+//TODO: Change foo::bar and set the corresponding path of namespaces when EntityDelegate is implemented
+/*template<typename T>
+class dds::pub::detail::DataWriter : public  foo::bar::core::EntityDelegate  
+{
+	public:
+  	// Vendor implementation should go here.
+
+};*/
 
 
 

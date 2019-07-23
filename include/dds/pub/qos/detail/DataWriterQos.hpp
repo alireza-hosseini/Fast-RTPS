@@ -20,10 +20,20 @@
  */
 
 #include <dds/core/TEntityQos.hpp>
+//TODO: Fix this file when DataWriterQos is implemented
 #include <foo/bar/pub/qos/DataWriterQos.hpp>
 
-namespace dds { namespace pub { namespace qos { namespace detail { 
-	typedef dds::core::qos::TEntityQos<foo::bar::pub::qos::DataWriterQos> DataWriterQos;
-} } } }
+namespace dds { 
+namespace pub { 
+namespace qos {
+namespace detail { 
+
+//TODO: Change foo::bar and set the corresponding path of namespaces when DataWriterQos is implemented	
+//typedef dds::core::qos::TEntityQos<foo::bar::pub::qos::DataWriterQos> DataWriterQos;
+
+}
+} 
+} 
+}
 
 #endif /* OMG_DDS_QOS_DETAIL_DATA_WRITER_QOS_HPP_ */

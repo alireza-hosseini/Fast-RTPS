@@ -22,14 +22,18 @@
 
 #include <dds/pub/DataWriter.hpp>
 
-namespace dds { namespace pub {
+namespace dds { 
+namespace pub {
 
-  template <typename T>
-  class DataWriterListener {
+template<typename T>
+class DataWriterListener 
+{
   public:
-    virtual ~DataWriterListener() { }
+
+    virtual ~DataWriterListener() {}
 
   public:
+
     virtual void on_offered_deadline_missed(
         dds::pub::DataWriter<T>& writer,
         const dds::core::status::OfferedDeadlineMissedStatus& status) = 0;
@@ -45,32 +49,36 @@ namespace dds { namespace pub {
     virtual void on_publication_matched(
         dds::pub::DataWriter<T>& writer,
         const dds::core::status::PublicationMatchedStatus& status) = 0;
-  };
+};
 
 
-  template <typename T>
-  class NoOpDataWriterListener : public virtual DataWriterListener<T> {
+template<typename T>
+class NoOpDataWriterListener : public virtual DataWriterListener<T> 
+{
   public:
+
     virtual ~NoOpDataWriterListener();
 
   public:
-    virtual void 
-    on_offered_deadline_missed(dds::pub::DataWriter<T>& writer,
+
+    virtual void on_offered_deadline_missed(
+        dds::pub::DataWriter<T>& writer,
         const dds::core::status::OfferedDeadlineMissedStatus& status);
 
-    virtual void 
-    on_offered_incompatible_qos(dds::pub::DataWriter<T> writer,
+    virtual void on_offered_incompatible_qos(
+        dds::pub::DataWriter<T> writer,
         const dds::core::status::OfferedIncompatibleQosStatus&  status);
 
-    virtual void 
-    on_liveliness_lost(dds::pub::DataWriter<T>& writer,
+    virtual void on_liveliness_lost(
+        dds::pub::DataWriter<T>& writer,
         const dds::core::status::LivelinessLostStatus& status);
 
-    virtual void 
-    on_publication_matched(dds::pub::DataWriter<T>& writer,
+    virtual void on_publication_matched(
+        dds::pub::DataWriter<T>& writer,
         const dds::core::status::PublicationMatchedStatus& status);
-  };
+};
 
-} }
+} 
+}
 
 #endif /* OMG_DDS_PUB_DATA_WRITER_LISTENER_HPP_ */

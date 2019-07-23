@@ -20,10 +20,19 @@
  */
 
 #include <dds/core/TEntityQos.hpp>
-#include <foo/bar/pub/qos/PublisherQos.hpp>
+#include <fastdds/dds/publisher/qos/PublisherQos.hpp>
 
-namespace dds { namespace pub { namespace qos { namespace detail {
-	typedef dds::core::qos::TEntityQos<foo::bar::pub::qos::PublisherQos> PublisherQos;
-} } } }
+namespace dds { 
+namespace pub { 
+namespace qos { 
+namespace detail {
+
+//TODO: Fix namespaces in PublisherQos --> dds::pub::qos::PublisherQos instead of dds::PublisherQos
+typedef dds::core::qos::TEntityQos<eprosima::fastdds::dds::PublisherQos> PublisherQos;
+
+}
+} 
+} 
+}
 
 #endif /* OMG_DDS_PUB_QOS_DETAIL_PUBLISER_QOS_HPP_ */

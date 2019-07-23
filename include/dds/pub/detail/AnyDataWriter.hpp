@@ -27,72 +27,103 @@
 // NOTE: This code is non-normative and is provided only as a guide
 // to implementor of this specification.
 
-namespace dds { namespace pub { namespace detail {
-    class DWHolderBase;
-    template <typename T> class DWHolder;
-} } }
+namespace dds { 
+namespace pub { 
+namespace detail {
 
-class dds::pub::detail::DWHolderBase {
-public:
-  virtual ~DWHolderBase() { }
+class DWHolderBase;
+template <typename T> 
+class DWHolder;
 
-    virtual const dds::pub::qos::DataWriterQos& qos() const = 0;
+}
+}
+}
 
-    virtual void qos(const ::dds::pub::qos::DataWriterQos& qos) = 0;
+class dds::pub::detail::DWHolderBase 
+{
+    public:
 
-    virtual const std::string& topic_name() const = 0;
+        virtual ~DWHolderBase() { }
 
-    virtual const std::string& type_name() const = 0;
+        virtual const dds::pub::qos::DataWriterQos& qos() const = 0;
 
-    virtual  const dds::pub::Publisher& publisher() const = 0;
+        virtual void qos(
+                const ::dds::pub::qos::DataWriterQos& qos) = 0;
 
-    virtual void wait_for_acknowledgments(const dds::core::Duration& timeout) = 0;
+        virtual const std::string& topic_name() const = 0;
 
-    virtual void close() = 0;
+        virtual const std::string& type_name() const = 0;
 
-    virtual void retain(bool b) = 0;
+        virtual  const dds::pub::Publisher& publisher() const = 0;
+
+        virtual void wait_for_acknowledgments(
+                const dds::core::Duration& timeout) = 0;
+
+        virtual void close() = 0;
+
+        virtual void retain(bool b) = 0;
 };
 
+
 template <typename T>
-class dds::pub::detail::DWHolder : public DWHolderBase {
-public:
-    DWHolder(const dds::pub::DataWriter<T>& dw) : dw_(dw) { }
-    virtual ~DWHolder() { }
-public:
-    virtual const ::dds::pub::qos::DataWriterQos& qos() const {
-        return dw_.qos();
-    }
+class dds::pub::detail::DWHolder : public DWHolderBase 
+{
+    public:
 
-    virtual void qos(const ::dds::pub::qos::DataWriterQos& the_qos) {
-    	dw_.qos(the_qos);
-    }
+        DWHolder(
+                const dds::pub::DataWriter<T>& dw) 
+            : dw_(dw) 
+        { 
+        }
 
-    virtual const std::string& topic_name() const {
-        return dw_.topic().name();
-    }
+        virtual ~DWHolder() {}
 
-    virtual const std::string& type_name() const {
-        return dw_.topic().type_name();
-    }
+    public:
 
-    virtual const ::dds::pub::Publisher& publisher() const {
-        return dw_.publisher();
-    }
+        virtual const ::dds::pub::qos::DataWriterQos& qos() const
+        {
+            return dw_.qos();
+        }
 
-  virtual void wait_for_acknowledgments(const dds::core::Duration& timeout) {
-      dw_.wait_for_acknowledgments(timeout);
-    }
+        virtual void qos(
+                const ::dds::pub::qos::DataWriterQos& the_qos) 
+        {
+        	dw_.qos(the_qos);
+        }
 
-    virtual void close() {
-        dw_.close();
-    }
+        virtual const std::string& topic_name() const 
+        {
+            return dw_.topic().name();
+        }
 
-    virtual void retain(bool b)  { }
+        virtual const std::string& type_name() const 
+        {
+            return dw_.topic().type_name();
+        }
 
-    const dds::pub::DataWriter<T>& get() const { return dw_; }
+        virtual const ::dds::pub::Publisher& publisher() const 
+        {
+            return dw_.publisher();
+        }
 
-private:
-    dds::pub::DataWriter<T> dw_;
+        virtual void wait_for_acknowledgments(
+                const dds::core::Duration& timeout) 
+        {
+          dw_.wait_for_acknowledgments(timeout);
+        }
+
+        virtual void close() 
+        {
+            dw_.close();
+        }
+
+        virtual void retain(bool b) {}
+
+        const dds::pub::DataWriter<T>& get() const { return dw_; }
+
+    private:
+        
+        dds::pub::DataWriter<T> dw_;
 };
 
 
