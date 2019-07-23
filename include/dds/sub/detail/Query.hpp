@@ -8,13 +8,18 @@
 #ifndef DDS_SUB_DETAIL_QUERY_HPP_
 #define DDS_SUB_DETAIL_QUERY_HPP_
 
-#include <foo/bar/sub/Query.hpp>
+//TODO: Fix this file when Query is implemented
+//#include <foo/bar/sub/Query.hpp>
+
 namespace dds {
-  namespace sub {
-    namespace detail {
-      typedef foo::bar::sub::Query Query;
-    }
-  }
+namespace sub {
+namespace detail {
+      
+//TODO: Change foo::bar and set the corresponding path of namespaces when Query is implemented
+//typedef foo::bar::sub::Query Query;
+
+}
+}
 }
 
 

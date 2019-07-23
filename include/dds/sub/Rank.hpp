@@ -3,9 +3,13 @@
 
 #include <dds/sub/detail/Rank.hpp>
 
-namespace dds { namespace sub { 
-  typedef detail::Rank Rank;
-} } 
+namespace dds { 
+namespace sub { 
+
+typedef detail::Rank Rank;
+
+}
+} 
 
 #endif /* OMG_DDS_SUB_RANK_HPP_ */
 

@@ -27,15 +27,16 @@
 #include <dds/sub/detail/find.hpp>
 
 
-namespace dds { namespace sub {
+namespace dds { 
+namespace sub {
 
   /**
    * Retrieves the built-in subscriber for the given domain participant.
    *
    * @param dp the domain participant.
    */
-  const dds::sub::Subscriber&
-  builtin_subscriber(const dds::domain::DomainParticipant& dp);
+  const dds::sub::Subscriber& builtin_subscriber(
+      const dds::domain::DomainParticipant& dp);
 
   /**
    * This function retrieves a previously-created DataReader
@@ -49,11 +50,14 @@ namespace dds { namespace sub {
    * at most max_size will be copied using the provided iterator.
    *
    */
-  template <typename READER, typename FwdIterator>
-  uint32_t
-  find(const dds::sub::Subscriber& sub,
+  template<
+      typename READER, 
+      typename FwdIterator>
+  uint32_t find(
+      const dds::sub::Subscriber& sub,
       const std::string& topic_name,
-      FwdIterator begin, uint32_t max_size);
+      FwdIterator begin, 
+      uint32_t max_size);
 
   /**
    * This function retrieves a previously-created DataReader
@@ -66,9 +70,11 @@ namespace dds { namespace sub {
    * @return the total number of elements found and copied over.
    *
    */
-  template <typename READER, typename BinIterator>
-  uint32_t
-  find(const dds::sub::Subscriber& sub,
+  template< 
+      typename READER, 
+      typename BinIterator>
+  uint32_t find(
+      const dds::sub::Subscriber& sub,
       const std::string& topic_name,
       BinIterator begin);
 
@@ -80,11 +86,15 @@ namespace dds { namespace sub {
    * operation on the built-in Subscriber allows access to the
    * built-in DataReader entities for the built-in topics
    */
-  template <typename READER, typename T, typename FwdIterator>
-  uint32_t
-  find(const dds::sub::Subscriber& sub,
+  template<
+      typename READER, 
+      typename T, 
+      typename FwdIterator>
+  uint32_t find(
+      const dds::sub::Subscriber& sub,
       const dds::topic::TopicDescription<T>& topic_description,
-      FwdIterator begin, uint32_t max_size);
+      FwdIterator begin, 
+      uint32_t max_size);
 
   /**
    * This function retrieves a previously-created DataReader
@@ -94,9 +104,12 @@ namespace dds { namespace sub {
    * operation on the built-in Subscriber allows access to the
    * built-in DataReader entities for the built-in topics
    */
-  template <typename READER, typename T, typename BinIterator>
-  uint32_t
-  find(const dds::sub::Subscriber& sub,
+  template<
+      typename READER, 
+      typename T, 
+      typename BinIterator>
+  uint32_t find(
+      const dds::sub::Subscriber& sub,
       const dds::topic::TopicDescription<T>& topic_description,
       BinIterator begin);
 
@@ -104,22 +117,28 @@ namespace dds { namespace sub {
    * This function retrieves a previously-created DataReader
    * belonging to the Subscriber that is in a specific state.
    */
-  template <typename READER, typename FwdIterator>
-  uint32_t
-  find(const dds::sub::Subscriber& sub,
+  template<
+      typename READER, 
+      typename FwdIterator>
+  uint32_t find(
+      const dds::sub::Subscriber& sub,
       const dds::sub::status::DataState& rs,
-      FwdIterator begin, uint32_t max_size);
+      FwdIterator begin, 
+      uint32_t max_size);
 
   /**
    * This function retrieves a previously-created DataReader
    * belonging to the Subscriber that is in a specific state.
    */
-  template <typename READER, typename BinIterator>
-  uint32_t
-  find(const dds::sub::Subscriber& sub,
+  template<
+    typename READER, 
+    typename BinIterator>
+  uint32_t find(
+      const dds::sub::Subscriber& sub,
       const dds::sub::status::DataState& rs,
       BinIterator begin);
 
-} }
+} 
+}
 
 #endif /* OMG_DDS_SUB_FIND_HPP_ */

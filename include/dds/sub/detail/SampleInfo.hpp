@@ -1,12 +1,19 @@
 #ifndef OMG_DDS_SUB_DETAIL_SAMPLE_INFO_HPP_
 #define OMG_DDS_SUB_DETAIL_SAMPLE_INFO_HPP_
 
-#include <foo/bar/sub/SampleInfo.hpp>
+#include <include/fastrtps/SampleInfo.h>
 #include <dds/sub/TSampleInfo.hpp>
 
-namespace dds { namespace sub { namespace detail {
-  typedef dds::sub::TSampleInfo<foo::bar::sub::SampleInfo> SampleInfo;
-} } }
+namespace dds { 
+namespace sub { 
+namespace detail {
+
+//TODO: Change namespaces --> fastdds::dds::sub::SampleInfo instead of fastrtps::SampleInfo
+typedef dds::sub::TSampleInfo<eprosima::fastrtps::SampleInfo> SampleInfo;
+
+}
+}
+}
 
 #endif /* OMG_DDS_SUB_DETAIL_SAMPLE_INFO_HPP_ */
 

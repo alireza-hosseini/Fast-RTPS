@@ -20,10 +20,19 @@
  */
 
 #include <dds/core/TEntityQos.hpp>
-#include <foo/bar/sub/qos/SubscriberQos.hpp>
+#include <fastdds/dds/subscriber/qos/SubscriberQos.hpp>
 
-namespace dds { namespace sub { namespace qos { namespace detail {
-	typedef ::dds::core::qos::TEntityQos< ::foo::bar::sub::qos::SubscriberQos> SubscriberQos;
-} } } }
+namespace dds { 
+namespace sub { 
+namespace qos { 
+namespace detail {
+	
+//TODO: Change namespaces --> fastdds::dds::sub::qos::SubscriberQos instead of fastdds::dds::SubscriberQos
+typedef ::dds::core::qos::TEntityQos< ::fastdds::dds::SubscriberQos> SubscriberQos;
+
+}
+}
+}
+}
 
 #endif /* OMG_DDS_SUB_QOS_DETAIL_SUBSCRIBER_QOS_HPP_ */

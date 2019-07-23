@@ -8,11 +8,14 @@
 #include <dds/sub/detail/SharedSamples.hpp>
 
 namespace dds {
-  namespace sub {
-    template <typename T,
+namespace sub {
+
+template<
+    typename T,
     template <typename Q> class DELEGATE = detail::SharedSamples>
-    class SharedSamples;
-  }
+class SharedSamples;
+
+}
 }
 
 /**
@@ -21,44 +24,48 @@ namespace dds {
  *
  *
  */
-template <typename T,
-template <typename Q> class DELEGATE>
+template<
+    typename T,
+    template <typename Q> class DELEGATE>
 class dds::sub::SharedSamples : public dds::core::Reference< DELEGATE<T> >
 {
-public:
-  typedef T                     DataType;
-  typedef typename DELEGATE<T>::iterator              iterator;
-  typedef typename DELEGATE<T>::const_iterator        const_iterator;
+  public:
 
+    typedef T DataType;
 
+    typedef typename DELEGATE<T>::iterator iterator;
 
-public:
-  /**
-   * Constructs an instance of <code>SharedSamples</code> and
-   * removes the ownership of the loan from the <code>LoanedSamples</code>.
-   * As a result the destruction of the <code>LoanedSamples</code> object
-   * or the explicit invocation of its method return_loan will have no effect
-   * on loaned data. Loaned data will be returned automatically once
-   * the delegate of this reference type will have a zero reference count.
-   *
-   * @param ls the loaned samples.
-   *
-   */
-  SharedSamples(LoanedSamples ls);
+    typedef typename DELEGATE<T>::const_iterator const_iterator;
 
-  ~SharedSamples();
+  public:
 
+    /**
+     * Constructs an instance of <code>SharedSamples</code> and
+     * removes the ownership of the loan from the <code>LoanedSamples</code>.
+     * As a result the destruction of the <code>LoanedSamples</code> object
+     * or the explicit invocation of its method return_loan will have no effect
+     * on loaned data. Loaned data will be returned automatically once
+     * the delegate of this reference type will have a zero reference count.
+     *
+     * @param ls the loaned samples.
+     *
+     */
+    SharedSamples(
+        LoanedSamples ls);
 
-public:
-  const_iterator begin() const;
+    ~SharedSamples();
 
-  const_iterator  end() const;
+  public:
+    
+    const_iterator begin() const;
 
-  const DELEGATE_REF_T& delegate() const;
+    const_iterator  end() const;
 
-  DELEGATE_REF_T& delegate();
+    const DELEGATE_REF_T& delegate() const;
 
-  uint32_t length() const;
+    DELEGATE_REF_T& delegate();
+
+    uint32_t length() const;
 
 };
 

@@ -3,11 +3,14 @@
 
 
 namespace dds {
-  namespace sub {
-    namespace detail {
-      template <typename T>
-      class SharedSamples { };
-    }
-  }
+namespace sub {
+namespace detail {
+
+template<typename T>
+class SharedSamples {};
+    
 }
+}
+}
+
 #endif /* OMG_SUB_DETAIL_SHARED_SAMPLES_HPP_ */

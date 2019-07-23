@@ -21,7 +21,7 @@
 
 
 namespace dds {
-  namespace sub {
+namespace sub {
 
     /**
      * Ignore subscriptions.
@@ -32,8 +32,9 @@ namespace dds {
      * @param handle  the <code>InstanceHandle</code> of the remote entity that
      *                has to be ignored
      */
-    void ignore(const dds::domain::DomainParticipant& dp,
-        const dds::core::InstanceHandle& handle);
+    void ignore(
+            const dds::domain::DomainParticipant& dp,
+            const dds::core::InstanceHandle& handle);
 
     /**
      * Ignore subscriptions.
@@ -44,8 +45,11 @@ namespace dds {
      * @param handle  the <code>InstanceHandle</code> of the remote entity that
      *                has to be ignored
      */
-    template <typename FwdIterator>
-    void ignore(const dds::domain::DomainParticipant& dp, FwdIterator begin, FwdIterator end);
+    template<typename FwdIterator>
+    void ignore(
+            const dds::domain::DomainParticipant& dp, 
+            FwdIterator begin, 
+            FwdIterator end);
 
 
     //==========================================================================
@@ -62,9 +66,9 @@ namespace dds {
      * “DCPSPublications” builtin topic. The operation may fail if the
      * infrastructure does not locally maintain the connectivity information.
      */
-    template <typename T>
-    const ::dds::core::InstanceHandleSeq
-    matched_publications(const dds::sub::DataReader<T>& dw);
+    template<typename T>
+    const ::dds::core::InstanceHandleSeq matched_publications(
+            const dds::sub::DataReader<T>& dw);
 
     /**
      * This operation retrieves the list of publications currently “associated”
@@ -78,10 +82,13 @@ namespace dds {
      * “DCPSPublications” builtin topic. The operation may fail if the
      * infrastructure does not locally maintain the connectivity information.
      */
-    template <typename T, typename FwdIterator>
-    ::dds::core::InstanceHandleSeq&
-     matched_publications(const dds::sub::DataReader<T>& dw,
-         FwdIterator begin, FwdIterator end);
+    template<
+            typename T, 
+            typename FwdIterator>
+    ::dds::core::InstanceHandleSeq& matched_publications(
+            const dds::sub::DataReader<T>& dw,
+            FwdIterator begin, 
+            FwdIterator end);
 
     /**
      * This operation retrieves information on a publication that is currently
@@ -98,11 +105,12 @@ namespace dds {
      * information necessary to fill in the subscription_data.
      * In this case the operation will throw UnsupportedError.
      */
-    template <typename T>
-    const dds::topic::SubscriptionBuiltinTopicData
-    matched_publications_data(const dds::sub::DataReader<T>& dw,
-        const ::dds::core::InstanceHandle& h);
+    template<typename T>
+    const dds::topic::SubscriptionBuiltinTopicData matched_publications_data(
+            const dds::sub::DataReader<T>& dw,
+            const ::dds::core::InstanceHandle& h);
 
-  }
 }
+}
+
 #endif /* OMG_DDS_SUB_DISCOVERY_HPP_ */
