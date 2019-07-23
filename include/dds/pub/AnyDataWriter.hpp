@@ -26,81 +26,94 @@
 #include <dds/pub/detail/AnyDataWriter.hpp>
 
 namespace dds {
-  namespace pub {
-    class AnyDataWriter;
+namespace pub {
 
-    /**
-     * Extracts a typed <code>DataWriter</code> from an
-     * <code>AnyDataWriter</code>.
-     *
-     */
-    template <typename T>
-    DataWriter<T> get(const AnyDataWriter& adw);
-  }
+class AnyDataWriter;
+
+/**
+ * Extracts a typed <code>DataWriter</code> from an
+ * <code>AnyDataWriter</code>.
+ *
+ */
+template<typename T>
+DataWriter<T> get(
+    const AnyDataWriter& adw);
+
+}
 }
 
 /**
  * This class provides an holder for representing a generic DDS 
  * <code>DataWriter</code>.
  */
-class dds::pub::AnyDataWriter {
-public:
-  template <typename T>
-  AnyDataWriter(const dds::pub::DataWriter<T>& dw);
+class dds::pub::AnyDataWriter 
+{
+  public:
 
-public:
-  const dds::pub::qos::DataWriterQos& qos() const;
+    template<typename T>
+    AnyDataWriter(
+        const dds::pub::DataWriter<T>& dw);
 
-  void qos(const ::dds::pub::qos::DataWriterQos& q);
+  public:
 
-  const std::string& topic_name() const;
+    const dds::pub::qos::DataWriterQos& qos() const;
 
-  const std::string& type_name() const;
+    void qos(
+        const ::dds::pub::qos::DataWriterQos& q);
 
-  const dds::pub::Publisher& publisher() const;
+    const std::string& topic_name() const;
 
-  void wait_for_acknowledgments(const dds::core::Duration& timeout);
+    const std::string& type_name() const;
 
-  void close();
+    const dds::pub::Publisher& publisher() const;
 
-  void retain(bool b);
+    void wait_for_acknowledgments(
+        const dds::core::Duration& timeout);
 
-public:
-  inline AnyDataWriter&
-  swap(AnyDataWriter& rhs);
+    void close();
 
-  template <typename T> AnyDataWriter&
-  operator =(const dds::pub::DataWriter<T>& rhs);
+    void retain(
+        bool b);
 
-  template <typename T>
-  AnyDataWriter& operator =(const AnyDataWriter& rhs);
+  public:
 
-  inline AnyDataWriter& operator =(AnyDataWriter rhs);
+    inline AnyDataWriter& swap(
+        AnyDataWriter& rhs);
 
-public:
-  /**
-   * Extracts a typed <code>DataWriter</code> from this.
-   *
-   */
-  template <typename T>
-  dds::pub::DataWriter<T> get();
+    template<typename T> AnyDataWriter& operator =(
+        const dds::pub::DataWriter<T>& rhs);
 
-public:
-  /**
-   * Direct access to methods available on the delegate. Notice that
-   * this should only be used to access proprietary extensions.
-   */
-  const detail::DWHolderBase* operator->() const;
+    template <typename T> AnyDataWriter& operator =(
+        const AnyDataWriter& rhs);
 
-  /**
-   * Direct access to methods available on the delegate. Notice that
-   * this should only be used to access proprietary extensions.
-   */
-  detail::DWHolderBase* operator->();
+    inline AnyDataWriter& operator =(
+        AnyDataWriter rhs);
 
+  public:
 
-private:
-  dds::core::smart_ptr_traits<detail::DWHolderBase>::ref_type holder_;
+    /**
+     * Extracts a typed <code>DataWriter</code> from this.
+     *
+     */
+    template <typename T> dds::pub::DataWriter<T> get();
+
+  public:
+
+    /**
+     * Direct access to methods available on the delegate. Notice that
+     * this should only be used to access proprietary extensions.
+     */
+    const detail::DWHolderBase* operator->() const;
+
+    /**
+     * Direct access to methods available on the delegate. Notice that
+     * this should only be used to access proprietary extensions.
+     */
+    detail::DWHolderBase* operator->();
+
+  private:
+
+    dds::core::smart_ptr_traits<detail::DWHolderBase>::ref_type holder_;
 };
 
 #endif /* OMG_DDS_PUB_ANY_DATA_WRITER_HPP_ */

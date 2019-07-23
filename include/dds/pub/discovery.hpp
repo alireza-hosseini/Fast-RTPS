@@ -20,7 +20,8 @@
  */
 
 
-namespace dds { namespace pub {
+namespace dds { 
+namespace pub {
 
   /**
    * Ignore publications.
@@ -31,7 +32,8 @@ namespace dds { namespace pub {
    * @param handle  the <code>InstanceHandle</code> of the remote entity that
    *                has to be ignored
    */
-  void ignore(const dds::domain::DomainParticipant& dp,
+  void ignore(
+      const dds::domain::DomainParticipant& dp,
       const dds::core::InstanceHandle& handle);
 
   /**
@@ -43,8 +45,11 @@ namespace dds { namespace pub {
    * @param handle  the <code>InstanceHandle</code> of the remote entity that
    *                has to be ignored
    */
-  template <typename FwdIterator>
-  void ignore(const dds::domain::DomainParticipant& dp, FwdIterator begin, FwdIterator end);
+  template<typename FwdIterator>
+  void ignore(
+      const dds::domain::DomainParticipant& dp, 
+      FwdIterator begin, 
+      FwdIterator end);
 
   /**
    * This operation retrieves the list of subscriptions currently "associated"
@@ -58,9 +63,9 @@ namespace dds { namespace pub {
    * "DCPSSubscriptions" builtin topic. The operation may fail if the
    * infrastructure does not locally maintain the connectivity information.
    */
-  template <typename T>
-  const ::dds::core::InstanceHandleSeq
-  matched_subscriptions(const dds::pub::DataWriter<T>& dw);
+  template<typename T>
+  const ::dds::core::InstanceHandleSeq matched_subscriptions(
+      const dds::pub::DataWriter<T>& dw);
 
   /**
    * This operation retrieves the list of subscriptions currently "associated"
@@ -74,10 +79,13 @@ namespace dds { namespace pub {
    * "DCPSSubscriptions" builtin topic. The operation may fail if the
    * infrastructure does not locally maintain the connectivity information.
    */
-  template <typename T, typename FwdIterator>
-  ::dds::core::InstanceHandleSeq&
-   matched_subscriptions(const dds::pub::DataWriter<T>& dw,
-       FwdIterator begin, FwdIterator end);
+  template<
+      typename T, 
+      typename FwdIterator>
+  ::dds::core::InstanceHandleSeq& matched_subscriptions(
+      const dds::pub::DataWriter<T>& dw,
+      FwdIterator begin, 
+      FwdIterator end);
 
   /**
    * This operation retrieves information on a subscription that is currently
@@ -94,10 +102,12 @@ namespace dds { namespace pub {
    * information necessary to fill in the subscription_data.
    * In this case the operation will throw UnsupportedError.
    */
-  template <typename T>
-  const dds::topic::SubscriptionBuiltinTopicData
-  matched_subscription_data(const dds::pub::DataWriter<T>& dw,
+  template<typename T>
+  const dds::topic::SubscriptionBuiltinTopicData matched_subscription_data(
+      const dds::pub::DataWriter<T>& dw,
       const ::dds::core::InstanceHandle& h);
 
-} }
+} 
+}
+
 #endif /* OMG_DDS_PUB_DISCOVERY_HPP_ */

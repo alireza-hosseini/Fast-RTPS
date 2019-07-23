@@ -18,7 +18,9 @@ class dds::domain::TDomainId : public dds::core::Value<DELEGATE>
 	public:
 
 	  template<typename ARG0>
-	  TDomainId(ARG0 id) : dds::core::Value<DELEGATE>(id);
+	  TDomainId(
+	  		ARG0 id) 
+	  	: dds::core::Value<DELEGATE>(id);
 
 	  template<
 	  		typename ARG0, 
