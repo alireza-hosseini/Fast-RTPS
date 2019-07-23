@@ -50,7 +50,7 @@ explicit TYPE(const DELEGATE_REF_T& ref) \
     : BASE<DELEGATE_T>(ref) \
       { } \
 \
-template <typename H__> \
+template<typename H__> \
 TYPE(const H__& h) \
 : BASE< DELEGATE_T >(h) \
 { \
@@ -66,7 +66,7 @@ TYPE(const H__& h) \
     : BASE< DELEGATE_T >(p) \
       {  }\
     public:\
-    template <typename H__> \
+    template<typename H__> \
     TYPE(const H__& h)    \
     : BASE< DELEGATE_T >(h) \
       { \
@@ -82,7 +82,7 @@ TYPE(const H__& h) \
     : BASE< T_PARAM, DELEGATE >(p) \
       {  } \
     public: \
-    template <typename H__> \
+    template<typename H__> \
     TYPE(const H__& h) \
     : BASE< T_PARAM, DELEGATE >(h) \
       { \
@@ -103,7 +103,7 @@ TYPE(const H__& h) \
     { return ::dds::core::Reference< DELEGATE >::impl_; } \
     \
     public: \
-    template <typename T__> \
+    template<typename T__> \
     TYPE& \
     operator=(const T__& rhs) { \
       OMG_DDS_STATIC_ASSERT((::dds::core::is_base_of<typename TYPE::DELEGATE_T, typename T__::DELEGATE_T>::value)); \
@@ -128,7 +128,7 @@ TYPE(const H__& h) \
     { return ::dds::core::Reference< DELEGATE< T_PARAM > >::impl_; } \
     \
     public: \
-    template <typename T__> \
+    template<typename T__> \
     TYPE& \
     operator=(const T__& rhs) { \
       OMG_DDS_STATIC_ASSERT((::dds::core::is_base_of<typename TYPE::DELEGATE_T, typename T__::DELEGATE_T>::value)); \
@@ -161,7 +161,7 @@ TYPE(const H__& h) \
     explicit TYPE(DELEGATE_T* p) \
     : BASE< DELEGATE_T >(p) \
       {  }\
-      template <typename PTR> \
+      template<typename PTR> \
       explicit TYPE(PTR* ptr) { \
         OMG_DDS_STATIC_ASSERT((::dds::core::is_base_of<typename TYPE::DELEGATE_T, PTR>::value)); \
         this->::dds::core::Reference< DELEGATE >::impl_.reset(ptr); \
@@ -171,7 +171,7 @@ TYPE(const H__& h) \
     : BASE<DELEGATE_T>(ref) \
       { } \
       \
-      template <typename H__> \
+      template<typename H__> \
       explicit TYPE(const H__& h) \
       : BASE< DELEGATE_T >(h) \
         { \
@@ -179,7 +179,7 @@ TYPE(const H__& h) \
         this->::dds::core::Reference<DELEGATE>::impl_ = h.delegate(); \
         } \
     public:\
-    template <typename T__> \
+    template<typename T__> \
     TYPE& \
     operator=(const T__& rhs) { \
       OMG_DDS_STATIC_ASSERT((::dds::core::is_base_of<typename TYPE::DELEGATE_T, typename T__::DELEGATE_T>::value)); \

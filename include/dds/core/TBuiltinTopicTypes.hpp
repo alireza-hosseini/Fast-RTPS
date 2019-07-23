@@ -5,22 +5,22 @@
 namespace dds {
 namespace core {
 
-template <typename DELEGATE>
+template<typename DELEGATE>
 class TBytesTopicType;
 
-template <typename DELEGATE>
+template<typename DELEGATE>
 class TStringTopicType;
 
-template <typename DELEGATE>
+template<typename DELEGATE>
 class TKeyedBytesTopicType;
 
-template <typename DELEGATE>
+template<typename DELEGATE>
 class TKeyedStringTopicType;
 
 }
 }
 
-template <typename DELEGATE>
+template<typename DELEGATE>
 class dds::core::TBytesTopicType
 {
     public:
@@ -37,7 +37,7 @@ class dds::core::TBytesTopicType
     void data(const std::vector<uint8_t>& bytes);
 };
 
-template <typename DELEGATE>
+template<typename DELEGATE>
 class dds::core::TStringTopicType
 {
     public:
@@ -61,7 +61,7 @@ class dds::core::TStringTopicType
  * to readily create Topics, DataReaders and DataWriters for this type.
  * No code generation is required when using this type.
  */
-template <typename DELEGATE>
+template<typename DELEGATE>
 class dds::core::TKeyedStringTopicType<DELEGATE>
 {
     public:
@@ -87,7 +87,7 @@ class dds::core::TKeyedStringTopicType<DELEGATE>
  * to readily create Topics, DataReaders and DataWriters for this type.
  * No code generation is required when using this type.
  */
-template <typename DELEGATE>
+template<typename DELEGATE>
 class dds::core::TKeyedBytesTopicType<DELEGATE>
 {
     public:

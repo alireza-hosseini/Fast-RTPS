@@ -27,7 +27,7 @@
 namespace dds {
 namespace core {
 
-template <typename DELEGATE>
+template<typename DELEGATE>
 class TEntity;
 
 }
@@ -40,7 +40,7 @@ class TEntity;
  * in what it automatically manages its resource and it can be
  * safely assigned up and down the DDS Entity type hierarchy.
  */
-template <typename DELEGATE>
+template<typename DELEGATE>
 class dds::core::TEntity : public dds::core::Reference<DELEGATE>
 {
     public:

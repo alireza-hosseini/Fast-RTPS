@@ -26,7 +26,7 @@ namespace dds {
 namespace core {
 namespace cond {
 
-template <typename DELEGATE>
+template<typename DELEGATE>
 class TGuardCondition;
 
 }
@@ -42,7 +42,7 @@ class TGuardCondition;
  * attaching the GuardCondition to the WaitSet and then setting the
  * trigger_value by means of the set trigger_value operation.
  */
-template <typename DELEGATE>
+template<typename DELEGATE>
 class dds::core::cond::TGuardCondition : public TCondition<DELEGATE>
 {
     public:
@@ -58,7 +58,7 @@ class dds::core::cond::TGuardCondition : public TCondition<DELEGATE>
     /**
      * Registers a custom handler with this condition.
      */
-    template <typename Functor>
+    template<typename Functor>
     void handler(
             const Functor& func);
 

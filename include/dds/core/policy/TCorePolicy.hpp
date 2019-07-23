@@ -41,7 +41,7 @@ namespace policy {
  * its own security policies. The use of this QoS is not limited to security,
  * rather it offers a simple, yet flexible extensibility mechanism.
  */
-template <typename D>
+template<typename D>
 class TUserData : public dds::core::Value<D>
 {
     public:
@@ -79,7 +79,7 @@ class TUserData : public dds::core::Value<D>
     /**
      * Set the value for the user data.
      */
-    template <typename OCTET_ITER>
+    template<typename OCTET_ITER>
     TUserData& value(
             OCTET_ITER begin,
             OCTET_ITER end);
@@ -105,7 +105,7 @@ class TUserData : public dds::core::Value<D>
  * similar to those of the PARTITION QoS except the decision can be made based
  * on an application-defined policy.
  */
-template <typename D>
+template<typename D>
 class TGroupData : public dds::core::Value<D>
 {
     public:
@@ -145,7 +145,7 @@ class TGroupData : public dds::core::Value<D>
     /**
      * Set the value for this <code>GroupData</code>
      */
-    template <typename OCTET_ITER>
+    template<typename OCTET_ITER>
     TGroupData& value(
             OCTET_ITER begin,
             OCTET_ITER end);
@@ -175,7 +175,7 @@ class TGroupData : public dds::core::Value<D>
  * DataReader and DataWriter as well as by means of operations such as
  * ignore_topic, these QoS can assist an application to extend the provided QoS.
  */
-template <typename D>
+template<typename D>
 class TTopicData : public dds::core::Value<D>
 {
     public:
@@ -205,7 +205,7 @@ class TTopicData : public dds::core::Value<D>
     /**
      * Set the value for the topic data.
      */
-    template <typename OCTET_ITER>
+    template<typename OCTET_ITER>
     TTopicData& value(
             OCTET_ITER begin,
             OCTET_ITER end);
@@ -242,7 +242,7 @@ class TTopicData : public dds::core::Value<D>
  * of autoenable_created_entities = TRUE means that, by default, it is not
  * necessary to explicitly call enable on newly created entities.
  */
-template <typename D>
+template<typename D>
 class TEntityFactory : public dds::core::Value<D>
 {
     public:
@@ -284,7 +284,7 @@ class TEntityFactory : public dds::core::Value<D>
  * then be used by the infrastructure when propagating the data written by
  * the DataWriter.
  */
-template <typename D>
+template<typename D>
 class TTransportPriority : public dds::core::Value<D>
 {
     public:
@@ -324,7 +324,7 @@ class TTransportPriority : public dds::core::Value<D>
  * detect it, the DataReader is allowed to use the reception timestamp instead
  * of the source timestamp in its computation of the expiration time.
  */
-template <typename D>
+template<typename D>
 class TLifespan : public dds::core::Value<D>
 {
     public:
@@ -367,7 +367,7 @@ class TLifespan : public dds::core::Value<D>
  * For these two policies to be consistent the settings must be such that
  * "deadline period>= minimum_separation".
  */
-template <typename D>
+template<typename D>
 class TDeadline : public dds::core::Value<D>
 {
     public:
@@ -389,7 +389,7 @@ class TDeadline : public dds::core::Value<D>
     const dds::core::Duration period() const;
 };
 
-template <typename D>
+template<typename D>
 class TLatencyBudget : public dds::core::Value<D>
 {
     public:
@@ -411,7 +411,7 @@ class TLatencyBudget : public dds::core::Value<D>
     const dds::core::Duration duration() const;
 };
 
-template <typename D>
+template<typename D>
 class TTimeBasedFilter : public dds::core::Value<D>
 {
     public:
@@ -433,7 +433,7 @@ class TTimeBasedFilter : public dds::core::Value<D>
     const dds::core::Duration minimum_separation() const;
 };
 
-template <typename D>
+template<typename D>
 class TPartition : public dds::core::Value<D>
 {
     public:
@@ -461,7 +461,7 @@ class TPartition : public dds::core::Value<D>
 
 #ifdef OMG_DDS_OWNERSHIP_SUPPORT
 
-template <typename D>
+template<typename D>
 class TOwnership : public dds::core::Value<D>
 {
     public:
@@ -487,7 +487,7 @@ class TOwnership : public dds::core::Value<D>
     static TOwnership Shared();
 };
 
-template <typename D>
+template<typename D>
 class TOwnershipStrength : public dds::core::Value<D>
 {
     public:
@@ -506,7 +506,7 @@ class TOwnershipStrength : public dds::core::Value<D>
 
 #endif // OMG_DDS_OWNERSHIP_SUPPORT
 
-template <typename D>
+template<typename D>
 class TWriterDataLifecycle : public dds::core::Value<D>
 {
     public:
@@ -529,7 +529,7 @@ class TWriterDataLifecycle : public dds::core::Value<D>
     static TWriterDataLifecycle ManuallyDisposeUnregisteredInstances();
 };
 
-template <typename D>
+template<typename D>
 class TReaderDataLifecycle : public dds::core::Value<D>
 {
     public:
@@ -564,7 +564,7 @@ class TReaderDataLifecycle : public dds::core::Value<D>
 };
 
 
-template <typename D>
+template<typename D>
 class TDurability : public dds::core::Value<D>
 {
     public:
@@ -594,7 +594,7 @@ class TDurability : public dds::core::Value<D>
     static TDurability Persistent();
 };
 
-template <typename D>
+template<typename D>
 class TPresentation : public dds::core::Value<D>
 {
     public:
@@ -642,7 +642,7 @@ class TPresentation : public dds::core::Value<D>
             bool ordered = false);
 };
 
-template <typename D>
+template<typename D>
 class TReliability : public dds::core::Value<D>
 {
     public:
@@ -675,7 +675,7 @@ class TReliability : public dds::core::Value<D>
     static TReliability BestEffort();
 };
 
-template <typename D>
+template<typename D>
 class TDestinationOrder : public dds::core::Value<D>
 {
     public:
@@ -701,7 +701,7 @@ class TDestinationOrder : public dds::core::Value<D>
     static TDestinationOrder ReceptionTimestamp();
 };
 
-template <typename D>
+template<typename D>
 class THistory : public dds::core::Value<D>
 {
     public:
@@ -734,7 +734,7 @@ class THistory : public dds::core::Value<D>
             uint32_t depth);
 };
 
-template <typename D>
+template<typename D>
 class TResourceLimits : public dds::core::Value<D>
 {
     public:
@@ -768,7 +768,7 @@ class TResourceLimits : public dds::core::Value<D>
     int32_t max_samples_per_instance() const;
 };
 
-template <typename D>
+template<typename D>
 class TLiveliness : public dds::core::Value<D>
 {
     public:
@@ -806,7 +806,7 @@ class TLiveliness : public dds::core::Value<D>
 
 #ifdef OMG_DDS_PERSISTENCE_SUPPORT
 
-template <typename D>
+template<typename D>
 class TDurabilityService : public dds::core::Value<D>
 {
     public:
@@ -859,7 +859,7 @@ class TDurabilityService : public dds::core::Value<D>
 
 #ifdef OMG_DDS_EXTENSIBLE_AND_DYNAMIC_TOPIC_TYPE_SUPPORT
 
-template <typename D>
+template<typename D>
 class TDataRepresentation : public dds::core::Value<D>
 {
     public:
@@ -884,7 +884,7 @@ class TDataRepresentation : public dds::core::Value<D>
             dds::core::policy::DataRepresentationIdSeq& dst) const;
 };
 
-template <typename D>
+template<typename D>
 class TTypeConsistencyEnforcement : public dds::core::Value<D>
 {
     public:

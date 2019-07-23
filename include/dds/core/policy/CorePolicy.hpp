@@ -24,13 +24,13 @@
 #include <dds/core/policy/detail/QosPolicyCount.hpp>
 
 #define OMG_DDS_POLICY_TRAITS(POLICY, ID) \
-    template <> \
+    template<> \
     class policy_id<POLICY> \
     { \
         public: \
         static const dds::core::policy::QosPolicyId value = ID; \
     }; \
-    template <> \
+    template<> \
     class policy_name<POLICY>\
     { \
         public:\
@@ -48,10 +48,10 @@ namespace dds {
 namespace core {
 namespace policy {
 
-template <typename Policy>
+template<typename Policy>
 class policy_id { };
 
-template <typename Policy>
+template<typename Policy>
 class policy_name { };
 
 #ifdef OMG_DDS_EXTENSIBLE_AND_DYNAMIC_TOPIC_TYPE_SUPPORT
@@ -102,10 +102,10 @@ typedef dds::core::policy::detail::OwnershipStrength
 typedef dds::core::policy::detail::Partition
         Partition;
 
-template <typename Policy>
+template<typename Policy>
 class policy_id;
 
-template <typename Policy>
+template<typename Policy>
 class policy_name;
 
 typedef dds::core::policy::detail::Presentation
