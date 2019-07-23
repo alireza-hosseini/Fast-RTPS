@@ -27,4 +27,4 @@
 
 #include <stdint.h>
 
-#endif /* OMG_DDS_CORE_DETAIL_INT_TYPES_HPP_ */
+#endif // OMG_DDS_CORE_DETAIL_INT_TYPES_HPP_

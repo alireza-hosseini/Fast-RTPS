@@ -23,31 +23,22 @@
 #include <boost/static_assert.hpp>
 #include <string.h>
 
-// == Constants
+// Constants
 #define OMG_DDS_DEFAULT_STATE_BIT_COUNT_DETAIL size_t(16)
 #define OMG_DDS_DEFAULT_STATUS_COUNT_DETAIL    size_t(16)
-// ==========================================================================
 
-// == Static Assert
+// Static Assert
 #define OMG_DDS_STATIC_ASSERT_DETAIL(...) static_assert(__VA_ARGS__, #__VA_ARGS__)
-// ==========================================================================
 
 // Logging Macros
 #define OMG_DDS_LOG_DETAIL(kind, msg) \
     std::cout << "[" << kind << "]: " << msg << std::endl;
-// ==========================================================================
-
 
 // DLL Export Macros
-
 #ifdef _WIN32 // This is defined for 32/64 bit Windows
-#  define OMG_DDS_API_DETAIL __declspec(dllexport)
+    #define OMG_DDS_API_DETAIL __declspec(dllexport)
 #else
-#  define OMG_DDS_API_DETAIL
+    #define OMG_DDS_API_DETAIL
 #endif
 
-// ==========================================================================
-
-
-
-#endif /* OMG_DDS_CORE_MACROS_HPP_*/
+#endif // OMG_DDS_CORE_MACROS_HPP_
