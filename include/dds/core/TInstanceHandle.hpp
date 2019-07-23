@@ -22,51 +22,55 @@
 #include <dds/core/types.hpp>
 #include <dds/core/Value.hpp>
 
-
 namespace dds {
-  namespace core {
-    template <typename DELEGATE>
-    class TInstanceHandle;
-  }
+namespace core {
+
+template<typename DELEGATE>
+class TInstanceHandle;
+
+}
 }
 
-template <typename DELEGATE>
-class dds::core::TInstanceHandle : public dds::core::Value<DELEGATE> {
-public:
-  /**
-   * Construct a nil instance handle.
-   */
-  TInstanceHandle(const dds::core::null_type& nullHandle);
+template<typename DELEGATE>
+class dds::core::TInstanceHandle : public dds::core::Value<DELEGATE>
+{
+    public:
 
-  /**
-   * Copy Constructor
-   */
-  TInstanceHandle(const TInstanceHandle& other);
+    /**
+     * Construct a nil instance handle.
+     */
+    TInstanceHandle(
+            const dds::core::null_type& nullHandle);
 
-  /**
-   * Distructor
-   */
-  ~TInstanceHandle();
+    /**
+     * Copy Constructor
+     */
+    TInstanceHandle(
+            const TInstanceHandle& other);
 
-  /**
-   * Parametric constructor for creating an instance-handle
-   * from some other type. This method is intended for internal
-   * usage.
-   */
-  template <typename ARG0>
-  TInstanceHandle(const ARG0& arg0);
+    /**
+     * Distructor
+     */
+    ~TInstanceHandle();
 
-public:
-  TInstanceHandle& operator=(const TInstanceHandle& that);
+    /**
+     * Parametric constructor for creating an instance-handle
+     * from some other type. This method is intended for internal
+     * usage.
+     */
+    template<typename ARG0>
+    TInstanceHandle(
+            const ARG0& arg0);
 
-  bool operator==(const TInstanceHandle& that) const;
+    TInstanceHandle& operator=(
+            const TInstanceHandle& that);
 
+    bool operator==(
+            const TInstanceHandle& that) const;
 
-public:
-  static const TInstanceHandle nil();
+    static const TInstanceHandle nil();
 
-  bool is_nil() const;
+    bool is_nil() const;
 };
 
-
-#endif // !defined(OMG_TDDS_CORE_INSTANCE_HANDLE_HPP_)
+#endif // OMG_TDDS_CORE_INSTANCE_HANDLE_HPP_

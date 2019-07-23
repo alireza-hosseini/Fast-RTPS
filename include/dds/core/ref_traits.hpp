@@ -23,27 +23,32 @@
  * These traits have to be provided by compliant implementations
  * to enable safe polymorphic casts.
  */
-namespace  dds { namespace core {
+namespace dds {
+namespace core {
 
-  template <typename T1, typename T2>
-  struct is_base_of;
+template<
+    typename T1,
+    typename T2>
+struct is_base_of;
 
-  template <typename T1, typename T2>
-  struct is_same;
+template<
+    typename T1,
+    typename T2>
+struct is_same;
 
-  template <typename T>
-  struct smart_ptr_traits;
+template<typename T>
+struct smart_ptr_traits;
 
-  template <typename TO, typename FROM>
-  TO  polymorphic_cast(FROM& from);
+template<
+    typename TO,
+    typename FROM>
+TO polymorphic_cast(FROM& from);
 
-
-} } /* namespace dds / namespace core */
-
+}
+}
 
 // This include should stay here as it provides implementations
 // for the declaration just above.
 #include <dds/core/detail/ref_traits.hpp>
 
-#endif /* OMG_DDS_CORE_REF_TRAITS_H_ */
-
+#endif // OMG_DDS_CORE_REF_TRAITS_H_

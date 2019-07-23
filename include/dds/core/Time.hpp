@@ -10,7 +10,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ *         http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -22,61 +22,88 @@
 #include <dds/core/types.hpp>
 
 namespace dds {
-  namespace core {
-    class Duration;
-    class Time;
-  }
+namespace core {
+
+class Duration;
+class Time;
+
+}
 }
 
-class dds::core::Time {
-public:
-  static const Time invalid();       // {-1, 0xffffffff}
+class dds::core::Time
+{
+    public:
 
-public:
-  static const Time from_microsecs(int64_t microseconds);
-  static const Time from_millisecs(int64_t milliseconds);
-  static const Time from_secs(double seconds);
+    static const Time invalid(); // {-1, 0xffffffff}
 
-public:
-  Time();
-  explicit Time(int64_t sec, uint32_t nanosec = 0);
+    static const Time from_microsecs(
+            int64_t microseconds);
 
-public:
-  int64_t sec() const;
-  void    sec(int64_t s);
+    static const Time from_millisecs(
+            int64_t milliseconds);
 
-  uint32_t nanosec() const;
-  void     nanosec(uint32_t ns);
+    static const Time from_secs(
+            double seconds);
 
-public:
-  int compare(const Time& that);
-  bool operator >(const Time& that);
-  bool operator >=(const Time& that);
+    Time();
 
-  bool operator ==(const Time& that);
+    explicit Time(
+            int64_t sec,
+            uint32_t nanosec = 0);
 
-  bool operator <=(const Time& that);
-  bool operator <(const Time& that);
+    int64_t sec() const;
 
-public:
-  Time& operator+=(const Duration& a_ti);
-  Time& operator-=(const Duration& a_ti);
+    void sec(
+            int64_t s);
 
-public:
-  int64_t to_millisecs() const;
-  void to_microsecs(int64_t microsec);
-  double to_secs() const;
+    uint32_t nanosec() const;
 
-private:
-  int64_t sec_;
-  uint32_t nsec_;
+    void nanosec(
+            uint32_t ns);
+
+    int compare(
+            const Time& that);
+
+    bool operator>(
+            const Time& that);
+
+    bool operator>=(
+            const Time& that);
+
+    bool operator==(
+            const Time& that);
+
+    bool operator<=(
+            const Time& that);
+
+    bool operator<(
+            const Time& that);
+
+    Time& operator+=(
+            const Duration& a_ti);
+
+   Time& operator-=(
+           const Duration& a_ti);
+
+    int64_t to_millisecs() const;
+
+    void to_microsecs(
+            int64_t microsec);
+
+    double to_secs() const;
+
+    private:
+
+    int64_t sec_;
+
+    uint32_t nsec_;
 };
 
 // Time arithmetic operators.
-const dds::core::Time operator +(const dds::core::Time& lhs,      const dds::core::Duration &rhs);
-const dds::core::Time operator +(const dds::core::Duration& lhs,  const dds::core::Time& rhs);
-const dds::core::Time operator -(const dds::core::Time& lhs,      const dds::core::Duration &rhs);
+const dds::core::Time operator+(const dds::core::Time& lhs, const dds::core::Duration &rhs);
 
+const dds::core::Time operator+(const dds::core::Duration& lhs, const dds::core::Time& rhs);
 
-#endif /* OMG_DDS_CORE_TIME_HPP_ */
+const dds::core::Time operator-(const dds::core::Time& lhs, const dds::core::Duration &rhs);
 
+#endif // OMG_DDS_CORE_TIME_HPP_

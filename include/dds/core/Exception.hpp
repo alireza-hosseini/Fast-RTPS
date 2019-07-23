@@ -23,194 +23,246 @@
 #include <string>
 #include <dds/core/macros.hpp>
 
-namespace dds { namespace core {
+namespace dds {
+namespace core {
 
-  /**
-   * This files contains the exceptions corresponding to DDS errors.
-   * In the DDS-PSM-Cxx in place of DDS errors the associated expcetion
-   * should be raised. Please section 7.5.5 of the DDS-PSM-C++ specification.
-   */
+/**
+ * This files contains the exceptions corresponding to DDS errors.
+ * In the DDS-PSM-Cxx in place of DDS errors the associated expcetion
+ * should be raised. Please section 7.5.5 of the DDS-PSM-C++ specification.
+ */
+class Exception
+{
+    protected:
 
-  class Exception
-  {
-  protected:
     Exception();
-  public:
+
+    public:
+
     virtual ~Exception() throw ();
 
-  public:
     virtual const char* what() const throw () = 0;
-  };
+};
 
-  class Error : public Exception, public std::exception
-  {
-  public:
+class Error : public Exception, public std::exception
+{
+    public:
+
     Error();
-    Error(const Error& src);
-  public:
+
+    Error(
+        const Error& src);
+
     virtual ~Error() throw ();
 
-  public:
     virtual const char* what() const throw ();
-  };
+};
 
+class AlreadyClosedError : public Exception, public std::logic_error
+{
+    public:
 
-  class AlreadyClosedError : public Exception, public std::logic_error
-  {
-  public:
-    explicit AlreadyClosedError(const std::string& msg);
-    AlreadyClosedError(const AlreadyClosedError& src);
+    explicit AlreadyClosedError(
+        const std::string& msg);
+
+    AlreadyClosedError(
+        const AlreadyClosedError& src);
+
     virtual ~AlreadyClosedError() throw ();
 
-  public:
     virtual const char* what() const throw ();
-  };
+};
 
+class IllegalOperationError : public Exception, public std::logic_error
+{
+    public:
 
-  class IllegalOperationError : public Exception, public std::logic_error
-  {
-  public:
-    explicit IllegalOperationError(const std::string& msg);
-    IllegalOperationError(const IllegalOperationError& src);
+    explicit IllegalOperationError(
+        const std::string& msg);
+
+    IllegalOperationError(
+        const IllegalOperationError& src);
+
     virtual ~IllegalOperationError() throw ();
 
-  public:
     virtual const char* what() const throw ();
-  };
+};
 
+class ImmutablePolicyError : public Exception, public std::logic_error
+{
+    public:
 
-  class ImmutablePolicyError : public Exception, public std::logic_error
-  {
-  public:
-    explicit ImmutablePolicyError(const std::string& msg);
-    ImmutablePolicyError(const ImmutablePolicyError& src);
+    explicit ImmutablePolicyError(
+        const std::string& msg);
+
+    ImmutablePolicyError(
+        const ImmutablePolicyError& src);
+
     virtual ~ImmutablePolicyError() throw ();
 
-  public:
     virtual const char* what() const throw ();
-  };
+};
 
+class InconsistentPolicyError : public Exception, public std::logic_error
+{
+    public:
 
-  class InconsistentPolicyError : public Exception, public std::logic_error
-  {
-  public:
-    explicit InconsistentPolicyError(const std::string& msg);
-    InconsistentPolicyError(const InconsistentPolicyError& src);
+    explicit InconsistentPolicyError(
+        const std::string& msg);
+
+    InconsistentPolicyError(
+        const InconsistentPolicyError& src);
+
     virtual ~InconsistentPolicyError() throw ();
 
-  public:
     virtual const char* what() const throw ();
-  };
+};
 
+class InvalidArgumentError : public Exception, public std::invalid_argument
+{
+    public:
 
-  class InvalidArgumentError : public Exception, public std::invalid_argument
-  {
-  public:
-    explicit InvalidArgumentError(const std::string& msg);
-    InvalidArgumentError(const InvalidArgumentError& src);
+    explicit InvalidArgumentError(
+        const std::string& msg);
+
+    InvalidArgumentError(
+        const InvalidArgumentError& src);
+
     virtual ~InvalidArgumentError() throw ();
 
-  public:
     virtual const char* what() const throw ();
-  };
+};
 
+class NotEnabledError : public Exception, public std::logic_error
+{
+    public:
 
-  class NotEnabledError : public Exception, public std::logic_error
-  {
-  public:
-    explicit NotEnabledError(const std::string& msg);
-    NotEnabledError(const NotEnabledError& src);
+    explicit NotEnabledError(
+        const std::string& msg);
+
+    NotEnabledError(
+        const NotEnabledError& src);
+
     virtual ~NotEnabledError() throw ();
 
-  public:
     virtual const char* what() const throw ();
-  };
+};
 
+class OutOfResourcesError : public Exception, public std::runtime_error
+{
+    public:
 
-  class OutOfResourcesError : public Exception, public std::runtime_error
-  {
-  public:
-    explicit OutOfResourcesError(const std::string& msg);
-    OutOfResourcesError(const OutOfResourcesError& src);
+    explicit OutOfResourcesError(
+        const std::string& msg);
+
+    OutOfResourcesError(
+        const OutOfResourcesError& src);
+
     virtual ~OutOfResourcesError() throw ();
 
-  public:
     virtual const char* what() const throw ();
-  };
+};
 
+class PreconditionNotMetError : public Exception, public std::logic_error
+{
+    public:
 
-  class PreconditionNotMetError : public Exception, public std::logic_error
-  {
-  public:
-    explicit PreconditionNotMetError(const std::string& msg) : std::logic_error(msg) { }
-    PreconditionNotMetError(const PreconditionNotMetError& src) : std::logic_error(src.what()) {}
-    virtual ~PreconditionNotMetError() throw () { }
-
-  public:
-    virtual const char* what() const throw () {
-      return this->std::logic_error::what();
+    explicit PreconditionNotMetError(
+            const std::string& msg)
+        : std::logic_error(msg)
+    {
     }
 
-  };
+    PreconditionNotMetError(
+            const PreconditionNotMetError& src)
+        : std::logic_error(src.what())
+    {
+    }
 
+    virtual ~PreconditionNotMetError() throw () {}
 
-  class TimeoutError : public Exception, public std::runtime_error
-  {
-  public:
-    explicit TimeoutError(const std::string& msg);
-    TimeoutError(const TimeoutError& src);
+    virtual const char* what() const throw ()
+    {
+        return this->std::logic_error::what();
+    }
+};
+
+class TimeoutError : public Exception, public std::runtime_error
+{
+    public:
+
+    explicit TimeoutError(
+        const std::string& msg);
+
+    TimeoutError(
+        const TimeoutError& src);
+
     virtual ~TimeoutError() throw ();
 
-  public:
     virtual const char* what() const throw ();
-  };
+};
 
+class UnsupportedError : public Exception, public std::logic_error
+{
+    public:
 
-  class UnsupportedError : public Exception, public std::logic_error
-  {
-  public:
-    explicit UnsupportedError(const std::string& msg);
-    UnsupportedError(const UnsupportedError& src);
+    explicit UnsupportedError(
+        const std::string& msg);
+
+    UnsupportedError(
+        const UnsupportedError& src);
+
     virtual ~UnsupportedError() throw ();
 
-  public:
     virtual const char* what() const throw ();
-  };
+};
 
-  class InvalidDowncastError : public Exception, public std::runtime_error
-  {
-  public:
-    explicit InvalidDowncastError(const std::string& msg);
-    InvalidDowncastError(const InvalidDowncastError& src);
+class InvalidDowncastError : public Exception, public std::runtime_error
+{
+    public:
+
+    explicit InvalidDowncastError(
+        const std::string& msg);
+
+    InvalidDowncastError(
+        const InvalidDowncastError& src);
+
     virtual ~InvalidDowncastError() throw();
 
-  public:
     virtual const char* what() const throw ();
-  };
+};
 
-  class NullReferenceError : public Exception, public std::runtime_error
-  {
-  public:
-    explicit NullReferenceError(const std::string& msg);
-    NullReferenceError(const NullReferenceError& src);
+class NullReferenceError : public Exception, public std::runtime_error
+{
+    public:
+
+    explicit NullReferenceError(
+        const std::string& msg);
+
+    NullReferenceError(
+        const NullReferenceError& src);
+
     virtual ~NullReferenceError() throw();
 
-  public:
     virtual const char* what() const throw ();
-  };
+};
 
+class InvalidDataError : public Exception, public std::logic_error
+{
+    public:
 
-  class InvalidDataError : public Exception, public std::logic_error
-  {
-  public:
-    explicit InvalidDataError(const std::string& msg);
-    InvalidDataError(const InvalidDataError& src);
+    explicit InvalidDataError(
+        const std::string& msg);
+
+    InvalidDataError(
+        const InvalidDataError& src);
+
     virtual ~InvalidDataError() throw ();
 
-  public:
     virtual const char* what() const throw ();
-  };
+};
 
-}}
+}
+}
 
-#endif /* OMG_DDS_CORE_EXCEPTION_HPP_ */
+#endif // OMG_DDS_CORE_EXCEPTION_HPP_
