@@ -31,4 +31,4 @@ typedef dds::domain::qos::detail::DomainParticipantQos DomainParticipantQos;
 } 
 }
 
-#endif /* OMG_DDS_DOMAIN_QOS_DOMAINPARTICIPANTQOS_HPP_ */
+#endif // OMG_DDS_DOMAIN_QOS_DOMAINPARTICIPANTQOS_HPP_

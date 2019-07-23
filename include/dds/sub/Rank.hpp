@@ -11,6 +11,6 @@ typedef detail::Rank Rank;
 }
 } 
 
-#endif /* OMG_DDS_SUB_RANK_HPP_ */
+#endif // OMG_DDS_SUB_RANK_HPP_
 
 

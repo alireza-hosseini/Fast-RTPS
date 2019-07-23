@@ -73,4 +73,4 @@ void ignore(
 }
 }
 
-#endif /* OMG_DDS_TOPIC_DISCOVER_HPP_ */
+#endif // OMG_DDS_TOPIC_DISCOVER_HPP_ 

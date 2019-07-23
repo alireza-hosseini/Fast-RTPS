@@ -78,4 +78,4 @@ class dds::sub::AnyDataReader
     
 };
 
-#endif /* OMG_DDS_SUB_ANY_DATA_READER_HPP_ */
+#endif // OMG_DDS_SUB_ANY_DATA_READER_HPP_

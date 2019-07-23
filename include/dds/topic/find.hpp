@@ -37,4 +37,4 @@ TOPIC find(
 }
 }
 
-#endif /* OMG_DDS_TOPIC_FIND_HPP_ */
+#endif // OMG_DDS_TOPIC_FIND_HPP_

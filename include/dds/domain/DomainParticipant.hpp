@@ -29,4 +29,4 @@ typedef dds::domain::detail::DomainParticipant DomainParticipant;
 } 
 } 
 
-#endif /* OMG_DDS_DOMAIN_DOMAINPARTICIPANT_HPP_ */
+#endif // OMG_DDS_DOMAIN_DOMAINPARTICIPANT_HPP_

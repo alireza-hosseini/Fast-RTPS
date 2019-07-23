@@ -113,4 +113,4 @@ namespace sub {
 }
 }
 
-#endif /* OMG_DDS_SUB_DISCOVERY_HPP_ */
+#endif // OMG_DDS_SUB_DISCOVERY_HPP_

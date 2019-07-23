@@ -113,4 +113,4 @@ class dds::sub::cond::QueryCondition : public dds::sub::cond::TReadCondition<det
 
 #endif  // OMG_DDS_CONTENT_SUBSCRIPTION_SUPPORT
 
-#endif /* OMG_DDS_SUB_TQUERY_CONDITION_HPP_ */
+#endif // OMG_DDS_SUB_TQUERY_CONDITION_HPP_

@@ -110,4 +110,4 @@ class dds::sub::Query: public dds::core::Value<detail::Query>
     const AnyDataReader& data_reader() const;
 };
 
-#endif /* DDS_CORE_TQUERY_HPP_ */
+#endif // DDS_CORE_TQUERY_HPP_

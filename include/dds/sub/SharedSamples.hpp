@@ -69,4 +69,4 @@ class dds::sub::SharedSamples : public dds::core::Reference< DELEGATE<T> >
 
 };
 
-#endif /* OMG_DDS_SUB_SHARED_SAMPLES_HPP_ */
+#endif // OMG_DDS_SUB_SHARED_SAMPLES_HPP_

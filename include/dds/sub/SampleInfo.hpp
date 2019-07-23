@@ -12,5 +12,5 @@ typedef detail::SampleInfo SampleInfo;
 }
 }
 
-#endif /* OMG_DDS_SUB_SAMPLE_INFO_HPP_ */
+#endif // OMG_DDS_SUB_SAMPLE_INFO_HPP_
 

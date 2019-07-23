@@ -31,4 +31,4 @@ typedef dds::pub::qos::detail:: DataWriterQos DataWriterQos;
 } 
 }
 
-#endif /* OMG_DDS_QOS_DATA_WRITER_QOS_HPP_ */
+#endif // OMG_DDS_QOS_DATA_WRITER_QOS_HPP_

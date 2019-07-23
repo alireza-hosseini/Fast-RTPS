@@ -177,4 +177,4 @@ class dds::pub::TPublisher : public dds::core::TEntity<DELEGATE>
 
 };
 
-#endif /* OMG_TDDS_PUB_PUBLISHER_HPP_ */
+#endif // OMG_TDDS_PUB_PUBLISHER_HPP_

@@ -141,4 +141,4 @@ namespace sub {
 } 
 }
 
-#endif /* OMG_DDS_SUB_FIND_HPP_ */
+#endif // OMG_DDS_SUB_FIND_HPP_

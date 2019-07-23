@@ -95,4 +95,4 @@ LoanedSamples<T, D<T> > move(
 }
 }
 
-#endif /* OMG_DDS_SUB_TLOANED_SAMPLES_HPP_ */
+#endif // OMG_DDS_SUB_TLOANED_SAMPLES_HPP_

@@ -33,4 +33,4 @@ class TopicDescription;
 }
 }
 
-#endif /* OMG_DDS_TOPIC_TOPIC_DESCRIPTION_HPP_ */
+#endif // OMG_DDS_TOPIC_TOPIC_DESCRIPTION_HPP_

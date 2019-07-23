@@ -119,4 +119,4 @@ class dds::sub::TCoherentAccess : public dds::core::Value<DELEGATE>
         const TCoherentAccess&);
 };
 
-#endif /* OMG_TDDS_SUB_TCOHERENT_ACCESS_HPP_ */
+#endif // OMG_TDDS_SUB_TCOHERENT_ACCESS_HPP_

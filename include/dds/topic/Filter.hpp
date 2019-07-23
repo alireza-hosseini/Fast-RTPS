@@ -19,4 +19,4 @@ typedef TFilter<detail::Filter> Filter;
 }
 }
 
-#endif /* DDS_TOPIC_FILTER_HPP_ */
+#endif // DDS_TOPIC_FILTER_HPP_ 

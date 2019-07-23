@@ -57,4 +57,4 @@ class NoOpSubscriberListener :
 }
 }
 
-#endif /* OMG_DDS_SUB_SUBSCRIBER_LISTENER_HPP_ */
+#endif // OMG_DDS_SUB_SUBSCRIBER_LISTENER_HPP_

@@ -16,4 +16,4 @@ namespace detail {
 }
 }
 
-#endif /*  OMG_DDS_PUB_DETAIL_COHERENT_SET_HPP_ */
+#endif //  OMG_DDS_PUB_DETAIL_COHERENT_SET_HPP_ 

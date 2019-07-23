@@ -13,4 +13,4 @@ class SharedSamples {};
 }
 }
 
-#endif /* OMG_SUB_DETAIL_SHARED_SAMPLES_HPP_ */
+#endif // OMG_SUB_DETAIL_SHARED_SAMPLES_HPP_

@@ -227,4 +227,4 @@ class dds::domain::TDomainParticipant : public ::dds::core::TEntity<DELEGATE>
 };
 
 
-#endif /* OMG_TDDS_DOMAIN_DOMAIN_PARTICIPANT_HPP_ */
+#endif // OMG_TDDS_DOMAIN_DOMAIN_PARTICIPANT_HPP_

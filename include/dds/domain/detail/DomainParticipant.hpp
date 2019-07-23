@@ -32,4 +32,4 @@ typedef dds::domain::TDomainParticipant<eprosima::fastdds::dds::domain::DomainPa
 }
 }
 
-#endif /* OMG_DDS_DOMAIN_DETAIL_DOMAINPARTICIPANT_HPP_ */
+#endif // OMG_DDS_DOMAIN_DETAIL_DOMAINPARTICIPANT_HPP_

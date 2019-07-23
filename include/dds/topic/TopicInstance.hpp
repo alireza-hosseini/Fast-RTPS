@@ -69,4 +69,4 @@ class dds::topic::TopicInstance
 
 };
 
-#endif /* OMG_DDS_TOPIC_TOPIC_INSTANCE_HPP_ */
+#endif // OMG_DDS_TOPIC_TOPIC_INSTANCE_HPP_

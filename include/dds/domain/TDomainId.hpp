@@ -37,4 +37,4 @@ class dds::domain::TDomainId : public dds::core::Value<DELEGATE>
 
 };
 
-#endif /* OMG_DDS_DOMAIN_T_DOMAIN_ID_HPP_ */
+#endif // OMG_DDS_DOMAIN_T_DOMAIN_ID_HPP_

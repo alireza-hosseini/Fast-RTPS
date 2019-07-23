@@ -30,4 +30,4 @@ typedef ::dds::sub::detail::Subscriber Subscriber;
 }
 }
 
-#endif /* OMG_DDS_SUB_SUBSCRIBER_HPP_ */
+#endif // OMG_DDS_SUB_SUBSCRIBER_HPP_

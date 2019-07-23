@@ -127,4 +127,4 @@ class dds::pub::detail::DWHolder : public DWHolderBase
 };
 
 
-#endif /* OMG_DDS_PUB_DETAIL_ANY_DATA_WRITER_HPP_ */
+#endif // OMG_DDS_PUB_DETAIL_ANY_DATA_WRITER_HPP_

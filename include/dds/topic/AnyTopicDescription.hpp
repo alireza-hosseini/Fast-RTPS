@@ -80,4 +80,4 @@ class AnyTopicDescription
 }
 }
 
-#endif /* OMG_DDS_TOPIC_ANY_TOPIC_DESCRIPTION_HPP_ */
+#endif // OMG_DDS_TOPIC_ANY_TOPIC_DESCRIPTION_HPP_

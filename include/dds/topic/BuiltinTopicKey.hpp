@@ -29,4 +29,4 @@ typedef dds::topic::detail::BuiltinTopicKey BuiltinTopicKey;
 }
 }
 
-#endif /* OMG_DDS_TOPIC_BUILTIN_TOPIC_KEY_HPP_ */
+#endif // OMG_DDS_TOPIC_BUILTIN_TOPIC_KEY_HPP_

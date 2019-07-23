@@ -44,4 +44,4 @@ class dds::topic::TBuiltinTopicKey : public ::dds::core::Value<D>
   		
 };
 
-#endif /* OMG_DDS_TOPIC_TBUILTIN_TOPIC_KEY_HPP_ */
+#endif // OMG_DDS_TOPIC_TBUILTIN_TOPIC_KEY_HPP_

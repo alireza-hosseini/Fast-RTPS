@@ -36,4 +36,4 @@ namespace detail {
 }
 }
 
-#endif /* OMG_DDS_TOPIC_QOS_DETAIL_TOPIC_QOS_HPP_ */
+#endif // OMG_DDS_TOPIC_QOS_DETAIL_TOPIC_QOS_HPP_

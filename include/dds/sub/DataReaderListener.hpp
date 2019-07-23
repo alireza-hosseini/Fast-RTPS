@@ -116,4 +116,4 @@ class dds::sub::NoOpDataReaderListener : public virtual DataReaderListener<T>
         const dds::core::status::SampleLostStatus& status);
 };
 
-#endif /* OMG_DDS_SUB_DATA_READER_LISTENER_HPP_ */
+#endif // OMG_DDS_SUB_DATA_READER_LISTENER_HPP_

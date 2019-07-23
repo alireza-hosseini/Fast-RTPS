@@ -35,4 +35,4 @@ typedef dds::core::qos::TEntityQos<eprosima::fastdds::dds::PublisherQos> Publish
 } 
 }
 
-#endif /* OMG_DDS_PUB_QOS_DETAIL_PUBLISER_QOS_HPP_ */
+#endif // OMG_DDS_PUB_QOS_DETAIL_PUBLISER_QOS_HPP_

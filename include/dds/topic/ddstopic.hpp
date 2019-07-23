@@ -8,4 +8,4 @@
 #include <dds/topic/ContentFilteredTopic.hpp>
 
 
-#endif /* OMG_DDS_TOPIC_PACKAGE_INCLUDE_HPP_ */
+#endif // OMG_DDS_TOPIC_PACKAGE_INCLUDE_HPP_

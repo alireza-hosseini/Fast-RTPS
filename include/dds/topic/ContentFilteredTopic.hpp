@@ -33,4 +33,4 @@ class ContentFilteredTopic;
 }
 }
 
-#endif /* OMG_DDS_TOPIC_CONTENT_FILTERED_TOPIC_HPP_ */
+#endif // OMG_DDS_TOPIC_CONTENT_FILTERED_TOPIC_HPP_

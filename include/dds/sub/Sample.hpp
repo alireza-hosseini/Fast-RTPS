@@ -29,4 +29,4 @@ typedef detail::Sample Sample;
 }
 }
 
-#endif /* OMG_DDS_SUB_SAMPLE_HPP_ */
+#endif // OMG_DDS_SUB_SAMPLE_HPP_

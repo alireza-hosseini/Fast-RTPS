@@ -29,4 +29,4 @@ typedef dds::pub::detail::Publisher Publisher;
 }
 }
 
-#endif /* OMG_DDS_PUB_PUBLISHER_HPP_ */
+#endif // OMG_DDS_PUB_PUBLISHER_HPP_

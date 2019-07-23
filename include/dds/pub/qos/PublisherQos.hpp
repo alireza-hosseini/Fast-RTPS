@@ -31,4 +31,4 @@ typedef dds::pub::qos::detail::PublisherQos PublisherQos;
 }
 } 
 
-#endif /* OMG_DDS_QOS_PUBLISER_QOS_HPP_ */
+#endif // OMG_DDS_QOS_PUBLISER_QOS_HPP_ 

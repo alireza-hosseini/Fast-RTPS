@@ -300,4 +300,4 @@ class dds::topic::TSubscriptionBuiltinTopicData  : public ::dds::core::Value<D>
 
 };
 
-#endif /* OMG_TDDS_TOPIC_BUILT_IN_TOPIC_HPP_ */
+#endif // OMG_TDDS_TOPIC_BUILT_IN_TOPIC_HPP_

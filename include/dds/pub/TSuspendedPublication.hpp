@@ -84,4 +84,4 @@ class dds::pub::TSuspendedPublication : public dds::core::Value<DELEGATE>
 };
 
 
-#endif /* OMG_TDDS_PUB_SUSPENDED_PUBLICATION_HPP_ */
+#endif // OMG_TDDS_PUB_SUSPENDED_PUBLICATION_HPP_

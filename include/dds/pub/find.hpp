@@ -71,4 +71,4 @@ namespace pub {
 } 
 }
 
-#endif /* OMG_DDS_PUB_FIND_HPP_ */
+#endif // OMG_DDS_PUB_FIND_HPP_

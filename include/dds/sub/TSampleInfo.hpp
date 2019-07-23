@@ -44,4 +44,4 @@ class dds::sub::TSampleInfo : dds::core::Value<DELEGATE>
     
 };
 
-#endif /* OMG_DDS_SUB_TSAMPLE_INFO_HPP_ */
+#endif // OMG_DDS_SUB_TSAMPLE_INFO_HPP_

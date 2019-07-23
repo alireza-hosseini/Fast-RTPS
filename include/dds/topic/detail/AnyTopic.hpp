@@ -40,4 +40,4 @@ class THolder;
 }
 }
 
-#endif /* OMG_DDS_TOPIC_DETAIL_ANY_TOPIC_HPP_ */
+#endif // OMG_DDS_TOPIC_DETAIL_ANY_TOPIC_HPP_

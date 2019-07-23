@@ -11,5 +11,5 @@ typedef detail::GenerationCount GenerationCount;
 }
 }
 
-#endif /* OMG_DDS_SUB_GENERATION_COUNT_HPP_ */
+#endif // OMG_DDS_SUB_GENERATION_COUNT_HPP_
 

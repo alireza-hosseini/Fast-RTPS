@@ -29,4 +29,4 @@ typedef dds::pub::detaul::SuspendedPublication SuspendedPublication;
 } 
 } 
 
-#endif /* OMG_DDS_PUB_SUSPENDED_PUBLICATION_HPP_ */
+#endif // OMG_DDS_PUB_SUSPENDED_PUBLICATION_HPP_

@@ -106,4 +106,4 @@ class NoOpAnyDataReaderListener : public virtual AnyDataReaderListener
 }
 }
 
-#endif /* OMG_DDS_SUB_ANY_DATA_READER_LISTENER_HPP_ */
+#endif // OMG_DDS_SUB_ANY_DATA_READER_LISTENER_HPP_

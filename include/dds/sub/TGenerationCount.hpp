@@ -31,4 +31,4 @@ class dds::sub::TGenerationCount : public dds::core::Value<DELEGATE>
 
 };
 
-#endif /*  OMG_DDS_SUB_T_GENERATION_COUNT_HPP_ */
+#endif //  OMG_DDS_SUB_T_GENERATION_COUNT_HPP_
