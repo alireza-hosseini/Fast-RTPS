@@ -26,11 +26,13 @@
 //#include <fastdds/dds/core/QosProvider>
 
 namespace dds {
-   namespace core {
-      namespace detail {
-         //typedef dds::core::TQosProvider<eprosima::fastdds::dds::core::QosProvider> QosProvider;
-      }
-   }
+namespace core {
+namespace detail {
+
+//typedef dds::core::TQosProvider<eprosima::fastdds::dds::core::QosProvider> QosProvider;
+
+}
+}
 }
 
-#endif /* OMG_DDS_CORE_DETAIL_QOS_PROVIDER_HPP_ */
+#endif // OMG_DDS_CORE_DETAIL_QOS_PROVIDER_HPP_
