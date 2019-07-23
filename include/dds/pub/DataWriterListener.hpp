@@ -30,7 +30,9 @@ class DataWriterListener
 {
   public:
 
-    virtual ~DataWriterListener() {}
+    virtual ~DataWriterListener() 
+    {
+    }
 
   public:
 

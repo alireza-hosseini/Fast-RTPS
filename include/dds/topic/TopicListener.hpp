@@ -47,7 +47,10 @@ class NoOpTopicListener : public virtual TopicListener<T> {
 
     virtual void on_inconsistent_topic(
         Topic<T>& topic,
-        const dds::core::status::InconsistentTopicStatus& status) { }
+        const dds::core::status::InconsistentTopicStatus& status) 
+    {
+    }
+    
 };
 
 }

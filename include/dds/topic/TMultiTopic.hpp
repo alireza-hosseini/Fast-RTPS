@@ -66,7 +66,7 @@ class MultiTopic : public TopicDescription <T, DELEGATE>
 
     dds::core::StringSeq void expression_parameters() const;
 
-  };
+};
 
 #endif  // OMG_DDS_MULTI_TOPIC_SUPPORT
 
