@@ -23,7 +23,6 @@
 
 #include <dds/pub/detail/find.hpp>
 
-
 namespace dds {
 namespace pub {
 

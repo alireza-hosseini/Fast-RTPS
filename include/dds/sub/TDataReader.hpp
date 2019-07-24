@@ -241,7 +241,6 @@ class dds::sub::DataReader : public dds::core::TEntity< DELEGATE<T> >
         const dds::sub::Subscriber& sub,
         const ::dds::topic::MultiTopic<T>& topic);
 
-
     /**
      * Create a <code>DataReader</code> for a <code>MultiTopic</code>.
      * This <code>DataReader</code> will only receive that data that mathes the
@@ -303,7 +302,6 @@ class dds::sub::DataReader : public dds::core::TEntity< DELEGATE<T> >
     ManipulatorSelector operator >> (
         Functor f);
 
-
     ///////////////////////////////////////////////////////////////////////
   public:
     //== Loan Read/Take API ==================================================
@@ -357,7 +355,6 @@ class dds::sub::DataReader : public dds::core::TEntity< DELEGATE<T> >
     uint32_t take(
         SamplesFWIterator sfit,
         uint32_t max_samples);
-
 
     // --- Back-Inserting Iterators: --- //
 

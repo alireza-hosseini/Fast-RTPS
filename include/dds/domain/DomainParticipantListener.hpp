@@ -23,7 +23,6 @@
 #include <dds/sub/SubscriberListener.hpp>
 #include <dds/topic/AnyTopicListener.hpp>
 
-
 namespace dds {
 namespace domain {
 
@@ -39,7 +38,6 @@ class DomainParticipantListener :
     }
 
 };
-
 
 class NoOpDomainParticipantListener :
     public virtual DomainParticipantListener,

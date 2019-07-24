@@ -39,7 +39,6 @@ class ContentFilteredTopic;
 }
 }
 
-
 /**
  * This class represents a content-filtered topic.
  */

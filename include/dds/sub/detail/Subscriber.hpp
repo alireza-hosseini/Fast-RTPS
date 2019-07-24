@@ -33,5 +33,4 @@ typedef dds::sub::TSubscriber<fastdds::dds::Subscriber> Subscriber;
 }
 }
 
-
 #endif // OMG_DDS_SUB_DETAIL_SUBSCRIBER_HPP_

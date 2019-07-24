@@ -55,7 +55,6 @@ class dds::core::TStringTopicType
             const std::string& bytes);
 };
 
-
 /**
  * This class represents a built-in topic type that can be used
  * to readily create Topics, DataReaders and DataWriters for this type.

@@ -65,7 +65,6 @@ class dds::sub::LoanedSamples
      */
     ~LoanedSamples();
 
-
   public:
 
     const_iterator begin() const;

@@ -19,14 +19,11 @@
  * limitations under the License.
  */
 
-
 #include <dds/topic/Topic.hpp>
 //TODO: Fix this file when EntityDelegate is implemented
 //#include <foo/bar/core/EntityDelegate.hpp>
 //TODO: Fix this file when TopicTraits is implemented
 //#include <foo/bar/topic/TopicTraits.hpp>
-
-
 
 namespace dds {
 namespace pub {
@@ -51,8 +48,5 @@ class dds::pub::detail::DataWriter : public  eprosima::fastdds::dds::core::Entit
   	// Vendor implementation should go here.
 
 };*/
-
-
-
 
 #endif // OMG_DDS_PUB_DETAIL_DATA_WRITER_HPP_

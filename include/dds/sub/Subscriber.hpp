@@ -19,7 +19,6 @@
  * limitations under the License.
  */
 
-
 #include <dds/sub/detail/Subscriber.hpp>
 
 namespace dds {

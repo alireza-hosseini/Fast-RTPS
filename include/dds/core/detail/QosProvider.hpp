@@ -1,7 +1,6 @@
 #ifndef OMG_DDS_CORE_DETAIL_QOS_PROVIDER_HPP_
 #define OMG_DDS_CORE_DETAIL_QOS_PROVIDER_HPP_
 
-
 /* Copyright 2010, Object Management Group, Inc.
  * Copyright 2010, PrismTech, Inc.
  * Copyright 2010, Real-Time Innovations, Inc.

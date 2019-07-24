@@ -24,8 +24,6 @@
 #include <dds/core/detail/conformance.hpp>
 #include <dds/sub/cond/detail/QueryCondition.hpp>
 
-
-
 #ifdef OMG_DDS_CONTENT_SUBSCRIPTION_SUPPORT
 
 namespace dds {

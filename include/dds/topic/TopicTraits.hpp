@@ -56,7 +56,6 @@ struct dds::topic::topic_type_support
 {
 };
 
-
 #define REGISTER_TOPIC_TYPE(TOPIC_TYPE) \
     namespace dds { \
     namespace topic { \

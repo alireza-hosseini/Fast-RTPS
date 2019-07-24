@@ -1,7 +1,6 @@
 #ifndef OMG_DDS_SUB_COND_READ_CONDITION_HPP_
 #define OMG_DDS_SUB_COND_READ_CONDITION_HPP_
 
-
 /* Copyright 2010, Object Management Group, Inc.
  * Copyright 2010, PrismTech, Corp.
  * Copyright 2010, Real-Time Innovations, Inc.

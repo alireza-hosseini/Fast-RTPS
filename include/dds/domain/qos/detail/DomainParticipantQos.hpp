@@ -19,11 +19,9 @@
  * limitations under the License.
  */
 
-
 #include <dds/core/TEntityQos.hpp>
 //TODO: Fix this file when DomainParticipantQos is implemented
 //#include <foo/bar/domain/qos/DomainParticipantQos.hpp>
-
 
 namespace dds {
 namespace domain {

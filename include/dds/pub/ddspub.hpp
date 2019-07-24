@@ -19,7 +19,6 @@
  * limitations under the License.
  */
 
-
 #include <dds/pub/AnyDataWriter.hpp>
 
 #endif // OMG_DDS_PUB_PACKAGE_INCLUDE_HPP_

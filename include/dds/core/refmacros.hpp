@@ -112,7 +112,6 @@ TYPE(const H__& h) \
       return *this; \
     }
 
-
 #define OMG_DDS_REF_TYPE_DELEGATE_T(TYPE, BASE, T_PARAM, DELEGATE) \
     public: \
     typedef DELEGATE< T_PARAM > DELEGATE_T; \

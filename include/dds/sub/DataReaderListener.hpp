@@ -74,7 +74,6 @@ class dds::sub::DataReaderListener
         const dds::core::status::SampleLostStatus& status) = 0;
 };
 
-
 template<typename T>
 class dds::sub::NoOpDataReaderListener : public virtual DataReaderListener<T>
 {

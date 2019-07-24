@@ -458,7 +458,6 @@ class TPartition : public dds::core::Value<D>
             dds::core::StringSeq& dst) const;
 };
 
-
 #ifdef OMG_DDS_OWNERSHIP_SUPPORT
 
 template<typename D>
@@ -562,7 +561,6 @@ class TReaderDataLifecycle : public dds::core::Value<D>
     static TReaderDataLifecycle AutoPurgeDisposedSamples(
             const dds::core::Duration& d);
 };
-
 
 template<typename D>
 class TDurability : public dds::core::Value<D>
@@ -903,6 +901,5 @@ class TTypeConsistencyEnforcement : public dds::core::Value<D>
 }
 }
 }
-
 
 #endif // OMG_TDDS_CORE_POLICY_CORE_POLICY_HPP_

@@ -4,7 +4,6 @@
 #include <dds/sub/TDataReader.hpp>
 #include <dds/sub/detail/DataReader.hpp>
 
-
 namespace dds {
 namespace sub {
 
@@ -61,6 +60,5 @@ inline dds::sub::functors::NextInstanceManipulatorFunctor next_instance(
 
 }
 }
-
 
 #endif // OMG_DDS_SUB_DATA_READER_HPP_

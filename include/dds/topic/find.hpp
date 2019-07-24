@@ -21,7 +21,6 @@
 
 #include <string>
 
-
 namespace dds {
 namespace topic {
 

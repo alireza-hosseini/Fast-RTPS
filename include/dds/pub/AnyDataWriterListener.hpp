@@ -80,5 +80,4 @@ class dds::pub::NoOpAnyDataWriterListener : public virtual dds::pub::AnyDataWrit
         const ::dds::core::status::PublicationMatchedStatus& status);
 };
 
-
 #endif // OMG_DDS_PUB_ANY_DATA_WRITER_LISTENER_HPP_

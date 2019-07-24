@@ -23,7 +23,6 @@
 #include <dds/topic/detail/MultiTopic.hpp>
 #include <dds/topic/TMultiTopic.hpp>
 
-
 namespace dds {
 namespace topic {
 

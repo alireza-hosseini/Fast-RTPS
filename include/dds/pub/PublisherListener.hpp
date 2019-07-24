@@ -21,7 +21,6 @@
 
 #include <dds/pub/AnyDataWriterListener.hpp>
 
-
 namespace dds {
 namespace pub {
 
@@ -39,7 +38,6 @@ class dds::pub::PublisherListener : public virtual dds::pub::AnyDataWriterListen
 
 };
 
-
 class dds::pub::NoOpPublisherListener :
 		public virtual dds::pub::PublisherListener,
 		public virtual dds::pub::NoOpAnyDataWriterListener
@@ -48,6 +46,5 @@ class dds::pub::NoOpPublisherListener :
 
 	  virtual ~NoOpPublisherListener();
 };
-
 
 #endif // OMG_DDS_PUB_PUBLISHER_LISTENER_HPP_
