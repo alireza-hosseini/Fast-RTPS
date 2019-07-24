@@ -1,5 +1,5 @@
-#ifndef OMG_DDS_TOPIC_TOPIC_DESCRIPTION_HPP
-#define OMG_DDS_TOPIC_TOPIC_DESCRIPTION_HPP
+#ifndef OMG_DDS_TOPIC_TOPIC_DESCRIPTION_HPP_
+#define OMG_DDS_TOPIC_TOPIC_DESCRIPTION_HPP_
 
 /* Copyright 2010, Object Management Group, Inc.
  * Copyright 2010, PrismTech, Corp.
@@ -23,8 +23,8 @@
 
 #include <dds/domain/DomainParticipant.hpp>
 
-namespace dds { 
-namespace topic { 
+namespace dds {
+namespace topic {
 namespace detail {
 
 template<typename T>
@@ -35,5 +35,5 @@ class TopicDescription;
 }
 }
 }
-    
+
 #endif // OMG_DDS_TOPIC_DETAIL_PARENT_HPP_
