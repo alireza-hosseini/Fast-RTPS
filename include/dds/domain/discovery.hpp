@@ -56,7 +56,7 @@ namespace domain {
    *                to ignore
    *
    */
-  template <typename FwdIterator>
+  template<typename FwdIterator>
   void ignore(
       const dds::domain::DomainParticipant& dp,
       FwdIterator begin,

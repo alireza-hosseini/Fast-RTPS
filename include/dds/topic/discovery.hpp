@@ -27,7 +27,7 @@ namespace topic {
 /**
  *  Allows to discover Topic<T>, AnyTopic, ContentFilteredTopic<T>, etc.
  *  This operation usually results in network look-ups.
-template <typename TOPIC>
+template<typename TOPIC>
 TOPIC discover(
     const dds::domain::DomainParticipant& dp,
 		const std::string& name,

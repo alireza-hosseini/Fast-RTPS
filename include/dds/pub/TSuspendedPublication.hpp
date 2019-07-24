@@ -24,13 +24,13 @@
 namespace dds {
 namespace pub {
 
-template <typename DELEGATE>
+template<typename DELEGATE>
 class TSuspendedPublication;
 
 }
 }
 
-template <typename DELEGATE>
+template<typename DELEGATE>
 class dds::pub::TSuspendedPublication : public dds::core::Value<DELEGATE>
 {
   public:
