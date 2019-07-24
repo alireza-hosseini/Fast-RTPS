@@ -15,8 +15,8 @@ namespace dds {
 namespace sub {
 namespace detail {
       
-//TODO: Change foo::bar and set the corresponding path of namespaces when Query is implemented
-//typedef foo::bar::sub::Query Query;
+//TODO: Uncomment and fix when Query is implemented
+//typedef eproisma::fastdds::dds::sub::Query Query;
 
 }
 }

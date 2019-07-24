@@ -27,8 +27,8 @@ namespace dds {
 namespace pub { 
 namespace detail {
     
-//TODO: Change foo::bar and set the corresponding path of namespaces when PublisherDelegate is implemented
-//typedef dds::pub::TPublisher<foo::bar::pub::PublisherDelegate> Publisher;
+//TODO: Uncomment and fix when PublisherDelegate is implemented
+//typedef dds::pub::TPublisher<eprosima::fastdds::dds::pub::PublisherDelegate> Publisher;
 
 }
 } 

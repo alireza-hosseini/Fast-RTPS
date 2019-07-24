@@ -43,9 +43,9 @@ template<typename T>
 }
 }
 
-//TODO: Change foo::bar and set the corresponding path of namespaces when EntityDelegate is implemented
+//TODO: Uncomment and fix when EntityDelegate is implemented
 /*template<typename T>
-class dds::pub::detail::DataWriter : public  foo::bar::core::EntityDelegate  
+class dds::pub::detail::DataWriter : public  eprosima::fastdds::dds::core::EntityDelegate  
 {
 	public:
   	// Vendor implementation should go here.

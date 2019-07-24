@@ -30,8 +30,8 @@ namespace domain {
 namespace qos {
 namespace detail {
 
-//TODO: Change foo::bar and set the corresponding path of namespaces when DomainParticipantQos is implemented
-//typedef ::dds::core::qos::TEntityQos<foo::bar::domain::qos::DomainParticipantQos> DomainParticipantQos;
+//TODO: Uncomment and fix when DomainParticipantQos is implemented
+//typedef ::dds::core::qos::TEntityQos<eprosima::fastdds::dds::domain::qos::DomainParticipantQos> DomainParticipantQos;
 			
 }
 }

@@ -28,8 +28,8 @@ namespace sub {
 namespace qos { 
 namespace detail {
 
-//TODO: Change foo::bar and set the corresponding path of namespaces when DataReaderQos is implemented
-//typedef ::dds::core::qos::TEntityQos< ::foo::bar::sub::qos::DataReaderQos> DataReaderQos;
+//TODO: Uncomment and fix when DataReaderQos is implemented
+//typedef ::dds::core::qos::TEntityQos< ::eprosima::fastdds::dds::sub::qos::DataReaderQos> DataReaderQos;
 
 }
 }

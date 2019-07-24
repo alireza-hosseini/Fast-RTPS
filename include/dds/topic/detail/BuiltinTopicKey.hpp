@@ -27,8 +27,8 @@ namespace dds {
 namespace topic { 
 namespace detail {
       
-//TODO: Change foo::bar and set the corresponding path of namespaces when BuiltinTopicKey is implemented
-//typedef dds::topic::TBuiltinTopicKey<foo::bar::topic::BuiltinTopicKey> BuiltinTopicKey;
+//TODO: Uncomment and fix when BuiltinTopicKey is implemented
+//typedef dds::topic::TBuiltinTopicKey<eprosima::fastdds::dds::topic::BuiltinTopicKey> BuiltinTopicKey;
 
 }
 }
