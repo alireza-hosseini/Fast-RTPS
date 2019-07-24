@@ -28,8 +28,8 @@ namespace topic {
 namespace qos { 
 namespace detail {
 
-//TODO: Change foo::bar and set the corresponding path of namespaces when TopicQos is implemented
-//typedef ::dds::core::qos::TEntityQos< ::foo::bar::topic::qos::TopicQos> TopicQos;
+//TODO: Uncomment and fix when TopicQos is implemented
+//typedef ::dds::core::qos::TEntityQos< ::eprosima::fastdds::dds::topic::qos::TopicQos> TopicQos;
 
 }
 }

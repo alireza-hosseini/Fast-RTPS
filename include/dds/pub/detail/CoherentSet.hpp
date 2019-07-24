@@ -9,8 +9,8 @@ namespace dds {
 namespace pub {
 namespace detail {
 
-//TODO: Change foo::bar and set the corresponding path of namespaces when CoherentSet is implemented		
-//typedef dds::pub::TCoherentSet<foo::bar::pub::CoherentSet> CoherentSet;
+//TODO: Uncomment and fix when CoherentSet is implemented		
+//typedef dds::pub::TCoherentSet<eprosima::fastdds::dds::pub::CoherentSet> CoherentSet;
 		
 }
 }

@@ -9,8 +9,8 @@ namespace dds {
 namespace pub { 
 namespace detail {
 
-//TODO: Change foo::bar and set the corresponding path of namespaces when SuspendPublication is implemented
-//typedef dds::pub::TSuspendedPublication<foo::bar::pub::SuspendedPublicationImpl> SuspendedPublication;
+//TODO: Uncomment and fix when SuspendPublication is implemented
+//typedef dds::pub::TSuspendedPublication<eprosima::fastdds::dds::pub::SuspendedPublicationImpl> SuspendedPublication;
 
 }
 }

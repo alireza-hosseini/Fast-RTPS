@@ -3,14 +3,14 @@
 
 #include <dds/sub/TGenerationCount.hpp>
 //TODO: Fix this file when GenerationCount is implemented
-#include <foo/bar/sub/GenerationCount.hpp>
+//#include <foo/bar/sub/GenerationCount.hpp>
 
 namespace dds {
 namespace sub {
 namespace detail {
   
-//TODO: Change foo::bar and set the corresponding path of namespaces when GenerationCount is implemented    
-//typedef dds::sub::TGenerationCount< foo::bar::sub::GenerationCount> GenerationCount;
+//TODO: Uncomment and fix when GenerationCount is implemented    
+//typedef dds::sub::TGenerationCount< eprosima::fastdds::dds::sub::GenerationCount> GenerationCount;
     
 }
 }

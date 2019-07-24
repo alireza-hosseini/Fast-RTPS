@@ -26,8 +26,8 @@ namespace dds {
 namespace sub {
 namespace detail {
   
-//TODO: Change foo::bar and set the corresponding path of namespaces when Sample is implemented    
-//typedef dds::sub::TSample<foo::bar::sub::Sample> Sample;
+//TODO: Uncomment and fix when Sample is implemented    
+//typedef dds::sub::TSample<eprosima::fastdds::dds::sub::Sample> Sample;
     
 }
 }

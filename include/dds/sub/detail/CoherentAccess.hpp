@@ -9,8 +9,8 @@ namespace dds {
 namespace sub { 
 namespace detail {
 
-//TODO: Change foo::bar and set the corresponding path of namespaces when CoherentAccess is implemented
-//typedef ::dds::sub::TCoherentAccess<foo::bar::sub::CoherentAccess> CoherentAccess;
+//TODO: Uncomment and fix when CoherentAccess is implemented
+//typedef ::dds::sub::TCoherentAccess<eprosima::fastdds::dds::sub::CoherentAccess> CoherentAccess;
 
 }
 }
