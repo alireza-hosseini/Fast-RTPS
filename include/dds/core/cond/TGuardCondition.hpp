@@ -49,7 +49,8 @@ class dds::core::cond::TGuardCondition : public TCondition<DELEGATE>
 
     OMG_DDS_REF_TYPE_NODC(
             TGuardCondition,
-            TCondition, DELEGATE)
+            TCondition,
+            DELEGATE)
 
     TGuardCondition();
 

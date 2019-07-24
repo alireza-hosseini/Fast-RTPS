@@ -52,7 +52,8 @@ class dds::core::cond::TWaitSet : public dds::core::Reference<DELEGATE>
 
     OMG_DDS_REF_TYPE(
             TWaitSet,
-            dds::core::Reference, DELEGATE)
+            dds::core::Reference,
+            DELEGATE)
 
     /**
      * Creates a new waitset.
