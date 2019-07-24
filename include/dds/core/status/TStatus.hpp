@@ -32,7 +32,7 @@ namespace status {
 template<typename D>
 class TInconsistentTopicStatus : public dds::core::Value<D>
 {
-    public:
+public:
 
     TInconsistentTopicStatus();
 
@@ -44,7 +44,7 @@ class TInconsistentTopicStatus : public dds::core::Value<D>
 template<typename D>
 class TSampleLostStatus : public dds::core::Value<D>
 {
-    public:
+public:
 
     TSampleLostStatus();
 
@@ -56,7 +56,7 @@ class TSampleLostStatus : public dds::core::Value<D>
 template<typename D>
 class TSampleRejectedStatus : public dds::core::Value<D>
 {
-    public:
+public:
 
     TSampleRejectedStatus();
 
@@ -72,7 +72,7 @@ class TSampleRejectedStatus : public dds::core::Value<D>
 template<typename D>
 class TLivelinessLostStatus : public dds::core::Value<D>
 {
-    public:
+public:
 
     TLivelinessLostStatus();
 
@@ -84,7 +84,7 @@ class TLivelinessLostStatus : public dds::core::Value<D>
 template<typename D>
 class TLivelinessChangedStatus : public dds::core::Value<D>
 {
-    public:
+public:
 
     TLivelinessChangedStatus();
 
@@ -102,7 +102,7 @@ class TLivelinessChangedStatus : public dds::core::Value<D>
 template<typename D>
 class TOfferedDeadlineMissedStatus : public dds::core::Value<D>
 {
-    public:
+public:
 
     TOfferedDeadlineMissedStatus();
 
@@ -116,7 +116,7 @@ class TOfferedDeadlineMissedStatus : public dds::core::Value<D>
 template<typename D>
 class TRequestedDeadlineMissedStatus : public dds::core::Value<D>
 {
-    public:
+public:
 
     TRequestedDeadlineMissedStatus();
 
@@ -130,7 +130,7 @@ class TRequestedDeadlineMissedStatus : public dds::core::Value<D>
 template<typename D>
 class TOfferedIncompatibleQosStatus : public dds::core::Value<D>
 {
-    public:
+public:
 
     TOfferedIncompatibleQosStatus();
 
@@ -149,7 +149,7 @@ class TOfferedIncompatibleQosStatus : public dds::core::Value<D>
 template<typename D>
 class TRequestedIncompatibleQosStatus : public dds::core::Value<D>
 {
-    public:
+public:
 
     TRequestedIncompatibleQosStatus();
 
@@ -168,7 +168,7 @@ class TRequestedIncompatibleQosStatus : public dds::core::Value<D>
 template<typename D>
 class TPublicationMatchedStatus : public dds::core::Value<D>
 {
-    public:
+public:
 
     TPublicationMatchedStatus()
         : dds::core::Value<D>()
@@ -189,7 +189,7 @@ class TPublicationMatchedStatus : public dds::core::Value<D>
 template<typename D>
 class TSubscriptionMatchedStatus : public dds::core::Value<D>
 {
-    public:
+public:
 
     TSubscriptionMatchedStatus();
 

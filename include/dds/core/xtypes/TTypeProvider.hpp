@@ -20,7 +20,7 @@ namespace xtypes {
 template<typename DELEGATE>
 class dds::core::xtypes::TTypeProvider
 {
-    public:
+public:
 
     /**
      * Load a type from the specified URI. If multiple types are defined

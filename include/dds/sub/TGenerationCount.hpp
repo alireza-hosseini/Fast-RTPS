@@ -15,19 +15,19 @@ class TGenerationCount;
 template<typename DELEGATE>
 class dds::sub::TGenerationCount : public dds::core::Value<DELEGATE>
 {
-	public:
+public:
 
-  		TGenerationCount();
+    TGenerationCount();
 
-  		TGenerationCount(
-  				int32_t dgc,
-  				int32_t nwgc);
+    TGenerationCount(
+            int32_t dgc,
+            int32_t nwgc);
 
-	public:
+public:
 
-  		int32_t disposed() const;
+    int32_t disposed() const;
 
-  		inline int32_t no_writers() const;
+    inline int32_t no_writers() const;
 
 };
 

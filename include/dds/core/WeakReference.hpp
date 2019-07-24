@@ -39,7 +39,7 @@ class WeakReference;
 template<typename T>
 class dds::core::WeakReference
 {
-    public:
+public:
 
     typedef T ReferenceType;
 
@@ -63,7 +63,7 @@ class dds::core::WeakReference
      */
     T lock();
 
-    private:
+private:
 
     typename T::DELEGATE_WEAK_REF_T impl_;
 };

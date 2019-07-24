@@ -47,18 +47,14 @@ template<
 class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
 {
 
-  public:
+public:
 
     typedef dds::pub::DataWriterListener<T> Listener;
 
-  public:
-
     OMG_DDS_REF_TYPE(
-        DataWriter,
-        ::dds::core::TEntity,
-        DELEGATE<T>)
-
-  public:
+            DataWriter,
+            ::dds::core::TEntity,
+            DELEGATE<T>)
 
     /**
      * Create a <code>DataWriter</code>. The QoS will be set to pub.default_datawriter_qos().
@@ -70,8 +66,8 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * @param mask the listener event mask.
      */
     DataWriter(
-        const dds::pub::Publisher& pub,
-        const ::dds::topic::Topic<T>& topic);
+            const dds::pub::Publisher& pub,
+            const ::dds::topic::Topic<T>& topic);
 
     /**
      * Create a <code>DataWriter</code>.
@@ -83,17 +79,13 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * @param mask the listener event mask.
      */
     DataWriter(
-        const dds::pub::Publisher& pub,
-        const ::dds::topic::Topic<T>& topic,
-        const dds::pub::qos::DataWriterQos& qos,
-        dds::pub::DataWriterListener<T>* listener = NULL,
-        const dds::core::status::StatusMask& mask = ::dds::core::status::StatusMask::all());
-
-  public:
+            const dds::pub::Publisher& pub,
+            const ::dds::topic::Topic<T>& topic,
+            const dds::pub::qos::DataWriterQos& qos,
+            dds::pub::DataWriterListener<T>* listener = NULL,
+            const dds::core::status::StatusMask& mask = ::dds::core::status::StatusMask::all());
 
     ~DataWriter();
-
-  public:
 
     //==========================================================================
     //== Write API
@@ -104,7 +96,7 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * @param sample the sample to be written.
      */
     void write(
-        const T& sample);
+            const T& sample);
 
     /**
      * Write a sample with a given timestamp.
@@ -113,8 +105,8 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * @param timestamp the timestamp used for this sample.
      */
     void write(
-        const T& sample,
-        const dds::core::Time& timestamp);
+            const T& sample,
+            const dds::core::Time& timestamp);
 
     /**
      * Write a sample by providing the instance handle.
@@ -124,8 +116,8 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * @param instance the handle representing the instance written.
      */
     void write(
-        const T& data,
-        const ::dds::core::InstanceHandle& instance);
+            const T& data,
+            const ::dds::core::InstanceHandle& instance);
 
     /**
      * Write a sample, with a time-stamp, by providing the instance handle.
@@ -136,9 +128,9 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * @param timestamp the timestamp to use for this sample.
      */
     void write(
-        const T& data,
-        const ::dds::core::InstanceHandle& instance,
-        const dds::core::Time& timestamp);
+            const T& data,
+            const ::dds::core::InstanceHandle& instance,
+            const dds::core::Time& timestamp);
 
     /**
      * Write a topic instance -- a class that encapsulate the
@@ -147,7 +139,7 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * @param i the instance to write.
      */
     void write(
-        const dds::topic::TopicInstance<T>& i);
+            const dds::topic::TopicInstance<T>& i);
 
     /**
      * Write a topic instance with time stamp.
@@ -156,8 +148,8 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * @param timestamp the timestamp for this sample.
      */
     void write(
-        const dds::topic::TopicInstance<T>& i,
-        const dds::core::Time& timestamp);
+            const dds::topic::TopicInstance<T>& i,
+            const dds::core::Time& timestamp);
 
     /**
      * Write a series of samples or TopicInstances (determined by the template
@@ -165,8 +157,8 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      */
     template<typename FWIterator>
     void write(
-        const FWIterator& begin,
-        const FWIterator& end);
+            const FWIterator& begin,
+            const FWIterator& end);
 
     /**
      * Write a series of samples or TopicInstances (determined by the template
@@ -174,9 +166,9 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      */
     template<typename FWIterator>
     void write(
-        const FWIterator& begin,
-        const FWIterator& end,
-        const dds::core::Time& timestamp);
+            const FWIterator& begin,
+            const FWIterator& end,
+            const dds::core::Time& timestamp);
 
     /**
      * Write a series of samples and their parallel instance handles.
@@ -185,10 +177,10 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
         typename SamplesFWIterator,
         typename HandlesFWIterator>
     void write(
-        const SamplesFWIterator& data_begin,
-        const SamplesFWIterator& data_end,
-        const HandlesFWIterator& handle_begin,
-        const HandlesFWIterator& handle_end);
+            const SamplesFWIterator& data_begin,
+            const SamplesFWIterator& data_end,
+            const HandlesFWIterator& handle_begin,
+            const HandlesFWIterator& handle_end);
 
     /**
      * Write a series of samples and their parallel instance handles with
@@ -198,25 +190,25 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
         typename SamplesFWIterator,
         typename HandlesFWIterator>
     void write(
-        const SamplesFWIterator& data_begin,
-        const SamplesFWIterator& data_end,
-        const HandlesFWIterator& handle_begin,
-        const HandlesFWIterator& handle_end,
-        const dds::core::Time& timestamp);
+            const SamplesFWIterator& data_begin,
+            const SamplesFWIterator& data_end,
+            const HandlesFWIterator& handle_begin,
+            const HandlesFWIterator& handle_end,
+            const dds::core::Time& timestamp);
 
-    DataWriter& operator << (
-        const T& data);
+    DataWriter& operator<<(
+            const T& data);
 
-    DataWriter& operator << (
-        const std::pair<T,
-        dds::core::Time>& data);
+    DataWriter& operator<<(
+            const std::pair<T,
+            dds::core::Time>& data);
 
-    DataWriter& operator << (
-        const std::pair<T,
-        ::dds::core::InstanceHandle>& data);
+    DataWriter& operator<<(
+            const std::pair<T,
+            ::dds::core::InstanceHandle>& data);
 
-    DataWriter& operator << (
-        DataWriter& (*manipulator)(DataWriter&));
+    DataWriter& operator<<(
+            DataWriter& (*manipulator)(DataWriter&));
 
     //==========================================================================
     //== Instance Management
@@ -226,7 +218,7 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * @param key the key of the instance to register.
      */
     const ::dds::core::InstanceHandle register_instance(
-        const T& key);
+            const T& key);
 
     /**
      * Register an instance with timestamp.
@@ -235,8 +227,8 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * @param timestamp the timestamp used for registration.
      */
     const ::dds::core::InstanceHandle register_instance(
-        const T& key,
-        const dds::core::Time& ts);
+            const T& key,
+            const dds::core::Time& ts);
 
     /**
      * Unregister an instance.
@@ -244,7 +236,7 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * @param i the instance to unregister.
      */
     DataWriter& unregister_instance(
-        const ::dds::core::InstanceHandle& i);
+            const ::dds::core::InstanceHandle& i);
 
     /**
      * Unregister an instance with timestamp.
@@ -253,8 +245,8 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * @param timestamp the timestamp used for registration.
      */
     DataWriter& unregister_instance(
-        const ::dds::core::InstanceHandle& i,
-        const dds::core::Time& ts);
+            const ::dds::core::InstanceHandle& i,
+            const dds::core::Time& ts);
 
     /**
      * Dispose an instance.
@@ -262,7 +254,7 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * @param i the instance to dispose.
      */
     DataWriter& dispose_instance(
-        const ::dds::core::InstanceHandle& i);
+            const ::dds::core::InstanceHandle& i);
 
     /**
      * Dispose an instance with a timestamp.
@@ -271,8 +263,8 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * @param ts the timestamp.
      */
     DataWriter& dispose_instance(
-        const ::dds::core::InstanceHandle& i,
-        const dds::core::Time& ts);
+            const ::dds::core::InstanceHandle& i,
+            const dds::core::Time& ts);
 
     /**
      * This operation can be used to retrieve the instance key that corresponds
@@ -284,8 +276,8 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * result in this situation is unspecified.
      */
     dds::topic::TopicInstance<T>& key_value(
-        dds::topic::TopicInstance<T>& i,
-        const ::dds::core::InstanceHandle& h);
+            dds::topic::TopicInstance<T>& i,
+            const ::dds::core::InstanceHandle& h);
 
     /**
      * This operation can be used to retrieve the instance key that corresponds
@@ -297,8 +289,8 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * result in this situation is unspecified.
      */
     T& key_value(
-        T& sample,
-        const ::dds::core::InstanceHandle& h);
+            T& sample,
+            const ::dds::core::InstanceHandle& h);
 
     /**
      * This operation takes as a parameter an instance and returns a handle
@@ -311,7 +303,7 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * whose handle will be set to the HANDLE_NIL value.
      */
     dds::core::InstanceHandle lookup_instance(
-        const T& key);
+            const T& key);
 
     //==========================================================================
     //== QoS Management
@@ -327,13 +319,13 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * @param the_qos the new qos for this <code>DataWriter</code>.
      */
     void qos(
-        const ::dds::pub::qos::DataWriterQos& the_qos);
+            const ::dds::pub::qos::DataWriterQos& the_qos);
 
     /**
      * Get the <code>DataWriter</code> QoS.
      */
     DataWriter& operator <<(
-        const ::dds::pub::qos::DataWriterQos& the_qos);
+            const ::dds::pub::qos::DataWriterQos& the_qos);
 
     /**
      * Set the <code>DataWriter</code> QoS.
@@ -341,7 +333,7 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * @param the_qos the new qos for this <code>DataWriter</code>.
      */
     const DataWriter& operator >> (
-        ::dds::pub::qos::DataWriterQos& the_qos) const;
+            ::dds::pub::qos::DataWriterQos& the_qos) const;
 
     //==========================================================================
     //== Entity Navigation
@@ -369,7 +361,7 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * indicates that max_wait elapsed before all the data was acknowledged.
      */
     void wait_for_acknowledgments(
-        const dds::core::Duration& timeout);
+            const dds::core::Duration& timeout);
 
     //==========================================================================
     //== Listeners Management
@@ -383,8 +375,8 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * @param mask the event mask associated with this listener.
      */
     void listener(
-        DataWriterListener<T>* the_listener,
-        const ::dds::core::status::StatusMask& mask);
+            DataWriterListener<T>* the_listener,
+            const ::dds::core::status::StatusMask& mask);
 
     /**
      * Return the listener currently associated with this <code>DataWriter</code>.

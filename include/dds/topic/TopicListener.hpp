@@ -24,28 +24,28 @@ namespace topic {
 
 template<typename T>
 class TopicListener {
-  public:
+public:
 
     virtual ~TopicListener();
 
-  public:
+public:
 
     virtual void on_inconsistent_topic(
-        Topic<T>& topic,
-        const dds::core::status::InconsistentTopicStatus& status) = 0;
+            Topic<T>& topic,
+            const dds::core::status::InconsistentTopicStatus& status) = 0;
 };
 
 template<typename T>
 class NoOpTopicListener : public virtual TopicListener<T> {
-  public:
+public:
 
     virtual ~NoOpTopicListener();
 
-  public:
+public:
 
     virtual void on_inconsistent_topic(
-        Topic<T>& topic,
-        const dds::core::status::InconsistentTopicStatus& status)
+            Topic<T>& topic,
+            const dds::core::status::InconsistentTopicStatus& status)
     {
     }
 

@@ -33,7 +33,7 @@ namespace core {
 template<typename DELEGATE>
 class Reference
 {
-    public:
+public:
 
     DECLARE_TYPE_TRAITS(DELEGATE)
 
@@ -142,13 +142,13 @@ class Reference
     bool operator!=(
             const null_type nil) const;
 
-    private:
+private:
 
     // -- disallow dynamic allocation for reference types
     void* operator new(
             size_t);
 
-    public:
+public:
 
     /**
      * Returns a reference to the underlying delegate. This can be used
@@ -204,7 +204,7 @@ class Reference
 
     operator const DELEGATE_REF_T& () const;
 
-    protected:
+protected:
 
     DELEGATE_REF_T impl_;
 };

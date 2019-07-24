@@ -32,7 +32,7 @@ class Time;
 
 class dds::core::Time
 {
-    public:
+public:
 
     static const Time invalid(); // {-1, 0xffffffff}
 
@@ -92,7 +92,7 @@ class dds::core::Time
 
     double to_secs() const;
 
-    private:
+private:
 
     int64_t sec_;
 

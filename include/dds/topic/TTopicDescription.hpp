@@ -42,26 +42,20 @@ class TopicDescription;
  * name that allows it to be retrieved locally.
  */
 template<
-  typename T,
-  template<typename Q> class DELEGATE>
+    typename T,
+    template<typename Q> class DELEGATE>
 class dds::topic::TopicDescription : public ::dds::core::TEntity< DELEGATE<T> >
 {
-  public:
+public:
 
     typedef T DataType;
 
-  public:
-
     OMG_DDS_REF_TYPE(
-        TopicDescription,
-        ::dds::core::TEntity,
-        DELEGATE<T>)
-
-  public:
+            TopicDescription,
+            ::dds::core::TEntity,
+            DELEGATE<T>)
 
     virtual ~TopicDescription();
-
-  public:
 
     /**
      * Get the name used to create the TopicDescription.
@@ -75,12 +69,12 @@ class dds::topic::TopicDescription : public ::dds::core::TEntity< DELEGATE<T> >
 
     const dds::domain::DomainParticipant& domain_participant() const;
 
-  protected:
+protected:
 
     TopicDescription(
-        const dds::domain::DomainParticipant& dp,
-        const std::string& name,
-        const std::string& type_name = dds::topic::topic_type_name<T>::value());
+            const dds::domain::DomainParticipant& dp,
+            const std::string& name,
+            const std::string& type_name = dds::topic::topic_type_name<T>::value());
 
 };
 

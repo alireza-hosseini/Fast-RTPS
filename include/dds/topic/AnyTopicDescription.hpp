@@ -28,13 +28,19 @@ namespace topic {
 
 class AnyTopicDescription
 {
-  public:
+
+protected:
+
+    inline AnyTopicDescription(
+        detail::TDHolderBase* holder);
+
+    dds::core::smart_ptr_traits<detail::TDHolderBase>::ref_type holder_;
+
+public:
 
     template<typename T>
     inline AnyTopicDescription(
-        const dds::topic::TopicDescription<T>& t);
-
-  public:
+            const dds::topic::TopicDescription<T>& t);
 
     const dds::domain::DomainParticipant& domain_participant() const;
 
@@ -42,37 +48,22 @@ class AnyTopicDescription
 
     const std::string& type_name() const;
 
-  protected:
-
-    inline AnyTopicDescription(
-        detail::TDHolderBase* holder);
-
-  public:
-
     inline AnyTopicDescription& swap(
-        AnyTopicDescription& rhs);
+            AnyTopicDescription& rhs);
 
     template<typename T>
     AnyTopicDescription& operator =(
-        const dds::topic::Topic<T>& rhs);
+            const dds::topic::Topic<T>& rhs);
 
     inline AnyTopicDescription& operator =(
-        const AnyTopicDescription& rhs);
-
-  public:
+            const AnyTopicDescription& rhs);
 
     template<typename T>
     const dds::topic::TopicDescription<T>& get();
 
-  public:
-
     const detail::TDHolderBase* operator->() const;
 
     detail::TDHolderBase* operator->();
-
-  protected:
-
-    dds::core::smart_ptr_traits<detail::TDHolderBase>::ref_type holder_;
 
 };
 

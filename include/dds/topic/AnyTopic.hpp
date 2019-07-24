@@ -43,13 +43,13 @@ Topic<T> get(
 
 class dds::topic::AnyTopic
 {
-  public:
+public:
 
     template<typename T>
     AnyTopic(
         const dds::topic::Topic<T>& t);
 
-  public:
+public:
 
     const dds::domain::DomainParticipant& domain_participant() const;
 
@@ -60,18 +60,18 @@ class dds::topic::AnyTopic
     void qos(
         const dds::topic::qos::TopicQos& q);
 
-  public:
+public:
 
     template<typename T>
     Topic<T> get();
 
-  public:
+public:
 
     inline const detail::THolderBase* operator->() const;
 
     detail::THolderBase* operator->();
 
-  private:
+private:
 
     dds::core::smart_ptr_traits<detail::THolderBase>::ref_type holder_;
 

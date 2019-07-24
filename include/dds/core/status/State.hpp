@@ -28,7 +28,7 @@ namespace status {
 
 class SampleRejectedState : public std::bitset<OMG_DDS_STATE_BIT_COUNT>
 {
-    public:
+public:
 
     typedef std::bitset<OMG_DDS_STATE_BIT_COUNT> MaskType;
 
@@ -84,7 +84,7 @@ private:
 
 class StatusMask : public std::bitset<OMG_DDS_STATUS_COUNT>
 {
-    public:
+public:
 
     typedef std::bitset<OMG_DDS_STATUS_COUNT> MaskType;
 

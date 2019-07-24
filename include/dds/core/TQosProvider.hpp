@@ -43,7 +43,7 @@ class TQosProvider;
 template<typename DELEGATE>
 class dds::core::TQosProvider : public dds::core::Reference<DELEGATE>
 {
-    public:
+public:
     /**
      * Create a QosProvider fetching QoS configuration from the specified URI.
      * For instance, the following code:

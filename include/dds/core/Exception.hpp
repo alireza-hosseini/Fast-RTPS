@@ -33,11 +33,11 @@ namespace core {
  */
 class Exception
 {
-    protected:
+protected:
 
     Exception();
 
-    public:
+public:
 
     virtual ~Exception() throw ();
 
@@ -46,7 +46,7 @@ class Exception
 
 class Error : public Exception, public std::exception
 {
-    public:
+public:
 
     Error();
 
@@ -60,7 +60,7 @@ class Error : public Exception, public std::exception
 
 class AlreadyClosedError : public Exception, public std::logic_error
 {
-    public:
+public:
 
     explicit AlreadyClosedError(
         const std::string& msg);
@@ -75,7 +75,7 @@ class AlreadyClosedError : public Exception, public std::logic_error
 
 class IllegalOperationError : public Exception, public std::logic_error
 {
-    public:
+public:
 
     explicit IllegalOperationError(
         const std::string& msg);
@@ -90,7 +90,7 @@ class IllegalOperationError : public Exception, public std::logic_error
 
 class ImmutablePolicyError : public Exception, public std::logic_error
 {
-    public:
+public:
 
     explicit ImmutablePolicyError(
         const std::string& msg);
@@ -105,7 +105,7 @@ class ImmutablePolicyError : public Exception, public std::logic_error
 
 class InconsistentPolicyError : public Exception, public std::logic_error
 {
-    public:
+public:
 
     explicit InconsistentPolicyError(
         const std::string& msg);
@@ -120,7 +120,7 @@ class InconsistentPolicyError : public Exception, public std::logic_error
 
 class InvalidArgumentError : public Exception, public std::invalid_argument
 {
-    public:
+public:
 
     explicit InvalidArgumentError(
         const std::string& msg);
@@ -135,7 +135,7 @@ class InvalidArgumentError : public Exception, public std::invalid_argument
 
 class NotEnabledError : public Exception, public std::logic_error
 {
-    public:
+public:
 
     explicit NotEnabledError(
         const std::string& msg);
@@ -150,7 +150,7 @@ class NotEnabledError : public Exception, public std::logic_error
 
 class OutOfResourcesError : public Exception, public std::runtime_error
 {
-    public:
+public:
 
     explicit OutOfResourcesError(
         const std::string& msg);
@@ -165,7 +165,7 @@ class OutOfResourcesError : public Exception, public std::runtime_error
 
 class PreconditionNotMetError : public Exception, public std::logic_error
 {
-    public:
+public:
 
     explicit PreconditionNotMetError(
             const std::string& msg)
@@ -189,7 +189,7 @@ class PreconditionNotMetError : public Exception, public std::logic_error
 
 class TimeoutError : public Exception, public std::runtime_error
 {
-    public:
+public:
 
     explicit TimeoutError(
         const std::string& msg);
@@ -204,7 +204,7 @@ class TimeoutError : public Exception, public std::runtime_error
 
 class UnsupportedError : public Exception, public std::logic_error
 {
-    public:
+public:
 
     explicit UnsupportedError(
         const std::string& msg);
@@ -219,7 +219,7 @@ class UnsupportedError : public Exception, public std::logic_error
 
 class InvalidDowncastError : public Exception, public std::runtime_error
 {
-    public:
+public:
 
     explicit InvalidDowncastError(
         const std::string& msg);
@@ -234,7 +234,7 @@ class InvalidDowncastError : public Exception, public std::runtime_error
 
 class NullReferenceError : public Exception, public std::runtime_error
 {
-    public:
+public:
 
     explicit NullReferenceError(
         const std::string& msg);
@@ -249,7 +249,7 @@ class NullReferenceError : public Exception, public std::runtime_error
 
 class InvalidDataError : public Exception, public std::logic_error
 {
-    public:
+public:
 
     explicit InvalidDataError(
         const std::string& msg);

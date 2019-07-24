@@ -57,21 +57,17 @@ template<
     template<typename Q> class DELEGATE>
 class dds::topic::Topic : public dds::topic::TopicDescription <T, DELEGATE>
 {
-  public:
+public:
 
     typedef TopicListener<T> Listener;
 
-  public:
-
     OMG_DDS_REF_TYPE_T(
-        Topic,
-        TopicDescription,
-        T,
-        DELEGATE)
+            Topic,
+            TopicDescription,
+            T,
+            DELEGATE)
 
     ~Topic() {}
-
-  public:
 
     /**
      * Create a new topic.
@@ -81,8 +77,8 @@ class dds::topic::Topic : public dds::topic::TopicDescription <T, DELEGATE>
      *  dp.default_topic_qos().
      */
     Topic(
-        const dds::domain::DomainParticipant& dp,
-        const std::string& topic_name);
+            const dds::domain::DomainParticipant& dp,
+            const std::string& topic_name);
 
     /**
      * Create a new topic.The QoS will be set to
@@ -93,9 +89,9 @@ class dds::topic::Topic : public dds::topic::TopicDescription <T, DELEGATE>
      * @param type_name the name associated with the topic type.
      */
     Topic(
-        const dds::domain::DomainParticipant& dp,
-        const std::string& topic_name,
-        const std::string& type_name);
+            const dds::domain::DomainParticipant& dp,
+            const std::string& topic_name,
+            const std::string& type_name);
 
     /**
      * Create a new topic.
@@ -107,11 +103,11 @@ class dds::topic::Topic : public dds::topic::TopicDescription <T, DELEGATE>
      * @param mask the listener event mask.
      */
     Topic(
-        const dds::domain::DomainParticipant& dp,
-        const std::string& topic_name,
-        const dds::topic::qos::TopicQos& qos,
-        dds::topic::TopicListener<T>* listener = NULL,
-        const dds::core::status::StatusMask& mask = dds::core::status::StatusMask::all());
+            const dds::domain::DomainParticipant& dp,
+            const std::string& topic_name,
+            const dds::topic::qos::TopicQos& qos,
+            dds::topic::TopicListener<T>* listener = NULL,
+            const dds::core::status::StatusMask& mask = dds::core::status::StatusMask::all());
 
     /**
      * Create a new topic.
@@ -124,12 +120,12 @@ class dds::topic::Topic : public dds::topic::TopicDescription <T, DELEGATE>
      * @param mask the listener event mask.
      */
     Topic(
-        const dds::domain::DomainParticipant& dp,
-        const std::string& topic_name,
-        const std::string& type_name,
-        const dds::topic::qos::TopicQos& qos,
-        dds::topic::TopicListener<T>* listener = NULL,
-        const dds::core::status::StatusMask& mask = dds::core::status::StatusMask::all());
+            const dds::domain::DomainParticipant& dp,
+            const std::string& topic_name,
+            const std::string& type_name,
+            const dds::topic::qos::TopicQos& qos,
+            dds::topic::TopicListener<T>* listener = NULL,
+            const dds::core::status::StatusMask& mask = dds::core::status::StatusMask::all());
 
 #if defined (OMG_DDS_X_TYPE_DYNAMIC_TYPE_SUPPORT)
     /**
@@ -143,9 +139,9 @@ class dds::topic::Topic : public dds::topic::TopicDescription <T, DELEGATE>
      *  @param type the topic type
      */
     Topic(
-        const dds::domain::DomainParticipant& dp,
-        const std::string& topic_name,
-        const dds::core::xtypes::DynamicType type);
+            const dds::domain::DomainParticipant& dp,
+            const std::string& topic_name,
+            const dds::core::xtypes::DynamicType type);
 
     /**
 	   * Create a new topic with a dynamic type description. Notice that in this
@@ -160,23 +156,21 @@ class dds::topic::Topic : public dds::topic::TopicDescription <T, DELEGATE>
      * @param mask the listener event mask.
      */
     Topic(
-        const dds::domain::DomainParticipant& dp,
-        const std::string& topic_name,
-        const dds::core::xtypes::DynamicType type
-        const dds::topic::qos::TopicQos& qos,
-        dds::topic::TopicListener<T>* listener = NULL,
-        const dds::core::status::StatusMask& mask = dds::core::status::StatusMask::all());
+            const dds::domain::DomainParticipant& dp,
+            const std::string& topic_name,
+            const dds::core::xtypes::DynamicType type
+            const dds::topic::qos::TopicQos& qos,
+            dds::topic::TopicListener<T>* listener = NULL,
+            const dds::core::status::StatusMask& mask = dds::core::status::StatusMask::all());
 
 #endif // OMG_DDS_X_TYPE_DYNAMIC_TYPE_SUPPORT
-
-  public:
 
     /**
      * Set the <code>Topic</code> listener.
      */
     void listener(
-        Listener* the_listener,
-        const ::dds::core::status::StatusMask& event_mask);
+            Listener* the_listener,
+            const ::dds::core::status::StatusMask& event_mask);
 
     /**
      * Get the <code>Topic</code> listener.
@@ -192,7 +186,7 @@ class dds::topic::Topic : public dds::topic::TopicDescription <T, DELEGATE>
      * Set the <code>Topic</code> QoS.
      */
     void qos(
-        const dds::topic::qos::TopicQos& the_qos);
+            const dds::topic::qos::TopicQos& the_qos);
 
     /**
      * This method allows the application to retrieve the INCONSISTENT_TOPIC

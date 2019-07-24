@@ -38,27 +38,27 @@ class TFilter;
 template<typename D>
 class dds::topic::TFilter: public dds::core::Value<D>
 {
-  public:
+public:
 
     // Random access iterators
     typedef typename D::iterator iterator;
 
     typedef typename D::const_iterator const_iterator;
 
-  public:
+public:
 
     TFilter(
-        const std::string& query_expression);
+            const std::string& query_expression);
 
     template<typename FWIterator>
     TFilter(
-        const std::string& query_expression,
-        const FWIterator& params_begin,
-        const FWIterator& params_end);
+            const std::string& query_expression,
+            const FWIterator& params_begin,
+            const FWIterator& params_end);
 
     TFilter(
-      const std::string& query_expression,
-      const std::vector<std::string>& params);
+            const std::string& query_expression,
+            const std::vector<std::string>& params);
 
     const std::string& expression() const;
 
@@ -84,11 +84,11 @@ class dds::topic::TFilter: public dds::core::Value<D>
 
     template<typename FWIterator>
     void parameters(
-        const FWIterator& begin,
-        const FWIterator end);
+            const FWIterator& begin,
+            const FWIterator end);
 
     void add_parameter(
-        const std::string& param);
+            const std::string& param);
 
     uint32_t parameters_length() const;
 

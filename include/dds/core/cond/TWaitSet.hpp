@@ -46,7 +46,7 @@ class TWaitSet;
 template<typename DELEGATE>
 class dds::core::cond::TWaitSet : public dds::core::Reference<DELEGATE>
 {
-    public:
+public:
 
     typedef std::vector<dds::core::cond::Condition> ConditionSeq;
 

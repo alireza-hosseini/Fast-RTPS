@@ -34,7 +34,7 @@ class TInstanceHandle;
 template<typename DELEGATE>
 class dds::core::TInstanceHandle : public dds::core::Value<DELEGATE>
 {
-    public:
+public:
 
     /**
      * Construct a nil instance handle.

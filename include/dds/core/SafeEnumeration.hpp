@@ -12,7 +12,7 @@ class safe_enum : public def
     typedef typename def::type type;
     inner val;
 
-    public:
+public:
 
     safe_enum(
             type v)

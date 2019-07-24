@@ -34,14 +34,14 @@ class Value;
 template<typename D>
 class dds::core::Value
 {
-    protected:
+protected:
 
     Value();
 
     Value(
             const Value& p);
 
-    public:
+public:
 
     template<typename ARG>
     Value(
@@ -140,7 +140,7 @@ class dds::core::Value
 
     operator const D& () const;
 
-    protected:
+protected:
 
     D d_;
 };

@@ -37,26 +37,26 @@ namespace sub {
 
 template<typename SELECTOR>
 SELECTOR& read(
-    SELECTOR& selector);
+        SELECTOR& selector);
 
 template<typename SELECTOR>
 SELECTOR& take(
-    SELECTOR& selector);
+        SELECTOR& selector);
 
 inline dds::sub::functors::MaxSamplesManipulatorFunctor max_samples(
-    uint32_t n);
+        uint32_t n);
 
 inline dds::sub::functors::ContentFilterManipulatorFunctor content(
-    const dds::sub::Query& query);
+        const dds::sub::Query& query);
 
 inline dds::sub::functors::StateFilterManipulatorFunctor state(
-    const dds::sub::status::DataState& s);
+        const dds::sub::status::DataState& s);
 
 inline dds::sub::functors::InstanceManipulatorFunctor instance(
-    const dds::core::InstanceHandle& h);
+        const dds::core::InstanceHandle& h);
 
 inline dds::sub::functors::NextInstanceManipulatorFunctor next_instance(
-    const dds::core::InstanceHandle& h);
+        const dds::core::InstanceHandle& h);
 
 }
 }

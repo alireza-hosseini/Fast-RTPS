@@ -32,7 +32,7 @@ template<
     template<typename Q> class DELEGATE>
 class optional : public dds::core::Value< DELEGATE<T> >
 {
-    public:
+public:
 
     optional(const T& t);
 

@@ -26,15 +26,11 @@ class AnyDataReader;
 
 class AnyDataReaderListener
 {
-  public:
+public:
 
     typedef ::dds::core::smart_ptr_traits<AnyDataReaderListener>::ref_type ref_type;
 
-  public:
-
     virtual ~AnyDataReaderListener();
-
-  public:
 
     virtual void on_requested_deadline_missed(
             AnyDataReader& the_reader,
@@ -67,13 +63,11 @@ class AnyDataReaderListener
 
 class NoOpAnyDataReaderListener : public virtual AnyDataReaderListener
 {
-  public:
+public:
 
     virtual ~NoOpAnyDataReaderListener()
     {
     }
-
-  public:
 
     virtual void on_requested_deadline_missed(
             AnyDataReader& the_reader,

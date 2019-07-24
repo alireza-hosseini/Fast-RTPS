@@ -35,34 +35,34 @@ template<
     template<typename Q> class DELEGATE>
 class MultiTopic : public TopicDescription <T, DELEGATE>
 {
-  public:
+public:
 
     OMG_DDS_REF_TYPE_T(
-        MultiTopic,
-        TopicDescription,
-        T,
-        DELEGATE)
+            MultiTopic,
+            TopicDescription,
+            T,
+            DELEGATE)
 
-  public:
+public:
 
     template<typename FWDIterator>
     MultiTopic(
-        const dds::domain::DomainParticipant& dp,
-        const std::string& name,
-        const std::string expression,
-        const FWDIterator& params_begin,
-        const FWDIterator& params_end);
+            const dds::domain::DomainParticipant& dp,
+            const std::string& name,
+            const std::string expression,
+            const FWDIterator& params_begin,
+            const FWDIterator& params_end);
 
     virtual ~MultiTopic();
 
-  public:
-  public:
+public:
+public:
 
     const std::string expression() const;
 
     void expression_parameters(
-        const FWDIterator& params_begin,
-        const FWDIterator& params_end);
+            const FWDIterator& params_begin,
+            const FWDIterator& params_end);
 
     dds::core::StringSeq void expression_parameters() const;
 

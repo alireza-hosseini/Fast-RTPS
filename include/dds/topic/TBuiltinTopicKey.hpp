@@ -33,13 +33,13 @@ class TBuiltinTopicKey;
 template<typename D>
 class dds::topic::TBuiltinTopicKey : public ::dds::core::Value<D>
 {
-	public:
+public:
 
-	  	typedef typename D::VALUE_T VALUE_T;
+    typedef typename D::VALUE_T VALUE_T;
 
-	public:
+public:
 
-  		VALUE_T value() const;
+    VALUE_T value() const;
 
 };
 

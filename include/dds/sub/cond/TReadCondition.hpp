@@ -47,31 +47,27 @@ class TReadCondition;
 template<typename DELEGATE>
 class dds::sub::cond::TReadCondition : public dds::core::cond::TCondition<DELEGATE>
 {
-  public:
+public:
 
     OMG_DDS_REF_TYPE(
       TReadCondition,
       dds::core::cond::TCondition,
       DELEGATE)
 
-  public:
-
     template<typename T>
     TReadCondition(
-      const dds::sub::DataReader<T>& dr,
-      const dds::sub::status::DataState& status);
+            const dds::sub::DataReader<T>& dr,
+            const dds::sub::status::DataState& status);
 
     template<
         typename T,
         typename FUN>
     TReadCondition(
-        const dds::sub::DataReader<T>& dr,
-        const dds::sub::status::DataState& status,
-        const FUN& functor);
+            const dds::sub::DataReader<T>& dr,
+            const dds::sub::status::DataState& status,
+            const FUN& functor);
 
     ~TReadCondition();
-
-  public:
 
     /**
      * This operation returns the set of sample-states that are taken into
@@ -84,4 +80,3 @@ class dds::sub::cond::TReadCondition : public dds::core::cond::TCondition<DELEGA
 };
 
 #endif // OMG_DDS_SUB_TCOND_READ_CONDITION_HPP_
-

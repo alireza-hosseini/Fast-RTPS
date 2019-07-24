@@ -41,7 +41,7 @@ bool isNested(
 template<typename DELEGATE>
 class dds::core::xtypes::TStructForwardDeclaration : public dds::core::xtypes::DynamicType<DELEGATE>
 {
-    public:
+public:
 
     TStructForwardDeclaration(
             const std::string& name);
@@ -55,7 +55,7 @@ class dds::core::xtypes::TStructForwardDeclaration : public dds::core::xtypes::D
 template<typename DELEGATE>
 class dds::core::xtypes::TStructType : public dds::core::xtypes::DynamicType<DELEGATE>
 {
-    public:
+public:
 
     TStructType(
             const std::string& name);

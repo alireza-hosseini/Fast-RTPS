@@ -31,7 +31,7 @@ class DomainParticipantListener :
     public virtual dds::sub::SubscriberListener,
     public virtual dds::topic::AnyTopicListener
 {
-  public:
+public:
 
     virtual ~DomainParticipantListener()
     {
@@ -45,7 +45,7 @@ class NoOpDomainParticipantListener :
     public virtual dds::sub::NoOpSubscriberListener,
     public virtual dds::topic::NoOpAnyTopicListener
 {
-  public:
+public:
 
     virtual ~NoOpDomainParticipantListener();
 

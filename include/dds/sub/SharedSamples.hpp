@@ -28,15 +28,13 @@ template<
     template<typename Q> class DELEGATE>
 class dds::sub::SharedSamples : public dds::core::Reference< DELEGATE<T> >
 {
-  public:
+public:
 
     typedef T DataType;
 
     typedef typename DELEGATE<T>::iterator iterator;
 
     typedef typename DELEGATE<T>::const_iterator const_iterator;
-
-  public:
 
     /**
      * Constructs an instance of <code>SharedSamples</code> and
@@ -53,8 +51,6 @@ class dds::sub::SharedSamples : public dds::core::Reference< DELEGATE<T> >
         LoanedSamples ls);
 
     ~SharedSamples();
-
-  public:
 
     const_iterator begin() const;
 

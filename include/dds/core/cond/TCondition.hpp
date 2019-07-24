@@ -42,7 +42,7 @@ class TCondition;
 template<typename DELEGATE>
 class dds::core::cond::TCondition : public dds::core::Reference<DELEGATE>
 {
-    public:
+public:
 
     OMG_DDS_REF_TYPE(
             TCondition,
