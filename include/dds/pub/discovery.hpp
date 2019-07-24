@@ -20,7 +20,7 @@
  */
 
 
-namespace dds { 
+namespace dds {
 namespace pub {
 
   /**
@@ -47,8 +47,8 @@ namespace pub {
    */
   template<typename FwdIterator>
   void ignore(
-      const dds::domain::DomainParticipant& dp, 
-      FwdIterator begin, 
+      const dds::domain::DomainParticipant& dp,
+      FwdIterator begin,
       FwdIterator end);
 
   /**
@@ -80,11 +80,11 @@ namespace pub {
    * infrastructure does not locally maintain the connectivity information.
    */
   template<
-      typename T, 
+      typename T,
       typename FwdIterator>
   ::dds::core::InstanceHandleSeq& matched_subscriptions(
       const dds::pub::DataWriter<T>& dw,
-      FwdIterator begin, 
+      FwdIterator begin,
       FwdIterator end);
 
   /**
@@ -107,7 +107,7 @@ namespace pub {
       const dds::pub::DataWriter<T>& dw,
       const ::dds::core::InstanceHandle& h);
 
-} 
+}
 }
 
 #endif // OMG_DDS_PUB_DISCOVERY_HPP_

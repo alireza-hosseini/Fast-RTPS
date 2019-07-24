@@ -34,7 +34,7 @@
 #include <dds/sub/qos/SubscriberQos.hpp>
 
 
-namespace dds { 
+namespace dds {
 namespace domain {
 
 template<typename DELEGATE>
@@ -42,7 +42,7 @@ class TDomainParticipant;
 
 class DomainParticipantListener;
 
-} 
+}
 }
 
 /**
@@ -61,7 +61,7 @@ class DomainParticipantListener;
  * </ul>
  */
 template<typename DELEGATE>
-class dds::domain::TDomainParticipant : public ::dds::core::TEntity<DELEGATE> 
+class dds::domain::TDomainParticipant : public ::dds::core::TEntity<DELEGATE>
 {
   public:
 
@@ -82,7 +82,7 @@ class dds::domain::TDomainParticipant : public ::dds::core::TEntity<DELEGATE>
      *
      */
     TDomainParticipant(
-            uint32_t did) 
+            uint32_t did)
         : ::dds::core::TEntity<DELEGATE>(new DELEGATE(did));
 
     /**
@@ -105,8 +105,8 @@ class dds::domain::TDomainParticipant : public ::dds::core::TEntity<DELEGATE>
   public:
 
     OMG_DDS_BASIC_REF_TYPE(
-        TDomainParticipant, 
-        ::dds::core::TEntity, 
+        TDomainParticipant,
+        ::dds::core::TEntity,
         DELEGATE)
 
   public:

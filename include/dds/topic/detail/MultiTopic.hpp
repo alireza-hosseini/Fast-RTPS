@@ -29,8 +29,8 @@
 
 #ifdef OMG_DDS_MULTI_TOPIC_SUPPORT
 
-namespace dds { 
-namespace topic { 
+namespace dds {
+namespace topic {
 namespace detail {
 
 template<typename T>

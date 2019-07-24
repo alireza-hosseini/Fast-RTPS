@@ -20,10 +20,10 @@
  */
 
 
-namespace dds { 
+namespace dds {
 namespace topic {
 
-class AnyTopicListener 
+class AnyTopicListener
 {
   public:
 
@@ -37,7 +37,7 @@ class AnyTopicListener
 };
 
 
-class NoOpAnyTopicListener : public virtual AnyTopicListener 
+class NoOpAnyTopicListener : public virtual AnyTopicListener
 {
   public:
 

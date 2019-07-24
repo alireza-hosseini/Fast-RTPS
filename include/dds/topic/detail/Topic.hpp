@@ -27,20 +27,20 @@
 #include <dds/topic/qos/TopicQos.hpp>
 #include <dds/topic/detail/TopicDescription.hpp>
 
-namespace dds { 
+namespace dds {
 namespace topic {
 
 template<typename T>
 class TopicListener;
 
 namespace detail {
-    
+
 template<typename T>
 class Topic;
-    
+
 // Vendors should provide implementation.
 
-} 
+}
 }
 }
 

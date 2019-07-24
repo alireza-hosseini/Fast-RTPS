@@ -7,7 +7,7 @@ namespace detail {
 
 template<typename T>
 class LoanedSamples {};
-    
+
 }
 }
 }

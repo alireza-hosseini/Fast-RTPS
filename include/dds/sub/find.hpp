@@ -27,7 +27,7 @@
 #include <dds/sub/detail/find.hpp>
 
 
-namespace dds { 
+namespace dds {
 namespace sub {
 
   /**
@@ -51,12 +51,12 @@ namespace sub {
    *
    */
   template<
-      typename READER, 
+      typename READER,
       typename FwdIterator>
   uint32_t find(
       const dds::sub::Subscriber& sub,
       const std::string& topic_name,
-      FwdIterator begin, 
+      FwdIterator begin,
       uint32_t max_size);
 
   /**
@@ -70,8 +70,8 @@ namespace sub {
    * @return the total number of elements found and copied over.
    *
    */
-  template< 
-      typename READER, 
+  template<
+      typename READER,
       typename BinIterator>
   uint32_t find(
       const dds::sub::Subscriber& sub,
@@ -87,13 +87,13 @@ namespace sub {
    * built-in DataReader entities for the built-in topics
    */
   template<
-      typename READER, 
-      typename T, 
+      typename READER,
+      typename T,
       typename FwdIterator>
   uint32_t find(
       const dds::sub::Subscriber& sub,
       const dds::topic::TopicDescription<T>& topic_description,
-      FwdIterator begin, 
+      FwdIterator begin,
       uint32_t max_size);
 
   /**
@@ -105,8 +105,8 @@ namespace sub {
    * built-in DataReader entities for the built-in topics
    */
   template<
-      typename READER, 
-      typename T, 
+      typename READER,
+      typename T,
       typename BinIterator>
   uint32_t find(
       const dds::sub::Subscriber& sub,
@@ -118,12 +118,12 @@ namespace sub {
    * belonging to the Subscriber that is in a specific state.
    */
   template<
-      typename READER, 
+      typename READER,
       typename FwdIterator>
   uint32_t find(
       const dds::sub::Subscriber& sub,
       const dds::sub::status::DataState& rs,
-      FwdIterator begin, 
+      FwdIterator begin,
       uint32_t max_size);
 
   /**
@@ -131,14 +131,14 @@ namespace sub {
    * belonging to the Subscriber that is in a specific state.
    */
   template<
-    typename READER, 
+    typename READER,
     typename BinIterator>
   uint32_t find(
       const dds::sub::Subscriber& sub,
       const dds::sub::status::DataState& rs,
       BinIterator begin);
 
-} 
+}
 }
 
 #endif // OMG_DDS_SUB_FIND_HPP_

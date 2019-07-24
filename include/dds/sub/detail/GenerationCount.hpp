@@ -8,10 +8,10 @@
 namespace dds {
 namespace sub {
 namespace detail {
-  
-//TODO: Uncomment and fix when GenerationCount is implemented    
+
+//TODO: Uncomment and fix when GenerationCount is implemented
 //typedef dds::sub::TGenerationCount< eprosima::fastdds::dds::sub::GenerationCount> GenerationCount;
-    
+
 }
 }
 }

@@ -16,23 +16,23 @@ class LoanedSamples;
 
 // Used by C++11 compilers to allow for using LoanedSamples
 // and SharedSamples in a range based for-loop.
-template<typename T> 
+template<typename T>
 typename T::iterator begin(
     T& t);
 
-template<typename T> 
+template<typename T>
 typename T::iterator end(
     T& t);
 
-template<typename T> 
+template<typename T>
 typename T::const_iterator cbegin(
     const T& t);
 
-template<typename T> 
+template<typename T>
 typename T::const_iterator cend(
     const T& t);
 
-} 
+}
 }
 
 /**
@@ -85,9 +85,9 @@ class dds::sub::LoanedSamples
 
 namespace dds {
 namespace sub {
-    
+
 template<
-    typename T, 
+    typename T,
     template<typename Q> class D>
 LoanedSamples<T, D<T> > move(
     LoanedSamples<T, D<T> >& a);

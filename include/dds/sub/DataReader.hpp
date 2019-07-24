@@ -33,7 +33,7 @@ typedef dds::sub::functors::detail::NextInstanceManipulatorFunctor NextInstanceM
 }
 }
 
-namespace dds { 
+namespace dds {
 namespace sub {
 
 template <typename SELECTOR>

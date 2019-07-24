@@ -24,10 +24,10 @@
 #include <dds/topic/detail/AnyTopicDescription.hpp>
 
 
-namespace dds { 
+namespace dds {
 namespace topic {
 
-class AnyTopicDescription 
+class AnyTopicDescription
 {
   public:
 

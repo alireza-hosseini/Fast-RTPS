@@ -36,7 +36,7 @@ class TFilter;
  * <code>ContentFilteredTopic</code>.
  */
 template<typename D>
-class dds::topic::TFilter: public dds::core::Value<D> 
+class dds::topic::TFilter: public dds::core::Value<D>
 {
   public:
 
@@ -52,7 +52,7 @@ class dds::topic::TFilter: public dds::core::Value<D>
 
     template<typename FWIterator>
     TFilter(
-        const std::string& query_expression, 
+        const std::string& query_expression,
         const FWIterator& params_begin,
         const FWIterator& params_end);
 
@@ -84,7 +84,7 @@ class dds::topic::TFilter: public dds::core::Value<D>
 
     template<typename FWIterator>
     void parameters(
-        const FWIterator& begin, 
+        const FWIterator& begin,
         const FWIterator end);
 
     void add_parameter(

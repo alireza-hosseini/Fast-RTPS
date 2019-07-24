@@ -28,7 +28,7 @@
 
 
 
-namespace dds { 
+namespace dds {
 namespace pub {
 
 template<typename DELEGATE>
@@ -36,7 +36,7 @@ class TPublisher;
 
 class PublisherListener;
 
-} 
+}
 }
 
 /**
@@ -57,8 +57,8 @@ class dds::pub::TPublisher : public dds::core::TEntity<DELEGATE>
   public:
 
     OMG_DDS_REF_TYPE(
-        TPublisher, 
-        dds::core::TEntity, 
+        TPublisher,
+        dds::core::TEntity,
         DELEGATE)
 
 

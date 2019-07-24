@@ -21,9 +21,9 @@
 
 #include <dds/topic/detail/BuiltinTopicKey.hpp>
 
-namespace dds { 
+namespace dds {
 namespace topic {
-  
+
 typedef dds::topic::detail::BuiltinTopicKey BuiltinTopicKey;
 
 }

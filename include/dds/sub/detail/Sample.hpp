@@ -25,10 +25,10 @@
 namespace dds {
 namespace sub {
 namespace detail {
-  
-//TODO: Uncomment and fix when Sample is implemented    
+
+//TODO: Uncomment and fix when Sample is implemented
 //typedef dds::sub::TSample<eprosima::fastdds::dds::sub::Sample> Sample;
-    
+
 }
 }
 }

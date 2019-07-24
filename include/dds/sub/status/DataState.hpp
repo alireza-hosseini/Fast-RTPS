@@ -34,7 +34,7 @@ class SampleState;
 }
 }
 
-class dds::sub::status::SampleState : public std::bitset<OMG_DDS_STATE_BIT_COUNT> 
+class dds::sub::status::SampleState : public std::bitset<OMG_DDS_STATE_BIT_COUNT>
 {
   public:
 
@@ -94,7 +94,7 @@ class ViewState : public std::bitset<OMG_DDS_STATE_BIT_COUNT>
 };
 
 
-class InstanceState : public std::bitset<OMG_DDS_STATE_BIT_COUNT> 
+class InstanceState : public std::bitset<OMG_DDS_STATE_BIT_COUNT>
 {
   public:
     typedef std::bitset<OMG_DDS_STATE_BIT_COUNT> MaskType;
@@ -126,7 +126,7 @@ class InstanceState : public std::bitset<OMG_DDS_STATE_BIT_COUNT>
 
 };
 
-class DataState 
+class DataState
 {
   public:
 
@@ -168,58 +168,58 @@ class DataState
       : ss_(ss)
       , vs_(vs)
       , is_(is)
-    { 
+    {
     }
 
     DataState& operator << (
-        const dds::sub::status::SampleState& ss) 
+        const dds::sub::status::SampleState& ss)
     {
       ss_ = ss;
       return *this;
     }
 
     DataState& operator << (
-        const dds::sub::status::InstanceState& is) 
+        const dds::sub::status::InstanceState& is)
     {
       is_ = is;
       return *this;
     }
 
     DataState& operator << (
-        const dds::sub::status::ViewState& vs) 
+        const dds::sub::status::ViewState& vs)
     {
       vs_ = vs;
       return *this;
     }
 
     const DataState& operator >> (
-        dds::sub::status::SampleState& ss) const 
+        dds::sub::status::SampleState& ss) const
     {
       ss = ss_;
       return *this;
     }
 
     const DataState& operator >> (
-        dds::sub::status::InstanceState& is) const 
+        dds::sub::status::InstanceState& is) const
     {
       is = is_;
       return *this;
     }
 
     const DataState& operator >> (
-        dds::sub::status::ViewState& vs) const 
+        dds::sub::status::ViewState& vs) const
     {
       vs = vs_;
       return *this;
     }
 
-    const dds::sub::status::SampleState& sample_state() const 
+    const dds::sub::status::SampleState& sample_state() const
     {
       return ss_;
     }
 
     const void sample_state(
-        const dds::sub::status::SampleState& ss) 
+        const dds::sub::status::SampleState& ss)
     {
       *this << ss;
     }
@@ -230,23 +230,23 @@ class DataState
     }
 
     void instance_state(
-        const dds::sub::status::InstanceState& is) 
+        const dds::sub::status::InstanceState& is)
     {
       *this << is;
     }
 
-    const dds::sub::status::ViewState& view_state() const 
+    const dds::sub::status::ViewState& view_state() const
     {
       return vs_;
     }
 
     void view_state(
-        const dds::sub::status::ViewState& vs) 
+        const dds::sub::status::ViewState& vs)
     {
       *this << vs;
     }
 
-    static DataState any() 
+    static DataState any()
     {
       return DataState(
                 dds::sub::status::SampleState::any(),
@@ -254,7 +254,7 @@ class DataState
                 dds::sub::status::InstanceState::any());
     }
 
-    static DataState new_data() 
+    static DataState new_data()
     {
       return DataState(
                 dds::sub::status::SampleState::not_read(),
@@ -262,7 +262,7 @@ class DataState
                 dds::sub::status::InstanceState::alive());
     }
 
-    static DataState any_data() 
+    static DataState any_data()
     {
       return DataState(
                 dds::sub::status::SampleState::any(),
@@ -270,7 +270,7 @@ class DataState
                 dds::sub::status::InstanceState::alive());
     }
 
-    static DataState new_instance() 
+    static DataState new_instance()
     {
       return DataState(
                 dds::sub::status::SampleState::any(),
@@ -283,7 +283,7 @@ class DataState
     dds::sub::status::SampleState ss_;
 
     dds::sub::status::ViewState vs_;
-    
+
     dds::sub::status::InstanceState is_;
 
 };

@@ -23,15 +23,15 @@
 //TODO: Fix this file when PublisherDelegate is implemented
 //#include <foo/bar/pub/PublisherDelegate.hpp>
 
-namespace dds { 
-namespace pub { 
+namespace dds {
+namespace pub {
 namespace detail {
-    
+
 //TODO: Uncomment and fix when PublisherDelegate is implemented
 //typedef dds::pub::TPublisher<eprosima::fastdds::dds::pub::PublisherDelegate> Publisher;
 
 }
-} 
+}
 }
 
 #endif //  OMG_DDS_PUB_DETAIL_PUBLISHER_HPP_

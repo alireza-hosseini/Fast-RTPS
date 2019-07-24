@@ -24,7 +24,7 @@
 #include <dds/pub/detail/find.hpp>
 
 
-namespace dds { 
+namespace dds {
 namespace pub {
 
   /**
@@ -40,12 +40,12 @@ namespace pub {
    *
    */
   template<
-      typename WRITER, 
+      typename WRITER,
       typename FwdIterator>
   uint32_t find(
-      const dds::pub::Publisher& pub, 
+      const dds::pub::Publisher& pub,
       const std::string& topic_name,
-      FwdIterator begin, 
+      FwdIterator begin,
       uint32_t max_size);
 
   /**
@@ -61,14 +61,14 @@ namespace pub {
    *
    */
   template<
-      typename WRITER, 
+      typename WRITER,
       typename BinIterator>
   uint32_t find(
-      const dds::pub::Publisher& pub, 
+      const dds::pub::Publisher& pub,
       const std::string& topic_name,
       BinIterator begin);
 
-} 
+}
 }
 
 #endif // OMG_DDS_PUB_FIND_HPP_

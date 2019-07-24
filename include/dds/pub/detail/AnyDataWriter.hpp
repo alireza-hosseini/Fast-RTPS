@@ -27,19 +27,19 @@
 // NOTE: This code is non-normative and is provided only as a guide
 // to implementor of this specification.
 
-namespace dds { 
-namespace pub { 
+namespace dds {
+namespace pub {
 namespace detail {
 
 class DWHolderBase;
-template <typename T> 
+template <typename T>
 class DWHolder;
 
 }
 }
 }
 
-class dds::pub::detail::DWHolderBase 
+class dds::pub::detail::DWHolderBase
 {
     public:
 
@@ -66,17 +66,17 @@ class dds::pub::detail::DWHolderBase
 
 
 template <typename T>
-class dds::pub::detail::DWHolder : public DWHolderBase 
+class dds::pub::detail::DWHolder : public DWHolderBase
 {
     public:
 
         DWHolder(
-                const dds::pub::DataWriter<T>& dw) 
-            : dw_(dw) 
-        { 
+                const dds::pub::DataWriter<T>& dw)
+            : dw_(dw)
+        {
         }
 
-        virtual ~DWHolder() 
+        virtual ~DWHolder()
         {
         }
 
@@ -88,48 +88,48 @@ class dds::pub::detail::DWHolder : public DWHolderBase
         }
 
         virtual void qos(
-                const ::dds::pub::qos::DataWriterQos& the_qos) 
+                const ::dds::pub::qos::DataWriterQos& the_qos)
         {
         	dw_.qos(the_qos);
         }
 
-        virtual const std::string& topic_name() const 
+        virtual const std::string& topic_name() const
         {
             return dw_.topic().name();
         }
 
-        virtual const std::string& type_name() const 
+        virtual const std::string& type_name() const
         {
             return dw_.topic().type_name();
         }
 
-        virtual const ::dds::pub::Publisher& publisher() const 
+        virtual const ::dds::pub::Publisher& publisher() const
         {
             return dw_.publisher();
         }
 
         virtual void wait_for_acknowledgments(
-                const dds::core::Duration& timeout) 
+                const dds::core::Duration& timeout)
         {
           dw_.wait_for_acknowledgments(timeout);
         }
 
-        virtual void close() 
+        virtual void close()
         {
             dw_.close();
         }
 
-        virtual void retain(bool b) 
+        virtual void retain(bool b)
         {
         }
 
-        const dds::pub::DataWriter<T>& get() const 
-        { 
+        const dds::pub::DataWriter<T>& get() const
+        {
             return dw_;
         }
 
     private:
-        
+
         dds::pub::DataWriter<T> dw_;
 };
 

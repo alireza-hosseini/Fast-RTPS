@@ -20,12 +20,12 @@
  */
 
 
-namespace dds { 
+namespace dds {
 namespace sub {
 
 class AnyDataReader;
 
-class AnyDataReaderListener 
+class AnyDataReaderListener
 {
   public:
 
@@ -67,55 +67,55 @@ class AnyDataReaderListener
 };
 
 
-class NoOpAnyDataReaderListener : public virtual AnyDataReaderListener 
+class NoOpAnyDataReaderListener : public virtual AnyDataReaderListener
 {
   public:
 
-    virtual ~NoOpAnyDataReaderListener() 
-    { 
+    virtual ~NoOpAnyDataReaderListener()
+    {
     }
 
   public:
 
     virtual void on_requested_deadline_missed(
             AnyDataReader& the_reader,
-            const dds::core::status::RequestedDeadlineMissedStatus& status) 
-    { 
+            const dds::core::status::RequestedDeadlineMissedStatus& status)
+    {
     }
 
     virtual void on_requested_incompatible_qos(
             AnyDataReader& the_reader,
-            const dds::core::status::RequestedIncompatibleQosStatus& status) 
-    { 
+            const dds::core::status::RequestedIncompatibleQosStatus& status)
+    {
     }
 
     virtual void on_sample_rejected(
             AnyDataReader& the_reader,
-            const dds::core::status::SampleRejectedStatus& status) 
-    { 
+            const dds::core::status::SampleRejectedStatus& status)
+    {
     }
 
     virtual void on_liveliness_changed(
             AnyDataReader& the_reader,
-            const dds::core::status::LivelinessChangedStatus& status) 
-    { 
+            const dds::core::status::LivelinessChangedStatus& status)
+    {
     }
 
     virtual void on_data_available(
-            AnyDataReader& the_reader) 
-    { 
+            AnyDataReader& the_reader)
+    {
     }
 
     virtual void on_subscription_matched(
             AnyDataReader& the_reader,
-            const dds::core::status::SubscriptionMatchedStatus& status) 
-    { 
+            const dds::core::status::SubscriptionMatchedStatus& status)
+    {
     }
 
     virtual void on_sample_lost(
             AnyDataReader& the_reader,
-            const dds::core::status::SampleLostStatus& status) 
-    { 
+            const dds::core::status::SampleLostStatus& status)
+    {
     }
 };
 

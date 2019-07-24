@@ -38,14 +38,14 @@ namespace detail {
 
 template<typename T>
 	class DataWriter;
-    	
+
 }
 }
 }
 
 //TODO: Uncomment and fix when EntityDelegate is implemented
 /*template<typename T>
-class dds::pub::detail::DataWriter : public  eprosima::fastdds::dds::core::EntityDelegate  
+class dds::pub::detail::DataWriter : public  eprosima::fastdds::dds::core::EntityDelegate
 {
 	public:
   	// Vendor implementation should go here.

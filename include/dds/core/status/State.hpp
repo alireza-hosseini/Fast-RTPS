@@ -71,7 +71,7 @@ class SampleRejectedState : public std::bitset<OMG_DDS_STATE_BIT_COUNT>
 
 private:
     // @TODO
-    // -- This Ctor should be fixed as currently there is this 
+    // -- This Ctor should be fixed as currently there is this
     // -- cast only to avoid an error when compiling with the    MS vC++ compiler
     SampleRejectedState(
             uint32_t s)

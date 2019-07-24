@@ -14,7 +14,7 @@
 namespace dds {
 namespace sub {
 namespace detail {
-      
+
 //TODO: Uncomment and fix when Query is implemented
 //typedef eproisma::fastdds::dds::sub::Query Query;
 

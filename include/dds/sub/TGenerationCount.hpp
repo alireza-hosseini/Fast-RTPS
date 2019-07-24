@@ -3,9 +3,9 @@
 
 #include <dds/core/Value.hpp>
 
-namespace dds { 
+namespace dds {
 namespace sub {
-  
+
 template<typename DELEGATE>
 class TGenerationCount;
 
@@ -20,7 +20,7 @@ class dds::sub::TGenerationCount : public dds::core::Value<DELEGATE>
   		TGenerationCount();
 
   		TGenerationCount(
-  				int32_t dgc, 
+  				int32_t dgc,
   				int32_t nwgc);
 
 	public:

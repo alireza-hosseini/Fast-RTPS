@@ -6,9 +6,9 @@
 #include <dds/sub/GenerationCount.hpp>
 #include <dds/sub/Rank.hpp>
 
-namespace dds { 
+namespace dds {
 namespace sub {
-   
+
 template<typename DELEGATE>
 class TSampleInfo;
 
@@ -19,7 +19,7 @@ class TSampleInfo;
  * This class implements the DDS <code>SampleInfo</code>.
  */
 template<typename DELEGATE>
-class dds::sub::TSampleInfo : dds::core::Value<DELEGATE> 
+class dds::sub::TSampleInfo : dds::core::Value<DELEGATE>
 {
   public:
 
@@ -41,7 +41,7 @@ class dds::sub::TSampleInfo : dds::core::Value<DELEGATE>
     dds::core::InstanceHandle instance_handle() const;
 
     dds::core::InstanceHandle publication_handle() const;
-    
+
 };
 
 #endif // OMG_DDS_SUB_TSAMPLE_INFO_HPP_

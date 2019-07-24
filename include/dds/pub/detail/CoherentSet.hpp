@@ -9,11 +9,11 @@ namespace dds {
 namespace pub {
 namespace detail {
 
-//TODO: Uncomment and fix when CoherentSet is implemented		
+//TODO: Uncomment and fix when CoherentSet is implemented
 //typedef dds::pub::TCoherentSet<eprosima::fastdds::dds::pub::CoherentSet> CoherentSet;
-		
+
 }
 }
 }
 
-#endif //  OMG_DDS_PUB_DETAIL_COHERENT_SET_HPP_ 
+#endif //  OMG_DDS_PUB_DETAIL_COHERENT_SET_HPP_

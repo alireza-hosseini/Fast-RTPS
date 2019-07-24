@@ -28,7 +28,7 @@
 
 #ifdef OMG_DDS_CONTENT_SUBSCRIPTION_SUPPORT
 
-namespace dds { 
+namespace dds {
 namespace sub {
 namespace cond {
 
@@ -50,7 +50,7 @@ class QueryCondition;
  * conjunction with a WaitSet as normal conditions. More than one
  * ReadCondition may be attached to the same DataReader.
  */
-class dds::sub::cond::QueryCondition : public dds::sub::cond::TReadCondition<detail::QueryCondition> 
+class dds::sub::cond::QueryCondition : public dds::sub::cond::TReadCondition<detail::QueryCondition>
 {
   public:
 
@@ -76,7 +76,7 @@ class dds::sub::cond::QueryCondition : public dds::sub::cond::TReadCondition<det
 
     void expression(
         const std::string& expr);
-        
+
     const std::string& expression();
 
     /**
@@ -101,14 +101,14 @@ class dds::sub::cond::QueryCondition : public dds::sub::cond::TReadCondition<det
 
     template<typename FWIterator>
     void parameters(
-        const FWIterator& begin, 
+        const FWIterator& begin,
         const FWIterator end);
 
     void add_parameter(
         const std::string& param);
 
     uint32_t parameters_length() const;
-    
+
 };
 
 #endif  // OMG_DDS_CONTENT_SUBSCRIPTION_SUPPORT

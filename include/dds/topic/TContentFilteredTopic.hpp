@@ -32,7 +32,7 @@ namespace dds {
 namespace topic {
 
 template<
-    typename T, 
+    typename T,
     template <typename Q> class DELEGATE>
 class ContentFilteredTopic;
 
@@ -44,16 +44,16 @@ class ContentFilteredTopic;
  * This class represents a content-filtered topic.
  */
 template<
-    typename T, 
+    typename T,
     template <typename Q> class DELEGATE>
-class dds::topic::ContentFilteredTopic : public TopicDescription <T, DELEGATE> 
+class dds::topic::ContentFilteredTopic : public TopicDescription <T, DELEGATE>
 {
   public:
 
     OMG_DDS_REF_TYPE_T(
-        ContentFilteredTopic, 
-        TopicDescription, 
-        T, 
+        ContentFilteredTopic,
+        TopicDescription,
+        T,
         DELEGATE)
 
   public:
@@ -71,8 +71,8 @@ class dds::topic::ContentFilteredTopic : public TopicDescription <T, DELEGATE>
      *
      */
     ContentFilteredTopic(
-        const Topic<T>& topic, 
-        const std::string& name, 
+        const Topic<T>& topic,
+        const std::string& name,
         const dds::topic::Filter& filter);
 
     virtual ~ContentFilteredTopic();
@@ -94,7 +94,7 @@ class dds::topic::ContentFilteredTopic : public TopicDescription <T, DELEGATE>
      */
     template<typename FWDIterator>
     void filter_parameters(
-        const FWDIterator& begin, 
+        const FWDIterator& begin,
         const FWDIterator& end);
 
     /**

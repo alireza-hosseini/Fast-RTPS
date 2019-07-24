@@ -28,7 +28,7 @@ namespace detail {
 
 typedef dds::domain::TDomainParticipant<eprosima::fastdds::dds::domain::DomainParticipant> DomainParticipant;
 
-}	
+}
 }
 }
 

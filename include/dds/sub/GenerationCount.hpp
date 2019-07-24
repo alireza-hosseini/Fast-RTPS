@@ -3,7 +3,7 @@
 
 #include <dds/sub/detail/GenerationCount.hpp>
 
-namespace dds { 
+namespace dds {
 namespace sub {
 
 typedef detail::GenerationCount GenerationCount;

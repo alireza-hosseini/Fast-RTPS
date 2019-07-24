@@ -22,15 +22,15 @@
 
 #include <dds/pub/DataWriter.hpp>
 
-namespace dds { 
+namespace dds {
 namespace pub {
 
 template<typename T>
-class DataWriterListener 
+class DataWriterListener
 {
   public:
 
-    virtual ~DataWriterListener() 
+    virtual ~DataWriterListener()
     {
     }
 
@@ -55,7 +55,7 @@ class DataWriterListener
 
 
 template<typename T>
-class NoOpDataWriterListener : public virtual DataWriterListener<T> 
+class NoOpDataWriterListener : public virtual DataWriterListener<T>
 {
   public:
 
@@ -80,7 +80,7 @@ class NoOpDataWriterListener : public virtual DataWriterListener<T>
         const dds::core::status::PublicationMatchedStatus& status);
 };
 
-} 
+}
 }
 
 #endif // OMG_DDS_PUB_DATA_WRITER_LISTENER_HPP_

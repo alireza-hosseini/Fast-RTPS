@@ -118,17 +118,17 @@
 //
 // #if (OMG_DDS_HAS_PRETTY_PRINT_COUT == 1)
 std::ostream& operator << (
-		std::ostream& os, 
+		std::ostream& os,
 		const dds::sub::status::DataState& s);
 
 std::ostream& operator << (
-		std::ostream& os, 
+		std::ostream& os,
 		const dds::sub::Rank& r);
 
 std::ostream& operator << (
-		std::ostream& os, 
+		std::ostream& os,
 		const dds::sub::SampleInfo& si);
 
-// #endif 
+// #endif
 
 #endif // OMG_DDS_SUB_PACKAGE_INCLUDE_HPP_

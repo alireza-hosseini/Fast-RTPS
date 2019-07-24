@@ -22,8 +22,8 @@
 
 #include <dds/core/cond/TCondition.hpp>
 
-namespace dds { 
-namespace sub { 
+namespace dds {
+namespace sub {
 namespace cond {
 
 template<typename DELEGATE>
@@ -46,28 +46,28 @@ class TReadCondition;
  * ReadCondition may be attached to the same DataReader.
  */
 template<typename DELEGATE>
-class dds::sub::cond::TReadCondition : public dds::core::cond::TCondition<DELEGATE> 
+class dds::sub::cond::TReadCondition : public dds::core::cond::TCondition<DELEGATE>
 {
   public:
 
     OMG_DDS_REF_TYPE(
       TReadCondition,
-      dds::core::cond::TCondition, 
+      dds::core::cond::TCondition,
       DELEGATE)
 
   public:
 
     template<typename T>
     TReadCondition(
-      const dds::sub::DataReader<T>& dr, 
+      const dds::sub::DataReader<T>& dr,
       const dds::sub::status::DataState& status);
 
     template<
-        typename T, 
+        typename T,
         typename FUN>
     TReadCondition(
-        const dds::sub::DataReader<T>& dr, 
-        const dds::sub::status::DataState& status, 
+        const dds::sub::DataReader<T>& dr,
+        const dds::sub::status::DataState& status,
         const FUN& functor);
 
     ~TReadCondition();

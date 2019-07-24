@@ -31,7 +31,7 @@
 #ifdef OMG_DDS_CONTENT_SUBSCRIPTION_SUPPORT
 
 namespace dds {
-namespace topic { 
+namespace topic {
 namespace detail {
 
 template<typename T>

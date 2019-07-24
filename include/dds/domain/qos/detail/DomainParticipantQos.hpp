@@ -32,7 +32,7 @@ namespace detail {
 
 //TODO: Uncomment and fix when DomainParticipantQos is implemented
 //typedef ::dds::core::qos::TEntityQos<eprosima::fastdds::dds::domain::qos::DomainParticipantQos> DomainParticipantQos;
-			
+
 }
 }
 }

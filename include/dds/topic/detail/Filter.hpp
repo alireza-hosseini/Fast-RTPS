@@ -4,10 +4,10 @@
 #include <vector>
 #include <iterator>
 
-namespace dds { 
-namespace topic { 
+namespace dds {
+namespace topic {
 namespace detail {
-	
+
 class Filter;
 
 // Vendors should provide implementation.

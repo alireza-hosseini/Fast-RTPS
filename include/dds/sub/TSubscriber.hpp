@@ -24,9 +24,9 @@
 #include <dds/domain/DomainParticipant.hpp>
 #include <dds/sub/qos/DataReaderQos.hpp>
 
-namespace dds { 
+namespace dds {
 namespace sub {
-  
+
 template<typename DELEGATE>
 class TSubscriber;
 
@@ -36,12 +36,12 @@ class SubscriberListener;
 }
 
 template<typename DELEGATE>
-class dds::sub::TSubscriber : public dds::core::TEntity<DELEGATE> 
+class dds::sub::TSubscriber : public dds::core::TEntity<DELEGATE>
 {
   public:
     OMG_DDS_REF_TYPE(
-        TSubscriber, 
-        dds::core::TEntity, 
+        TSubscriber,
+        dds::core::TEntity,
         DELEGATE)
 
   public:

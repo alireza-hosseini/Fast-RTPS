@@ -21,16 +21,16 @@
 
 #include <dds/pub/AnyDataWriter.hpp>
 
-namespace dds { 
+namespace dds {
 namespace pub {
 
 class AnyDataWriterListener;
 class NoOpAnyDataWriterListener;
 
-} 
+}
 }
 
-class dds::pub::AnyDataWriterListener 
+class dds::pub::AnyDataWriterListener
 {
   public:
 
@@ -55,7 +55,7 @@ class dds::pub::AnyDataWriterListener
         const ::dds::core::status::PublicationMatchedStatus& status) = 0;
 };
 
-class dds::pub::NoOpAnyDataWriterListener : public virtual dds::pub::AnyDataWriterListener 
+class dds::pub::NoOpAnyDataWriterListener : public virtual dds::pub::AnyDataWriterListener
 {
   public:
 

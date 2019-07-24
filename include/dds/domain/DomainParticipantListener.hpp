@@ -34,10 +34,10 @@ class DomainParticipantListener :
 {
   public:
 
-    virtual ~DomainParticipantListener() 
-    { 
+    virtual ~DomainParticipantListener()
+    {
     }
-    
+
 };
 
 

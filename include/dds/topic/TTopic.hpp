@@ -28,11 +28,11 @@
 #include <dds/topic/TopicDescription.hpp>
 
 
-namespace dds { 
+namespace dds {
 namespace topic {
 
 template<
-    typename T, 
+    typename T,
     template <typename Q> class DELEGATE>
 class Topic;
 
@@ -54,9 +54,9 @@ class TopicListener;
  * therefore associated to a DataWriter.
  */
 template<
-    typename T, 
+    typename T,
     template <typename Q> class DELEGATE>
-class dds::topic::Topic : public dds::topic::TopicDescription <T, DELEGATE> 
+class dds::topic::Topic : public dds::topic::TopicDescription <T, DELEGATE>
 {
   public:
 
@@ -65,9 +65,9 @@ class dds::topic::Topic : public dds::topic::TopicDescription <T, DELEGATE>
   public:
 
     OMG_DDS_REF_TYPE_T(
-        Topic, 
-        TopicDescription, 
-        T, 
+        Topic,
+        TopicDescription,
+        T,
         DELEGATE)
 
     ~Topic() {}

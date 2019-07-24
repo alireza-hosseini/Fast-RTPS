@@ -23,17 +23,17 @@
 //TODO: Fix this file when DataWriterQos is implemented
 //#include <foo/bar/pub/qos/DataWriterQos.hpp>
 
-namespace dds { 
-namespace pub { 
+namespace dds {
+namespace pub {
 namespace qos {
-namespace detail { 
+namespace detail {
 
-//TODO: Uncomment and fix when DataWriterQos is implemented	
+//TODO: Uncomment and fix when DataWriterQos is implemented
 //typedef dds::core::qos::TEntityQos<eprosima::fastdds::dds::pub::qos::DataWriterQos> DataWriterQos;
 
 }
-} 
-} 
+}
+}
 }
 
 #endif // OMG_DDS_QOS_DETAIL_DATA_WRITER_QOS_HPP_

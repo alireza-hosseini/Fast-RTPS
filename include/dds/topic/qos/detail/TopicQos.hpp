@@ -23,9 +23,9 @@
 //TODO: Fix this file when TopicQos is implemented
 //#include <foo/bar/topic/qos/TopicQos.hpp>
 
-namespace dds { 
-namespace topic { 
-namespace qos { 
+namespace dds {
+namespace topic {
+namespace qos {
 namespace detail {
 
 //TODO: Uncomment and fix when TopicQos is implemented
