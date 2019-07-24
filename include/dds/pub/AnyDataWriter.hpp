@@ -83,7 +83,7 @@ class dds::pub::AnyDataWriter
     template<typename T> AnyDataWriter& operator =(
         const dds::pub::DataWriter<T>& rhs);
 
-    template <typename T> AnyDataWriter& operator =(
+    template<typename T> AnyDataWriter& operator =(
         const AnyDataWriter& rhs);
 
     inline AnyDataWriter& operator =(
@@ -95,7 +95,7 @@ class dds::pub::AnyDataWriter
      * Extracts a typed <code>DataWriter</code> from this.
      *
      */
-    template <typename T> dds::pub::DataWriter<T> get();
+    template<typename T> dds::pub::DataWriter<T> get();
 
   public:
 
