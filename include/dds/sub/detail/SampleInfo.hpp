@@ -4,8 +4,8 @@
 #include <include/fastrtps/SampleInfo.h>
 #include <dds/sub/TSampleInfo.hpp>
 
-namespace dds { 
-namespace sub { 
+namespace dds {
+namespace sub {
 namespace detail {
 
 //TODO: Change namespaces --> fastdds::dds::sub::SampleInfo instead of fastrtps::SampleInfo

@@ -35,16 +35,16 @@ template<
     template <typename Q> class DELEGATE = dds::pub::detail::DataWriter >
 class DataWriter;
 
-template<typename T> 
+template<typename T>
 class DataWriterListener;
-  
+
 }
 }
 
 template <
-    typename T, 
+    typename T,
     template <typename Q> class DELEGATE>
-class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> > 
+class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
 {
 
   public:
@@ -54,8 +54,8 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
   public:
 
     OMG_DDS_REF_TYPE(
-        DataWriter, 
-        ::dds::core::TEntity, 
+        DataWriter,
+        ::dds::core::TEntity,
         DELEGATE<T>)
 
   public:
@@ -113,7 +113,7 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * @param timestamp the timestamp used for this sample.
      */
     void write(
-        const T& sample, 
+        const T& sample,
         const dds::core::Time& timestamp);
 
     /**
@@ -124,7 +124,7 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * @param instance the handle representing the instance written.
      */
     void write(
-        const T& data, 
+        const T& data,
         const ::dds::core::InstanceHandle& instance);
 
     /**
@@ -166,7 +166,7 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      */
     template<typename FWIterator>
     void write(
-        const FWIterator& begin, 
+        const FWIterator& begin,
         const FWIterator& end);
 
     /**
@@ -175,7 +175,7 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      */
     template<typename FWIterator>
     void write(
-        const FWIterator& begin, 
+        const FWIterator& begin,
         const FWIterator& end,
         const dds::core::Time& timestamp);
 
@@ -183,7 +183,7 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * Write a series of samples and their parallel instance handles.
      */
     template<
-        typename SamplesFWIterator, 
+        typename SamplesFWIterator,
         typename HandlesFWIterator>
     void write(
         const SamplesFWIterator& data_begin,
@@ -196,7 +196,7 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * a timestamp.
      */
     template<
-        typename SamplesFWIterator, 
+        typename SamplesFWIterator,
         typename HandlesFWIterator>
     void write(
         const SamplesFWIterator& data_begin,
@@ -210,11 +210,11 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
         const T& data);
 
     DataWriter& operator << (
-        const std::pair<T, 
+        const std::pair<T,
         dds::core::Time>& data);
 
     DataWriter& operator << (
-        const std::pair<T, 
+        const std::pair<T,
         ::dds::core::InstanceHandle>& data);
 
     DataWriter& operator << (
@@ -299,7 +299,7 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * result in this situation is unspecified.
      */
     T& key_value(
-        T& sample, 
+        T& sample,
         const ::dds::core::InstanceHandle& h);
 
     /**

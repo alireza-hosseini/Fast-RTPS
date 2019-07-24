@@ -31,7 +31,7 @@ namespace topic {
  */
 template <typename TOPIC>
 TOPIC find(
-		const dds::domain::DomainParticipant& dp, 
+		const dds::domain::DomainParticipant& dp,
 		const std::string& topic_name);
 
 }

@@ -8,7 +8,7 @@ namespace detail {
 
 template<typename T>
 class SharedSamples {};
-    
+
 }
 }
 }

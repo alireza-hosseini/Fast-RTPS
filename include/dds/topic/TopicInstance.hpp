@@ -22,9 +22,9 @@
 #include <dds/core/Time.hpp>
 #include <dds/core/InstanceHandle.hpp>
 
-namespace dds { 
+namespace dds {
 namespace topic {
-  
+
 template<typename T>
 class TopicInstance;
 
@@ -32,7 +32,7 @@ class TopicInstance;
 }
 
 template<typename T>
-class dds::topic::TopicInstance 
+class dds::topic::TopicInstance
 {
   public:
 
@@ -42,7 +42,7 @@ class dds::topic::TopicInstance
         const ::dds::core::InstanceHandle& h);
 
     TopicInstance(
-        const ::dds::core::InstanceHandle& h, 
+        const ::dds::core::InstanceHandle& h,
         const T& the_sample);
 
   public:
@@ -64,7 +64,7 @@ class dds::topic::TopicInstance
   private:
 
     ::dds::core::InstanceHandle h_;
-  
+
     T sample_;
 
 };

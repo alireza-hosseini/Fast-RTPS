@@ -21,7 +21,7 @@
 
 
 
-namespace dds { 
+namespace dds {
 namespace topic {
 
 /**
@@ -35,27 +35,27 @@ TOPIC discover(
 */
 
 template<
-    typename ANYTOPIC, 
+    typename ANYTOPIC,
     typename FwdIterator>
 int discover(
-    FwdIterator begin, 
+    FwdIterator begin,
     uint32_t max_size);
 
 template<
-    typename ANYTOPIC, 
+    typename ANYTOPIC,
     typename BinIterator>
 int discover(
     BinIterator begin);
 
 template<
-    typename TOPICDATA, 
+    typename TOPICDATA,
     typename FwdIterator>
 uint32_t discover(
-    FwdIterator begin, 
+    FwdIterator begin,
     uint32_t max_size);
 
 template<
-    typename TOPICDATA, 
+    typename TOPICDATA,
     typename BinIterator>
 uint32_t discover(
     BinIterator begin);
@@ -66,11 +66,11 @@ void ignore(
 
 template<typename FwdIterator>
 void ignore(
-    const dds::domain::DomainParticipant& dp, 
-    FwdIterator begin, 
+    const dds::domain::DomainParticipant& dp,
+    FwdIterator begin,
     FwdIterator end);
 
 }
 }
 
-#endif // OMG_DDS_TOPIC_DISCOVER_HPP_ 
+#endif // OMG_DDS_TOPIC_DISCOVER_HPP_

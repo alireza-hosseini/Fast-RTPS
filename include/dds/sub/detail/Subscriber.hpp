@@ -22,15 +22,15 @@
 #include <dds/sub/TSubscriber.hpp>
 #include <fastdds/dds/subscriber/Subscriber.hpp>
 
-namespace dds { 
-namespace sub { 
+namespace dds {
+namespace sub {
 namespace detail {
 
 //TODO: Change namespaces --> dds::sub::Subscriber instead of dds::Subscriber
 typedef dds::sub::TSubscriber<fastdds::dds::Subscriber> Subscriber;
 
 }
-} 
+}
 }
 
 

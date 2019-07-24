@@ -30,7 +30,7 @@ template<
     template <typename Q> class DELEGATE>
 class TopicDescription;
 
-} 
+}
 }
 
 
@@ -43,9 +43,9 @@ class TopicDescription;
  * name that allows it to be retrieved locally.
  */
 template<
-  typename T, 
+  typename T,
   template <typename Q> class DELEGATE>
-class dds::topic::TopicDescription : public ::dds::core::TEntity< DELEGATE<T> > 
+class dds::topic::TopicDescription : public ::dds::core::TEntity< DELEGATE<T> >
 {
   public:
 
@@ -54,8 +54,8 @@ class dds::topic::TopicDescription : public ::dds::core::TEntity< DELEGATE<T> >
   public:
 
     OMG_DDS_REF_TYPE(
-        TopicDescription, 
-        ::dds::core::TEntity, 
+        TopicDescription,
+        ::dds::core::TEntity,
         DELEGATE<T>)
 
   public:

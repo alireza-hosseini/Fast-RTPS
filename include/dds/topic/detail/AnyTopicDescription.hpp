@@ -23,8 +23,8 @@
 
 #include <dds/domain/DomainParticipant.hpp>
 
-namespace dds { 
-namespace topic { 
+namespace dds {
+namespace topic {
 namespace detail {
 
 class TDHolderBase;

@@ -22,13 +22,13 @@
 #include <dds/domain/qos/detail/DomainParticipantQos.hpp>
 
 namespace dds {
-namespace domain { 
-namespace qos { 
+namespace domain {
+namespace qos {
 
 typedef dds::domain::qos::detail::DomainParticipantQos DomainParticipantQos;
 
-} 
-} 
+}
+}
 }
 
 #endif // OMG_DDS_DOMAIN_QOS_DOMAINPARTICIPANTQOS_HPP_

@@ -39,7 +39,7 @@ class null_type {};
 
 extern const null_type null;
 
-#ifdef OMG_DDS_EXTENSIBLE_AND_DYNAMIC_TOPIC_TYPE_SUPPORT    
+#ifdef OMG_DDS_EXTENSIBLE_AND_DYNAMIC_TOPIC_TYPE_SUPPORT
 namespace policy {
 
 typedef uint16_t DataRepresentationId;

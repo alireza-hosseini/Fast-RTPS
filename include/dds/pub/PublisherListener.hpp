@@ -31,7 +31,7 @@ class NoOpPublisherListener;
 }
 }
 
-class dds::pub::PublisherListener : public virtual dds::pub::AnyDataWriterListener 
+class dds::pub::PublisherListener : public virtual dds::pub::AnyDataWriterListener
 {
 	public:
 
@@ -42,7 +42,7 @@ class dds::pub::PublisherListener : public virtual dds::pub::AnyDataWriterListen
 
 class dds::pub::NoOpPublisherListener :
 		public virtual dds::pub::PublisherListener,
-		public virtual dds::pub::NoOpAnyDataWriterListener 
+		public virtual dds::pub::NoOpAnyDataWriterListener
 {
 	public:
 

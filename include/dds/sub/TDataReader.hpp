@@ -26,11 +26,11 @@
 
 namespace dds {
 namespace sub {
-    
+
 class Query;
 
 template<
-    typename T, 
+    typename T,
     template <typename Q> class DELEGATE>
 class DataReader;
 
@@ -41,9 +41,9 @@ class DataReaderListener;
 }
 
 template<
-    typename T, 
+    typename T,
     template <typename Q> class DELEGATE>
-class dds::sub::DataReader : public dds::core::TEntity< DELEGATE<T> > 
+class dds::sub::DataReader : public dds::core::TEntity< DELEGATE<T> >
 {
 
   public:
@@ -59,7 +59,7 @@ class dds::sub::DataReader : public dds::core::TEntity< DELEGATE<T> >
      *
      * By default the instance is nil,
      */
-    class Selector 
+    class Selector
     {
       public:
 
@@ -88,12 +88,12 @@ class dds::sub::DataReader : public dds::core::TEntity< DELEGATE<T> >
         // --- Forward Iterators: --- //
         template<typename SamplesFWIterator>
         uint32_t read(
-            SamplesFWIterator sfit, 
+            SamplesFWIterator sfit,
             uint32_t max_samples);
 
         template<typename SamplesFWIterator>
         uint32_t take(
-            SamplesFWIterator sfit,	
+            SamplesFWIterator sfit,
             uint32_t max_samples);
 
         // --- Back-Inserting Iterators: --- //
@@ -114,7 +114,7 @@ class dds::sub::DataReader : public dds::core::TEntity< DELEGATE<T> >
     /**
      * Selector class enabling the streaming API.
      */
-    class ManipulatorSelector 
+    class ManipulatorSelector
     {
       public:
 
@@ -159,8 +159,8 @@ class dds::sub::DataReader : public dds::core::TEntity< DELEGATE<T> >
   public:
 
     OMG_DDS_REF_TYPE(
-        DataReader, 
-        dds::core::TEntity, 
+        DataReader,
+        dds::core::TEntity,
         ELEGATE<T>)
 
   public:
@@ -436,7 +436,7 @@ class dds::sub::DataReader : public dds::core::TEntity< DELEGATE<T> >
      * result in this situation is unspecified.
      */
     T& key_value(
-        T& sample, 
+        T& sample,
         const dds::core::InstanceHandle& h);
 
     /**

@@ -23,7 +23,7 @@
 #include <dds/sub/Subscriber.hpp>
 
 
-namespace dds { 
+namespace dds {
 namespace domain {
 
   /**
@@ -39,7 +39,7 @@ namespace domain {
    *
    */
   void ignore(
-      const dds::domain::DomainParticipant& dp, 
+      const dds::domain::DomainParticipant& dp,
       const dds::core::InstanceHandle& handle);
 
   /**
@@ -58,11 +58,11 @@ namespace domain {
    */
   template <typename FwdIterator>
   void ignore(
-      const dds::domain::DomainParticipant& dp, 
-      FwdIterator begin, 
+      const dds::domain::DomainParticipant& dp,
+      FwdIterator begin,
       FwdIterator end);
 
-} 
+}
 }
 
 #endif // OMG_DDS_DOMAIN_DISCOVERY_HPP_

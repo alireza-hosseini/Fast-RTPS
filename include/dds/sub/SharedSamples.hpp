@@ -56,7 +56,7 @@ class dds::sub::SharedSamples : public dds::core::Reference< DELEGATE<T> >
     ~SharedSamples();
 
   public:
-    
+
     const_iterator begin() const;
 
     const_iterator  end() const;

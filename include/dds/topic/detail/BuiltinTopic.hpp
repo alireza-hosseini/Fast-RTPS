@@ -23,19 +23,19 @@
 //#include <foo/bar/topic/BuiltinTopicImpl.hpp>
 #include <dds/topic/TBuiltinTopic.hpp>
 
-namespace dds { 
-namespace topic { 
+namespace dds {
+namespace topic {
 namespace detail {
-    
+
 ///TODO: Uncomment and fix when ParticipantBuiltinTOpicDataImpl is implemented
 //typedef dds::topic::TParticipantBuiltinTopicData<eprosima::fastdds::dds::topic::ParticipantBuiltinTopicDataImpl> ParticipantBuiltinTopicData;
-    
+
 //TODO: Uncomment and fix when TopicBuiltinTOpicDataImpl is implemented
 //typedef dds::topic::TTopicBuiltinTopicData<eprosima::fastdds::dds::topic::TopicBuiltinTopicDataImpl> TopicBuiltinTopicData;
-    
+
 //TODO: Uncomment and fix when PublicationBuiltinTopicDataImpl is implemented
 //typedef dds::topic::TPublicationBuiltinTopicData<eprosima::fastdds::dds::topic::PublicationBuiltinTopicDataImpl> PublicationBuiltinTopicData;
-    
+
 //TODO: Uncomment and fix when SubscriptionBuiltinTopicDataImpl is implemented
 //typedef dds::topic::TSubscriptionBuiltinTopicData<eprosima::fastdds::dds::topic::SubscriptionBuiltinTopicDataImpl> SubscriptionBuiltinTopicData;
 

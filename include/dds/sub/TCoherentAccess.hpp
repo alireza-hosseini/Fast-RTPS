@@ -24,7 +24,7 @@
 
 namespace dds {
 namespace sub {
-    
+
 template<typename DELEGATE>
 class TCoherentAccess;
 
@@ -32,7 +32,7 @@ class TCoherentAccess;
 }
 
 template<typename DELEGATE>
-class dds::sub::TCoherentAccess : public dds::core::Value<DELEGATE> 
+class dds::sub::TCoherentAccess : public dds::core::Value<DELEGATE>
 {
   public:
 

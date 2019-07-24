@@ -24,9 +24,9 @@
 #include <dds/topic/detail/AnyTopic.hpp>
 #include <dds/topic/TopicDescription.hpp>
 
-namespace dds { 
+namespace dds {
 namespace topic {
-    
+
 class AnyTopic;
 
 /**
@@ -41,7 +41,7 @@ Topic<T> get(
 }
 }
 
-class dds::topic::AnyTopic 
+class dds::topic::AnyTopic
 {
   public:
 

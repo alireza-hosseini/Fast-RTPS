@@ -8,7 +8,7 @@ namespace dds {
 namespace topic {
 
 template<
-		typename T, 
+		typename T,
 		template <typename Q> class DELEGATE = dds::topic::detail::Topic>
 class Topic;
 

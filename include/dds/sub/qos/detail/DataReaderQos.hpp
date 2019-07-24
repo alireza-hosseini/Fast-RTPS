@@ -23,9 +23,9 @@
 //TODO: Fix this file when DataReaderQos is implemented
 //#include <foo/bar/sub/qos/DataReaderQos.hpp>
 
-namespace dds { 
-namespace sub { 
-namespace qos { 
+namespace dds {
+namespace sub {
+namespace qos {
 namespace detail {
 
 //TODO: Uncomment and fix when DataReaderQos is implemented

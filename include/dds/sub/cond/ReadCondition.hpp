@@ -28,7 +28,7 @@ namespace sub {
 namespace cond {
 
 typedef detail::ReadCondition ReadCondition;
-    
+
 }
 }
 }

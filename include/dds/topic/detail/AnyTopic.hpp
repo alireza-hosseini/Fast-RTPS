@@ -25,15 +25,15 @@
 #include <dds/topic/qos/TopicQos.hpp>
 #include <dds/topic/detail/AnyTopicDescription.hpp>
 
-namespace dds { 
-namespace topic { 
+namespace dds {
+namespace topic {
 namespace detail {
 
 class THolderBase;
 
 template<typename T>
 class THolder;
-	
+
 // Vendors should provide implementation.
 
 }

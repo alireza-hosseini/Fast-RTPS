@@ -31,13 +31,13 @@
  */
 namespace dds {
 namespace sub {
-    
+
 class Query;
 
 }
 }
 
-class dds::sub::Query: public dds::core::Value<detail::Query> 
+class dds::sub::Query: public dds::core::Value<detail::Query>
 {
   public:
 
@@ -54,21 +54,21 @@ class dds::sub::Query: public dds::core::Value<detail::Query>
 
     template<typename T>
     Query(
-        const dds::sub::DataReader<T>& dr, 
+        const dds::sub::DataReader<T>& dr,
         const std::string& query_expression);
 
     template<
-        typename T, 
+        typename T,
         typename FWIterator>
     Query(
-        const dds::sub::DataReader<T>& dr, 
+        const dds::sub::DataReader<T>& dr,
         const std::string& query_expression,
-        const FWIterator& params_begin, 
+        const FWIterator& params_begin,
         const FWIterator& params_end);
 
     template<typename T>
     Query(
-        const dds::sub::DataReader<T>& dr, 
+        const dds::sub::DataReader<T>& dr,
         const std::string& query_expression,
         const std::vector<std::string>& params);
 
@@ -99,7 +99,7 @@ class dds::sub::Query: public dds::core::Value<detail::Query>
 
     template<typename FWIterator>
     void parameters(
-        const FWIterator& begin, 
+        const FWIterator& begin,
         const FWIterator end);
 
     void add_parameter(

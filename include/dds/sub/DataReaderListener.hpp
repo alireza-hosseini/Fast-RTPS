@@ -21,7 +21,7 @@
 
 #include <dds/core/status/Status.hpp>
 
-namespace dds { 
+namespace dds {
 namespace sub {
 
 template<typename T>
@@ -30,11 +30,11 @@ class DataReaderListener;
 template<typename T>
 class NoOpDataReaderListener;
 
-} 
+}
 }
 
 template<typename T>
-class dds::sub::DataReaderListener 
+class dds::sub::DataReaderListener
 {
   public:
 
@@ -76,7 +76,7 @@ class dds::sub::DataReaderListener
 
 
 template<typename T>
-class dds::sub::NoOpDataReaderListener : public virtual DataReaderListener<T> 
+class dds::sub::NoOpDataReaderListener : public virtual DataReaderListener<T>
 {
   public:
 

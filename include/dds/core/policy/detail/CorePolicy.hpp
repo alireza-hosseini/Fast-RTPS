@@ -87,7 +87,7 @@ Partition;
 
 typedef dds::core::policy::TPresentation<eprosima::fastrtps::PresentationQosPolicy>
 Presentation;
-        
+
 //typedef dds::core::policy::TReaderDataLifecycle<eprosima::fastrtps::ReaderDataLifecycle>
 //ReaderDataLifecycle;
 

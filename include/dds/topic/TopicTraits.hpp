@@ -20,7 +20,7 @@
  */
 
 //==============================================================================
-namespace dds { 
+namespace dds {
 namespace topic {
 
 template<typename T>
@@ -30,9 +30,9 @@ template<typename T>
 struct topic_type_support;
 
 template<typename T>
-struct topic_type_name 
+struct topic_type_name
 {
-  static std::string value() 
+  static std::string value()
   {
     return "Undefined";
   }
@@ -43,16 +43,16 @@ struct topic_type_name
 
 //==============================================================================
 template<typename T>
-struct dds::topic::is_topic_type 
+struct dds::topic::is_topic_type
 {
-  enum 
+  enum
   {
-    value = 0 
+    value = 0
   };
 };
 
 template<typename T>
-struct dds::topic::topic_type_support 
+struct dds::topic::topic_type_support
 {
 };
 

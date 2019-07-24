@@ -38,7 +38,7 @@ class Sample;
  * DDS samples.
  */
 template<
-    typename T, 
+    typename T,
     template <typename Q> class DELEGATE>
 class dds::sub::Sample : public dds::core::Value< DELEGATE<T> >
 {
@@ -50,11 +50,11 @@ class dds::sub::Sample : public dds::core::Value< DELEGATE<T> >
     /**
      * Create a sample with invalid data.
      */
-    Sample() 
+    Sample()
       : dds::core::Value< DELEGATE<T> >();
 
     Sample(
-        const T& data, 
+        const T& data,
         const SampleInfo& info);
 
     Sample(

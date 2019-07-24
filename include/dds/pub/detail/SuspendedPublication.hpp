@@ -5,8 +5,8 @@
 //TODO: Fix this file when SuspendPublication is implemented
 //#include <foo/bar/pub/SuspendedPublication.hpp>
 
-namespace dds { 
-namespace pub { 
+namespace dds {
+namespace pub {
 namespace detail {
 
 //TODO: Uncomment and fix when SuspendPublication is implemented

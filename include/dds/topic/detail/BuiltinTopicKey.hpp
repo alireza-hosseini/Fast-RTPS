@@ -23,10 +23,10 @@
 //#include <foo/bar/topic/BuiltinTopicKey.hpp>
 #include <dds/topic/TBuiltinTopicKey.hpp>
 
-namespace dds { 
-namespace topic { 
+namespace dds {
+namespace topic {
 namespace detail {
-      
+
 //TODO: Uncomment and fix when BuiltinTopicKey is implemented
 //typedef dds::topic::TBuiltinTopicKey<eprosima::fastdds::dds::topic::BuiltinTopicKey> BuiltinTopicKey;
 
@@ -34,4 +34,4 @@ namespace detail {
 }
 }
 
-#endif // OMG_DDS_TOPIC_DETAIL_BUILTIN_TOPIC_KEY_HPP_ 
+#endif // OMG_DDS_TOPIC_DETAIL_BUILTIN_TOPIC_KEY_HPP_

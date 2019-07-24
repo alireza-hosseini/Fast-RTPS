@@ -21,7 +21,7 @@
 
 #include <dds/domain/DomainParticipant.hpp>
 
-namespace dds { 
+namespace dds {
 namespace domain {
 
   /**
@@ -34,7 +34,7 @@ namespace domain {
   OMG_DDS_API DomainParticipant find(
   		uint32_t id);
 
-} 
+}
 }
 
-#endif // OMG_DDS_DOMAIN_FIND_HPP_ 
+#endif // OMG_DDS_DOMAIN_FIND_HPP_

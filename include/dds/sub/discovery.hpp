@@ -47,8 +47,8 @@ namespace sub {
      */
     template<typename FwdIterator>
     void ignore(
-            const dds::domain::DomainParticipant& dp, 
-            FwdIterator begin, 
+            const dds::domain::DomainParticipant& dp,
+            FwdIterator begin,
             FwdIterator end);
 
 
@@ -83,11 +83,11 @@ namespace sub {
      * infrastructure does not locally maintain the connectivity information.
      */
     template<
-            typename T, 
+            typename T,
             typename FwdIterator>
     ::dds::core::InstanceHandleSeq& matched_publications(
             const dds::sub::DataReader<T>& dw,
-            FwdIterator begin, 
+            FwdIterator begin,
             FwdIterator end);
 
     /**

@@ -22,7 +22,7 @@
 #include <dds/topic/detail/TopicDescription.hpp>
 #include <dds/topic/TTopicDescription.hpp>
 
-namespace dds { 
+namespace dds {
 namespace topic {
 
 template<

@@ -3,27 +3,27 @@
 
 #include <dds/core/Value.hpp>
 
-namespace dds  { 
+namespace dds  {
 namespace sub {
 
 template<typename DELEGATE>
 class TRank;
 
-} 
+}
 }
 
 /**
  * This class encapsulate the concept of Rank for a sample.
  */
 template<typename DELEGATE>
-class dds::sub::TRank : public dds::core::Value<DELEGATE> 
+class dds::sub::TRank : public dds::core::Value<DELEGATE>
 {
 	public:
   		TRank();
 
   		TRank(
-  				int32_t s, 
-  				int32_t a, 
+  				int32_t s,
+  				int32_t a,
   				int32_t ag);
 
   		int32_t absolute_generation() const;
@@ -31,7 +31,7 @@ class dds::sub::TRank : public dds::core::Value<DELEGATE>
   		inline int32_t generation() const;
 
   		inline int32_t sample() const;
-  		
+
 };
 
 #endif // OMG_DDS_SUB_TRANK_HPP_

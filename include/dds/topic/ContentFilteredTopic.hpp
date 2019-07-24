@@ -22,11 +22,11 @@
 #include <dds/topic/detail/ContentFilteredTopic.hpp>
 #include <dds/topic/TContentFilteredTopic.hpp>
 
-namespace dds { 
+namespace dds {
 namespace topic {
-  
+
 template<
-		typename T, 
+		typename T,
 		template <typename Q> class DELEGATE = dds::topic::detail::ContentFilteredTopic>
 class ContentFilteredTopic;
 

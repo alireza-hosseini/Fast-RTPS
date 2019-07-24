@@ -32,7 +32,7 @@ class TCoherentSet;
 
 
 template<typename DELEGATE>
-class dds::pub::TCoherentSet : public dds::core::Value<DELEGATE> 
+class dds::pub::TCoherentSet : public dds::core::Value<DELEGATE>
 {
   public:
 
@@ -80,7 +80,7 @@ class dds::pub::TCoherentSet : public dds::core::Value<DELEGATE>
     void end();
 
   public:
-    
+
     /**
      * This operation terminates the coherent set initiated by the
      * constructor.

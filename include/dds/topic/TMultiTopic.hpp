@@ -25,22 +25,22 @@
 #include <dds/core/types.hpp>
 #include <dds/topic/TopicDescription.hpp>
 
-namespace dds { 
+namespace dds {
 namespace topic {
 
 #ifdef OMG_DDS_MULTI_TOPIC_SUPPORT
 
 template<
-    typename T, 
+    typename T,
     template <typename Q> class DELEGATE>
-class MultiTopic : public TopicDescription <T, DELEGATE> 
+class MultiTopic : public TopicDescription <T, DELEGATE>
 {
   public:
 
     OMG_DDS_REF_TYPE_T(
-        MultiTopic, 
-        TopicDescription, 
-        T, 
+        MultiTopic,
+        TopicDescription,
+        T,
         DELEGATE)
 
   public:
@@ -73,4 +73,4 @@ class MultiTopic : public TopicDescription <T, DELEGATE>
 }
 }
 
-#endif // OMG_DDS_T_TOPIC_CONTENT_FILTERED_TOPIC_HPP_ 
+#endif // OMG_DDS_T_TOPIC_CONTENT_FILTERED_TOPIC_HPP_

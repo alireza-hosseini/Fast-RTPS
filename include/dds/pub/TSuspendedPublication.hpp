@@ -31,7 +31,7 @@ class TSuspendedPublication;
 }
 
 template <typename DELEGATE>
-class dds::pub::TSuspendedPublication : public dds::core::Value<DELEGATE> 
+class dds::pub::TSuspendedPublication : public dds::core::Value<DELEGATE>
 {
   public:
 
@@ -80,7 +80,7 @@ class dds::pub::TSuspendedPublication : public dds::core::Value<DELEGATE>
      * error PRECONDITION_NOT_MET.
      */
     ~SuspendedPublication();    // resumes publications implicitly
-    
+
 };
 
 

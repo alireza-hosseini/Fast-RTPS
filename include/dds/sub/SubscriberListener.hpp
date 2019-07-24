@@ -20,10 +20,10 @@
  */
 
 
-namespace dds { 
+namespace dds {
 namespace sub {
 
-class SubscriberListener : public virtual AnyDataReaderListener 
+class SubscriberListener : public virtual AnyDataReaderListener
 {
   public:
 
@@ -42,7 +42,7 @@ class SubscriberListener : public virtual AnyDataReaderListener
 
 class NoOpSubscriberListener :
     public virtual SubscriberListener,
-    public virtual NoOpAnyDataReaderListener 
+    public virtual NoOpAnyDataReaderListener
 {
   public:
 
