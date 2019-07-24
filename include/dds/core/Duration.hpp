@@ -29,7 +29,7 @@ namespace core {
  */
 class OMG_DDS_API Duration
 {
-    public:
+public:
 
     static const Duration zero();       // {0, 0}
 
@@ -119,7 +119,7 @@ class OMG_DDS_API Duration
      */
     double to_secs() const;
 
-    private:
+private:
 
     uint32_t sec_;
 

@@ -23,7 +23,7 @@ class TKeyedStringTopicType;
 template<typename DELEGATE>
 class dds::core::TBytesTopicType
 {
-    public:
+public:
 
     TBytesTopicType();
 
@@ -40,7 +40,7 @@ class dds::core::TBytesTopicType
 template<typename DELEGATE>
 class dds::core::TStringTopicType
 {
-    public:
+public:
 
     TStringTopicType();
 
@@ -63,7 +63,7 @@ class dds::core::TStringTopicType
 template<typename DELEGATE>
 class dds::core::TKeyedStringTopicType<DELEGATE>
 {
-    public:
+public:
 
     TKeyedStringTopicType();
 
@@ -89,7 +89,7 @@ class dds::core::TKeyedStringTopicType<DELEGATE>
 template<typename DELEGATE>
 class dds::core::TKeyedBytesTopicType<DELEGATE>
 {
-    public:
+public:
 
     TKeyedBytesTopicType();
 

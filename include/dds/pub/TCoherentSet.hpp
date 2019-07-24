@@ -33,7 +33,7 @@ class TCoherentSet;
 template<typename DELEGATE>
 class dds::pub::TCoherentSet : public dds::core::Value<DELEGATE>
 {
-  public:
+public:
 
     /**
      * This operation requests that the application will begin a
@@ -67,9 +67,7 @@ class dds::pub::TCoherentSet : public dds::core::Value<DELEGATE>
      * interpret that the aircraft is on a collision course.
      */
     explicit TCoherentSet(
-        const dds::pub::Publisher& pub);
-
-  public:
+            const dds::pub::Publisher& pub);
 
     /**
      * This operation terminates the coherent set initiated by the
@@ -77,8 +75,6 @@ class dds::pub::TCoherentSet : public dds::core::Value<DELEGATE>
      * the operation will raise the PreconditionNotMetError.
      */
     void end();
-
-  public:
 
     /**
      * This operation terminates the coherent set initiated by the
@@ -88,4 +84,3 @@ class dds::pub::TCoherentSet : public dds::core::Value<DELEGATE>
 };
 
 #endif // OMG_TDDS_PUB_COHERENT_SET_HPP_
-

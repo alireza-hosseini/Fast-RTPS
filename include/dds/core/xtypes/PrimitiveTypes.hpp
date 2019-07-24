@@ -34,7 +34,7 @@ TPrimitiveType<T> PrimitiveType();
 template<typename T>
 class dds::core::xtypes::TPrimitiveType : public dds::core::xtypes::DynamicType
 {
-    public:
+public:
 
     TPrimitiveType()
         : DynamicType(dynamic_type_traits<T>::TYPE_ID, dynamic_type_traits<T>::NAME)

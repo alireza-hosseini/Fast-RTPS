@@ -42,95 +42,93 @@ class DWHolder;
 
 class dds::pub::detail::DWHolderBase
 {
-    public:
+public:
 
-        virtual ~DWHolderBase() { }
+    virtual ~DWHolderBase() { }
 
-        virtual const dds::pub::qos::DataWriterQos& qos() const = 0;
+    virtual const dds::pub::qos::DataWriterQos& qos() const = 0;
 
-        virtual void qos(
-                const ::dds::pub::qos::DataWriterQos& qos) = 0;
+    virtual void qos(
+            const ::dds::pub::qos::DataWriterQos& qos) = 0;
 
-        virtual const std::string& topic_name() const = 0;
+    virtual const std::string& topic_name() const = 0;
 
-        virtual const std::string& type_name() const = 0;
+    virtual const std::string& type_name() const = 0;
 
-        virtual  const dds::pub::Publisher& publisher() const = 0;
+    virtual  const dds::pub::Publisher& publisher() const = 0;
 
-        virtual void wait_for_acknowledgments(
-                const dds::core::Duration& timeout) = 0;
+    virtual void wait_for_acknowledgments(
+            const dds::core::Duration& timeout) = 0;
 
-        virtual void close() = 0;
+    virtual void close() = 0;
 
-        virtual void retain(bool b) = 0;
+    virtual void retain(bool b) = 0;
 };
 
 template<typename T>
 class dds::pub::detail::DWHolder : public DWHolderBase
 {
-    public:
+public:
 
-        DWHolder(
-                const dds::pub::DataWriter<T>& dw)
-            : dw_(dw)
-        {
-        }
+    DWHolder(
+            const dds::pub::DataWriter<T>& dw)
+        : dw_(dw)
+    {
+    }
 
-        virtual ~DWHolder()
-        {
-        }
+    virtual ~DWHolder()
+    {
+    }
 
-    public:
+    virtual const ::dds::pub::qos::DataWriterQos& qos() const
+    {
+        return dw_.qos();
+    }
 
-        virtual const ::dds::pub::qos::DataWriterQos& qos() const
-        {
-            return dw_.qos();
-        }
+    virtual void qos(
+            const ::dds::pub::qos::DataWriterQos& the_qos)
+    {
+        dw_.qos(the_qos);
+    }
 
-        virtual void qos(
-                const ::dds::pub::qos::DataWriterQos& the_qos)
-        {
-        	dw_.qos(the_qos);
-        }
+    virtual const std::string& topic_name() const
+    {
+        return dw_.topic().name();
+    }
 
-        virtual const std::string& topic_name() const
-        {
-            return dw_.topic().name();
-        }
+    virtual const std::string& type_name() const
+    {
+        return dw_.topic().type_name();
+    }
 
-        virtual const std::string& type_name() const
-        {
-            return dw_.topic().type_name();
-        }
+    virtual const ::dds::pub::Publisher& publisher() const
+    {
+        return dw_.publisher();
+    }
 
-        virtual const ::dds::pub::Publisher& publisher() const
-        {
-            return dw_.publisher();
-        }
+    virtual void wait_for_acknowledgments(
+            const dds::core::Duration& timeout)
+    {
+      dw_.wait_for_acknowledgments(timeout);
+    }
 
-        virtual void wait_for_acknowledgments(
-                const dds::core::Duration& timeout)
-        {
-          dw_.wait_for_acknowledgments(timeout);
-        }
+    virtual void close()
+    {
+        dw_.close();
+    }
 
-        virtual void close()
-        {
-            dw_.close();
-        }
+    virtual void retain(bool b)
+    {
+    }
 
-        virtual void retain(bool b)
-        {
-        }
+    const dds::pub::DataWriter<T>& get() const
+    {
+        return dw_;
+    }
 
-        const dds::pub::DataWriter<T>& get() const
-        {
-            return dw_;
-        }
+private:
 
-    private:
-
-        dds::pub::DataWriter<T> dw_;
+    dds::pub::DataWriter<T> dw_;
 };
 
 #endif // OMG_DDS_PUB_DETAIL_ANY_DATA_WRITER_HPP_

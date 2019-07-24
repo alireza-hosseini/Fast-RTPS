@@ -33,7 +33,7 @@ class TSuspendedPublication;
 template<typename DELEGATE>
 class dds::pub::TSuspendedPublication : public dds::core::Value<DELEGATE>
 {
-  public:
+public:
 
     /**
      * This operation indicates to the Service that the application is about
@@ -48,12 +48,22 @@ class dds::pub::TSuspendedPublication : public dds::core::Value<DELEGATE>
      * is called, any suspended updates yet to be published will be discarded.
      *
      * @return true if publications were suspended. False if the method
-     *         was called on an already suspended publisher.
+     * was called on an already suspended publisher.
      */
     explicit TSuspendedPublication(
         const dds::pub::Publisher& pub);
 
-  public:
+    /**
+     * This operation indicates to the Service that the application has
+     * completed the multiple changes initiated by the previous
+     * suspend_publications. This is a hint to the Service that can be used
+     * by a Service implementation to e.g., batch all the modifications made
+     * since the suspend_publications.
+     * The call to resume_publications must match a previous call to
+     * suspend_publications. Otherwise the operation will return the
+     * error PRECONDITION_NOT_MET.
+     */
+    void resume(); // resumes publications explicitly
 
     /**
      * This operation indicates to the Service that the application has
@@ -65,22 +75,7 @@ class dds::pub::TSuspendedPublication : public dds::core::Value<DELEGATE>
      * suspend_publications. Otherwise the operation will return the
      * error PRECONDITION_NOT_MET.
      */
-    void resume();           // resumes publications explicitly
-
-  public:
-
-    /**
-     * This operation indicates to the Service that the application has
-     * completed the multiple changes initiated by the previous
-     * suspend_publications. This is a hint to the Service that can be used
-     * by a Service implementation to e.g., batch all the modifications made
-     * since the suspend_publications.
-     * The call to resume_publications must match a previous call to
-     * suspend_publications. Otherwise the operation will return the
-     * error PRECONDITION_NOT_MET.
-     */
-    ~SuspendedPublication();    // resumes publications implicitly
-
+    ~TSuspendedPublication(); // resumes publications implicitly
 };
 
 #endif // OMG_TDDS_PUB_SUSPENDED_PUBLICATION_HPP_

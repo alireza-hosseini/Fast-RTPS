@@ -36,37 +36,37 @@ template<
     typename ANYTOPIC,
     typename FwdIterator>
 int discover(
-    FwdIterator begin,
-    uint32_t max_size);
+        FwdIterator begin,
+        uint32_t max_size);
 
 template<
     typename ANYTOPIC,
     typename BinIterator>
 int discover(
-    BinIterator begin);
+        BinIterator begin);
 
 template<
     typename TOPICDATA,
     typename FwdIterator>
 uint32_t discover(
-    FwdIterator begin,
-    uint32_t max_size);
+        FwdIterator begin,
+        uint32_t max_size);
 
 template<
     typename TOPICDATA,
     typename BinIterator>
 uint32_t discover(
-    BinIterator begin);
+        BinIterator begin);
 
 void ignore(
-    const dds::domain::DomainParticipant& dp,
-    const dds::core::InstanceHandle& handle);
+        const dds::domain::DomainParticipant& dp,
+        const dds::core::InstanceHandle& handle);
 
 template<typename FwdIterator>
 void ignore(
-    const dds::domain::DomainParticipant& dp,
-    FwdIterator begin,
-    FwdIterator end);
+        const dds::domain::DomainParticipant& dp,
+        FwdIterator begin,
+        FwdIterator end);
 
 }
 }

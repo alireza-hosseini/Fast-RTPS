@@ -15,26 +15,27 @@ class TDomainId;
 template<typename DELEGATE>
 class dds::domain::TDomainId : public dds::core::Value<DELEGATE>
 {
-	public:
+public:
 
-	  template<typename ARG0>
-	  TDomainId(
-	  		ARG0 id)
-	  	: dds::core::Value<DELEGATE>(id);
+    template<typename ARG0>
+    TDomainId(
+            ARG0 id)
+        : dds::core::Value<DELEGATE>(id)
+    {
+    }
 
-	  template<
-	  		typename ARG0,
-	  		typename ARG1>
-	  TDomainId(
-	  		ARG0 arg0,
-	  		ARG1 arg1);
+    template<
+          typename ARG0,
+          typename ARG1>
+    TDomainId(
+          ARG0 arg0,
+          ARG1 arg1);
 
-	  operator uint32_t () const;
+    operator uint32_t() const;
 
-	  uint32_t value() const;
+    uint32_t value() const;
 
-	  static const TDomainId default_domain();
-
+    static const TDomainId default_domain();
 };
 
 #endif // OMG_DDS_DOMAIN_T_DOMAIN_ID_HPP_

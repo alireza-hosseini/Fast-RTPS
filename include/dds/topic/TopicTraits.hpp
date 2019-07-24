@@ -32,10 +32,10 @@ struct topic_type_support;
 template<typename T>
 struct topic_type_name
 {
-  static std::string value()
-  {
-    return "Undefined";
-  }
+    static std::string value()
+    {
+        return "Undefined";
+    }
 };
 
 }
@@ -45,10 +45,10 @@ struct topic_type_name
 template<typename T>
 struct dds::topic::is_topic_type
 {
-  enum
-  {
-    value = 0
-  };
+    enum
+    {
+        value = 0
+    };
 };
 
 template<typename T>
@@ -57,16 +57,16 @@ struct dds::topic::topic_type_support
 };
 
 #define REGISTER_TOPIC_TYPE(TOPIC_TYPE) \
-    namespace dds { \
-    namespace topic { \
-      template<> struct is_topic_type<TOPIC_TYPE> \
-      { \
+namespace dds { \
+namespace topic { \
+    template<> struct is_topic_type<TOPIC_TYPE> \
+    { \
         enum \
         { \
-           value = 1 \
+            value = 1 \
         }; \
-      }; \
-    } \
-    }
+    }; \
+} \
+}
 
 #endif // OMG_DDS_TOPIC_TOPIC_TRAITS_HPP_

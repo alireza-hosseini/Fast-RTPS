@@ -38,17 +38,13 @@ class SubscriberListener;
 template<typename DELEGATE>
 class dds::sub::TSubscriber : public dds::core::TEntity<DELEGATE>
 {
-  public:
+public:
     OMG_DDS_REF_TYPE(
-        TSubscriber,
-        dds::core::TEntity,
-        DELEGATE)
-
-  public:
+            TSubscriber,
+            dds::core::TEntity,
+            DELEGATE)
 
     typedef dds::sub::SubscriberListener Listener;
-
-  public:
 
     /**
      * Create a <code>Subscriber</code> attached to the given domain participant.
@@ -58,7 +54,7 @@ class dds::sub::TSubscriber : public dds::core::TEntity<DELEGATE>
      * @param dp the domain participant that will own this subscriber.
      */
     TSubscriber(
-        const ::dds::domain::DomainParticipant& dp);
+            const ::dds::domain::DomainParticipant& dp);
 
     /**
      * Create a <code>Subscriber</code> attached to the given domain participant.
@@ -69,16 +65,12 @@ class dds::sub::TSubscriber : public dds::core::TEntity<DELEGATE>
      * @param mask the listener event mask.
      */
     TSubscriber(
-        const ::dds::domain::DomainParticipant& dp,
-        const dds::sub::qos::SubscriberQos& qos,
-        dds::sub::SubscriberListener* listener = NULL,
-        const dds::core::status::StatusMask& mask = dds::core::status::StatusMask::all());
-
-  public:
+            const ::dds::domain::DomainParticipant& dp,
+            const dds::sub::qos::SubscriberQos& qos,
+            dds::sub::SubscriberListener* listener = NULL,
+            const dds::core::status::StatusMask& mask = dds::core::status::StatusMask::all());
 
     ~TSubscriber();
-
-  public:
 
     /**
      * This operation invokes the operation on_data_available on the
@@ -96,8 +88,8 @@ class dds::sub::TSubscriber : public dds::core::TEntity<DELEGATE>
      * @param event_mask the event mask for the listener.
      */
     void listener(
-        Listener*,
-        const dds::core::status::StatusMask& event_mask);
+            Listener*,
+            const dds::core::status::StatusMask& event_mask);
 
     /**
      * Get the <code>Subscriber</code> listener.
@@ -115,7 +107,7 @@ class dds::sub::TSubscriber : public dds::core::TEntity<DELEGATE>
      * @param qos the new QoS.
      */
     void qos(
-        const dds::sub::qos::SubscriberQos& the_qos);
+            const dds::sub::qos::SubscriberQos& the_qos);
 
     /**
      * Get the default <code>DataReader</code> QoS.
@@ -128,7 +120,7 @@ class dds::sub::TSubscriber : public dds::core::TEntity<DELEGATE>
      * @param qos the default <code>DataReader</code> QoS.
      */
     TSubscriber& default_datareader_qos(
-        const dds::sub::qos::DataReaderQos &qos) const;
+            const dds::sub::qos::DataReaderQos &qos) const;
 
     /**
      * Return the <code>DomainParticipant<code> that owns this Subscriber.

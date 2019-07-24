@@ -34,34 +34,32 @@ class TopicInstance;
 template<typename T>
 class dds::topic::TopicInstance
 {
-  public:
+public:
 
     TopicInstance();
 
     TopicInstance(
-        const ::dds::core::InstanceHandle& h);
+            const ::dds::core::InstanceHandle& h);
 
     TopicInstance(
-        const ::dds::core::InstanceHandle& h,
-        const T& the_sample);
-
-  public:
+            const ::dds::core::InstanceHandle& h,
+            const T& the_sample);
 
     operator const ::dds::core::InstanceHandle() const;
 
     const ::dds::core::InstanceHandle handle() const;
 
     void handle(
-        const ::dds::core::InstanceHandle& h);
+            const ::dds::core::InstanceHandle& h);
 
     const T& sample() const;
 
     T& sample();
 
     void sample(
-        const T& the_sample);
+            const T& the_sample);
 
-  private:
+private:
 
     ::dds::core::InstanceHandle h_;
 

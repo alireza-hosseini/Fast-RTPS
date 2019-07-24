@@ -48,11 +48,11 @@ class PublisherListener;
 template<typename DELEGATE>
 class dds::pub::TPublisher : public dds::core::TEntity<DELEGATE>
 {
-  public:
+public:
 
     typedef dds::pub::PublisherListener Listener;
 
-  public:
+public:
 
     OMG_DDS_REF_TYPE(
         TPublisher,
@@ -85,8 +85,6 @@ class dds::pub::TPublisher : public dds::core::TEntity<DELEGATE>
 
     ~TPublisher();
 
-    //==========================================================================
-
     /**
      * Get the publisher qos policies.
      */
@@ -94,25 +92,23 @@ class dds::pub::TPublisher : public dds::core::TEntity<DELEGATE>
 
     /**
      * Set the new qos policies for this publisher.
-     *
      * @param pqos the new publisher QoS
      */
     void qos(
-        const dds::pub::qos::PublisherQos& pqos);
+            const dds::pub::qos::PublisherQos& pqos);
 
     /**
      * Set the new qos policies for this publisher.
-     *
      * @param pqos the new publisher QoS
      */
     TPublisher& operator <<(
-        const dds::pub::qos::PublisherQos& the_qos);
+            const dds::pub::qos::PublisherQos& the_qos);
 
     /**
      * Get the publisher qos policies.
      */
     TPublisher& operator >> (
-        dds::pub::qos::PublisherQos& the_qos);
+            dds::pub::qos::PublisherQos& the_qos);
 
     /**
      * This operation sets a default value of the <code>DataWriterQos<\code>
@@ -123,7 +119,7 @@ class dds::pub::TPublisher : public dds::core::TEntity<DELEGATE>
      * InconsistentPolicyError.
      */
     TPublisher& default_writer_qos(
-        const dds::pub::qos::DataWriterQos& dwqos);
+            const dds::pub::qos::DataWriterQos& dwqos);
 
     /**
      * This operation retrieves the default value of the <code>DataWriterQos<\code>,
@@ -132,8 +128,6 @@ class dds::pub::TPublisher : public dds::core::TEntity<DELEGATE>
      */
     dds::pub::qos::DataWriterQos default_writer_qos() const;
 
-    //==========================================================================
-
     /**
      * Set/Reset the listener associated with this publisher.
      * Listener un-registration is performed by setting the listener to NULL.
@@ -141,15 +135,13 @@ class dds::pub::TPublisher : public dds::core::TEntity<DELEGATE>
      * @param plistener the publisher listener.
      */
     void listener(
-        Listener* plistener,
-        const dds::core::status::StatusMask& event_mask);
+            Listener* plistener,
+            const dds::core::status::StatusMask& event_mask);
 
     /**
      * Get the currently registered listener.
      */
     Listener* listener() const;
-
-    //==========================================================================
 
     /**
      * This operation blocks the calling thread until either all data written
@@ -161,15 +153,12 @@ class dds::pub::TPublisher : public dds::core::TEntity<DELEGATE>
      * indicates that max_wait elapsed before all the data was acknowledged.
      */
     void wait_for_acknowledgments(
-        const dds::core::Duration& timeout);
-
-    //==========================================================================
+            const dds::core::Duration& timeout);
 
     /**
      * Return the <code>DomainParticipant<code> that owns this Publisher.
      */
     const dds::domain::DomainParticipant& participant() const;
-
 };
 
 #endif // OMG_TDDS_PUB_PUBLISHER_HPP_

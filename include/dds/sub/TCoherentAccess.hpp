@@ -33,7 +33,7 @@ class TCoherentAccess;
 template<typename DELEGATE>
 class dds::sub::TCoherentAccess : public dds::core::Value<DELEGATE>
 {
-  public:
+public:
 
     /**
      * This operation indicates that the application is about to access
@@ -57,9 +57,7 @@ class dds::sub::TCoherentAccess : public dds::core::Value<DELEGATE>
      * begin_access.
      */
     explicit TCoherentAccess(
-        const dds::sub::Subscriber& sub);
-
-  public:
+            const dds::sub::Subscriber& sub);
 
     /**
      * This operation indicates that the application is about to access
@@ -84,8 +82,6 @@ class dds::sub::TCoherentAccess : public dds::core::Value<DELEGATE>
      */
     void end();         // ends access explicitly
 
-  public:
-
     /**
      * This operation indicates that the application is about to access
      * the data samples in any of the DataReader objects attached to the
@@ -109,13 +105,13 @@ class dds::sub::TCoherentAccess : public dds::core::Value<DELEGATE>
      */
     ~TCoherentAccess();  // ends access implicitly
 
-  private:
+private:
 
     TCoherentAccess(
-        const TCoherentAccess&);
+            const TCoherentAccess&);
 
     TCoherentAccess& operator=(
-        const TCoherentAccess&);
+            const TCoherentAccess&);
 };
 
 #endif // OMG_TDDS_SUB_TCOHERENT_ACCESS_HPP_

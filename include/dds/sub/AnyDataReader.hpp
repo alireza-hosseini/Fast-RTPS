@@ -41,29 +41,25 @@ DataReader<T> get(
 
 class dds::sub::AnyDataReader
 {
-  public:
+public:
 
     template<typename T>
     AnyDataReader(
-        const dds::sub::DataReader<T>& dr);
+            const dds::sub::DataReader<T>& dr);
 
     inline const detail::DRHolderBase* operator->() const;
 
     inline detail::DRHolderBase* operator->();
 
-  public:
-
     inline AnyDataReader& swap(
-        AnyDataReader& rhs);
+            AnyDataReader& rhs);
 
     template<typename T>
-    AnyDataReader& operator =(
-        const DataReader<T>& rhs);
+    AnyDataReader& operator=(
+            const DataReader<T>& rhs);
 
-    inline AnyDataReader& operator =(
-        AnyDataReader rhs);
-
-  public:
+    inline AnyDataReader& operator=(
+            AnyDataReader rhs);
 
     /**
      * Get a typed <code>DataReader</code> from this.
@@ -71,7 +67,7 @@ class dds::sub::AnyDataReader
     template<typename T>
     dds::sub::DataReader<T> get();
 
-  private:
+private:
 
     dds::core::smart_ptr_traits<detail::DRHolderBase>::ref_type holder_;
 

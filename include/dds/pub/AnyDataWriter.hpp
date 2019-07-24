@@ -37,7 +37,7 @@ class AnyDataWriter;
  */
 template<typename T>
 DataWriter<T> get(
-    const AnyDataWriter& adw);
+        const AnyDataWriter& adw);
 
 }
 }
@@ -48,18 +48,16 @@ DataWriter<T> get(
  */
 class dds::pub::AnyDataWriter
 {
-  public:
+public:
 
     template<typename T>
     AnyDataWriter(
-        const dds::pub::DataWriter<T>& dw);
-
-  public:
+            const dds::pub::DataWriter<T>& dw);
 
     const dds::pub::qos::DataWriterQos& qos() const;
 
     void qos(
-        const ::dds::pub::qos::DataWriterQos& q);
+            const ::dds::pub::qos::DataWriterQos& q);
 
     const std::string& topic_name() const;
 
@@ -68,20 +66,18 @@ class dds::pub::AnyDataWriter
     const dds::pub::Publisher& publisher() const;
 
     void wait_for_acknowledgments(
-        const dds::core::Duration& timeout);
+            const dds::core::Duration& timeout);
 
     void close();
 
     void retain(
-        bool b);
-
-  public:
+            bool b);
 
     inline AnyDataWriter& swap(
-        AnyDataWriter& rhs);
+            AnyDataWriter& rhs);
 
     template<typename T> AnyDataWriter& operator =(
-        const dds::pub::DataWriter<T>& rhs);
+            const dds::pub::DataWriter<T>& rhs);
 
     template<typename T> AnyDataWriter& operator =(
         const AnyDataWriter& rhs);
@@ -89,15 +85,11 @@ class dds::pub::AnyDataWriter
     inline AnyDataWriter& operator =(
         AnyDataWriter rhs);
 
-  public:
-
     /**
      * Extracts a typed <code>DataWriter</code> from this.
      *
      */
     template<typename T> dds::pub::DataWriter<T> get();
-
-  public:
 
     /**
      * Direct access to methods available on the delegate. Notice that
@@ -111,7 +103,7 @@ class dds::pub::AnyDataWriter
      */
     detail::DWHolderBase* operator->();
 
-  private:
+private:
 
     dds::core::smart_ptr_traits<detail::DWHolderBase>::ref_type holder_;
 };

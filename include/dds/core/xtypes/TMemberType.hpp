@@ -54,7 +54,7 @@ int32_t getId(
 template<typename DELEGATE>
 class dds::core::xtypes::TMemberType : public dds::core::Reference<DELEGATE>
 {
-    public:
+public:
 
     OMG_DDS_REF_TYPE(
             TMemberType,

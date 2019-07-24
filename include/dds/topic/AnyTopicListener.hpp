@@ -24,28 +24,24 @@ namespace topic {
 
 class AnyTopicListener
 {
-  public:
+public:
 
     virtual ~AnyTopicListener();
 
-  public:
-
     virtual void on_inconsistent_topic(
-        AnyTopic& topic,
-        const dds::core::status::InconsistentTopicStatus& status) = 0;
+            AnyTopic& topic,
+            const dds::core::status::InconsistentTopicStatus& status) = 0;
 };
 
 class NoOpAnyTopicListener : public virtual AnyTopicListener
 {
-  public:
+public:
 
     virtual ~NoOpAnyTopicListener();
 
-  public:
-
     virtual void on_inconsistent_topic(
-        AnyTopic& topic,
-        const dds::core::status::InconsistentTopicStatus& status);
+            AnyTopic& topic,
+            const dds::core::status::InconsistentTopicStatus& status);
 };
 
 }

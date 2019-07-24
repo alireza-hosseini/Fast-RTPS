@@ -21,12 +21,10 @@ class TSampleInfo;
 template<typename DELEGATE>
 class dds::sub::TSampleInfo : dds::core::Value<DELEGATE>
 {
-  public:
+public:
 
     // Required for containers
     TSampleInfo();
-
-  public:
 
     const dds::core::Time timestamp() const;
 

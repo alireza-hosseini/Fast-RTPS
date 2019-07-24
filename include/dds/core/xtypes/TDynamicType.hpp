@@ -60,14 +60,14 @@ bool isAggregationType(
 template<typename DELEGATE>
 class dds::core::xtypes::TDynamicType : public dds::core::Reference<DELEGATE>
 {
-    public:
+public:
 
     OMG_DDS_REF_TYPE(
             TDynamicType,
             dds::core::Reference,
             DELEGATE)
 
-    protected:
+protected:
 
     TDynamicType(
             const std::string& name,
@@ -95,7 +95,7 @@ class dds::core::xtypes::TDynamicType : public dds::core::Reference<DELEGATE>
 
     ~TDynamicType();
 
-    public:
+public:
     /**
      * Get the type kind.
      */

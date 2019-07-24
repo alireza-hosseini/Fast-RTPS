@@ -47,7 +47,7 @@ class TStatusCondition;
 template<typename DELEGATE>
 class dds::core::cond::TStatusCondition : public dds::core::cond::TCondition<DELEGATE>
 {
-    public:
+public:
 
     /**
      * Create a <code>StatusCondition</code> (Section 7.1.2.1.9,

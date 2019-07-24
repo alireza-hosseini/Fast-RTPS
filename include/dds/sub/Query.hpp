@@ -39,43 +39,39 @@ class Query;
 
 class dds::sub::Query: public dds::core::Value<detail::Query>
 {
-  public:
+public:
 
     typedef detail::Query DELEGATE;
-
-  public:
 
     // Random access iterators
     typedef DELEGATE::iterator iterator;
 
     typedef DELEGATE::const_iterator const_iterator;
 
-  public:
-
     template<typename T>
     Query(
-        const dds::sub::DataReader<T>& dr,
-        const std::string& query_expression);
+            const dds::sub::DataReader<T>& dr,
+            const std::string& query_expression);
 
     template<
         typename T,
         typename FWIterator>
     Query(
-        const dds::sub::DataReader<T>& dr,
-        const std::string& query_expression,
-        const FWIterator& params_begin,
-        const FWIterator& params_end);
+            const dds::sub::DataReader<T>& dr,
+            const std::string& query_expression,
+            const FWIterator& params_begin,
+            const FWIterator& params_end);
 
     template<typename T>
     Query(
-        const dds::sub::DataReader<T>& dr,
-        const std::string& query_expression,
-        const std::vector<std::string>& params);
+            const dds::sub::DataReader<T>& dr,
+            const std::string& query_expression,
+            const std::vector<std::string>& params);
 
     const std::string& expression() const;
 
     void expression(
-        const std::string& expr);
+            const std::string& expr);
 
     /**
      * Provides the begin iterator to the parameter list.
@@ -99,11 +95,11 @@ class dds::sub::Query: public dds::core::Value<detail::Query>
 
     template<typename FWIterator>
     void parameters(
-        const FWIterator& begin,
-        const FWIterator end);
+            const FWIterator& begin,
+            const FWIterator end);
 
     void add_parameter(
-        const std::string& param);
+            const std::string& param);
 
     uint32_t parameters_length() const;
 

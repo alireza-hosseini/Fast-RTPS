@@ -24,33 +24,33 @@ namespace sub {
 
 class SubscriberListener : public virtual AnyDataReaderListener
 {
-  public:
+public:
 
       typedef ::dds::core::smart_ptr_traits<SubscriberListener>::ref_type ref_type;
 
-  public:
+public:
 
     virtual ~SubscriberListener();
 
-  public:
+public:
 
     virtual void on_data_on_readers(
-        Subscriber& sub) = 0;
+            Subscriber& sub) = 0;
 
 };
 
 class NoOpSubscriberListener :
-    public virtual SubscriberListener,
-    public virtual NoOpAnyDataReaderListener
+public virtual SubscriberListener,
+public virtual NoOpAnyDataReaderListener
 {
-  public:
+public:
 
     virtual ~NoOpSubscriberListener();
 
-  public:
+public:
 
     virtual void on_data_on_readers(
-        Subscriber& sub);
+            Subscriber& sub);
 };
 
 }

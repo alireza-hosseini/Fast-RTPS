@@ -34,7 +34,7 @@ class DataWriterListener;
 namespace detail {
 
 template<typename T>
-	class DataWriter;
+class DataWriter;
 
 }
 }

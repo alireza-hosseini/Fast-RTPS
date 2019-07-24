@@ -27,7 +27,7 @@ class UnionType;
 template<typename DELEGATE>
 class dds::core::xtypes::TUnionForwardDeclaration : public dds::core::xtypes::DynamicType<DELEGATE>
 {
-    public:
+public:
 
     TUnionForwardDeclaration(
             const std::string& name);
@@ -38,7 +38,7 @@ template<
     typename DELEGATE>
 class dds::core::xtypes::UnionType : public dds::core::xtypes::DynamicType<DELEGATE<T> >
 {
-    public:
+public:
 
     UnionType(
             const std::string& name,

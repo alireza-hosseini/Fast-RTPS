@@ -62,11 +62,9 @@ class DomainParticipantListener;
 template<typename DELEGATE>
 class dds::domain::TDomainParticipant : public ::dds::core::TEntity<DELEGATE>
 {
-  public:
+public:
 
     typedef dds::domain::DomainParticipantListener Listener;
-
-  public:
 
     /**
      * Create a new <code>DomainParticipant</code> object.
@@ -82,7 +80,9 @@ class dds::domain::TDomainParticipant : public ::dds::core::TEntity<DELEGATE>
      */
     TDomainParticipant(
             uint32_t did)
-        : ::dds::core::TEntity<DELEGATE>(new DELEGATE(did));
+        : ::dds::core::TEntity<DELEGATE>(new DELEGATE(did))
+    {
+    }
 
     /**
      * Create a new <code>DomainParticipant</code> object.
@@ -101,18 +101,12 @@ class dds::domain::TDomainParticipant : public ::dds::core::TEntity<DELEGATE>
         dds::domain::DomainParticipantListener* listener = NULL,
         const dds::core::status::StatusMask& mask = dds::core::status::StatusMask::all());
 
-  public:
-
     OMG_DDS_BASIC_REF_TYPE(
         TDomainParticipant,
         ::dds::core::TEntity,
         DELEGATE)
 
-  public:
-
     ~TDomainParticipant();
-
-  public:
 
     /**
      * Register a listener with the <core>DomainParticipant</code>.
@@ -193,33 +187,29 @@ class dds::domain::TDomainParticipant : public ::dds::core::TEntity<DELEGATE>
      */
     dds::core::Time current_time();
 
-  public:
-
-    // --- DomainParticipant QoS Defaults --- //
+    // DomainParticipant QoS Defaults
     static dds::domain::qos::DomainParticipantQos default_participant_qos();
 
     static void default_participant_qos(
         const ::dds::domain::qos::DomainParticipantQos& qos);
 
-    // --- Publisher QoS Defaults --- //
+    // Publisher QoS Defaults
     dds::pub::qos::PublisherQos default_publisher_qos() const;
 
     TDomainParticipant& default_publisher_qos(
         const ::dds::pub::qos::PublisherQos& qos);
 
-    // --- Subscriber QoS Defaults --- //
+    // Subscriber QoS Defaults
     dds::sub::qos::SubscriberQos default_subscriber_qos() const;
 
     TDomainParticipant& default_subscriber_qos(
         const ::dds::sub::qos::SubscriberQos& qos);
 
-    // --- Topic QoS Defaults --- //
+    // Topic QoS Defaults //
     dds::topic::qos::TopicQos default_topic_qos() const;
 
     TDomainParticipant& default_topic_qos(
         const dds::topic::qos::TopicQos& qos);
-
-  //=============================================================================
 };
 
 #endif // OMG_TDDS_DOMAIN_DOMAIN_PARTICIPANT_HPP_

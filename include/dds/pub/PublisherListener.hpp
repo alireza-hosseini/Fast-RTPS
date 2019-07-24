@@ -32,19 +32,19 @@ class NoOpPublisherListener;
 
 class dds::pub::PublisherListener : public virtual dds::pub::AnyDataWriterListener
 {
-	public:
+public:
 
-	  virtual ~PublisherListener();
+    virtual ~PublisherListener();
 
 };
 
 class dds::pub::NoOpPublisherListener :
-		public virtual dds::pub::PublisherListener,
-		public virtual dds::pub::NoOpAnyDataWriterListener
+	public virtual dds::pub::PublisherListener,
+	public virtual dds::pub::NoOpAnyDataWriterListener
 {
-	public:
+public:
 
-	  virtual ~NoOpPublisherListener();
+    virtual ~NoOpPublisherListener();
 };
 
 #endif // OMG_DDS_PUB_PUBLISHER_LISTENER_HPP_

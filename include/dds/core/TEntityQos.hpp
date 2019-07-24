@@ -36,7 +36,7 @@ class TEntityQos;
 template<typename DELEGATE>
 class dds::core::TEntityQos : public dds::core::Value<DELEGATE>
 {
-    public:
+public:
 
     TEntityQos();
 

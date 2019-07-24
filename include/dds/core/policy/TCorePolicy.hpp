@@ -44,7 +44,7 @@ namespace policy {
 template<typename D>
 class TUserData : public dds::core::Value<D>
 {
-    public:
+public:
 
     /**
      * Create a <code>UserData</code> instance with an empty user data.
@@ -108,7 +108,7 @@ class TUserData : public dds::core::Value<D>
 template<typename D>
 class TGroupData : public dds::core::Value<D>
 {
-    public:
+public:
 
     /**
      * Create a <code>GroupData<code> instance.
@@ -178,7 +178,7 @@ class TGroupData : public dds::core::Value<D>
 template<typename D>
 class TTopicData : public dds::core::Value<D>
 {
-    public:
+public:
 
     TTopicData()
         : dds::core::Value<D>()
@@ -245,7 +245,7 @@ class TTopicData : public dds::core::Value<D>
 template<typename D>
 class TEntityFactory : public dds::core::Value<D>
 {
-    public:
+public:
 
     TEntityFactory()
         : dds::core::Value<D>(true)
@@ -287,7 +287,7 @@ class TEntityFactory : public dds::core::Value<D>
 template<typename D>
 class TTransportPriority : public dds::core::Value<D>
 {
-    public:
+public:
 
     explicit TTransportPriority(
             int32_t prio);
@@ -327,7 +327,7 @@ class TTransportPriority : public dds::core::Value<D>
 template<typename D>
 class TLifespan : public dds::core::Value<D>
 {
-    public:
+public:
 
     /**
      * Create a lifespan with a specified duration.
@@ -370,7 +370,7 @@ class TLifespan : public dds::core::Value<D>
 template<typename D>
 class TDeadline : public dds::core::Value<D>
 {
-    public:
+public:
 
     explicit TDeadline(
             const dds::core::Duration& d);
@@ -392,7 +392,7 @@ class TDeadline : public dds::core::Value<D>
 template<typename D>
 class TLatencyBudget : public dds::core::Value<D>
 {
-    public:
+public:
 
     explicit TLatencyBudget(
             const dds::core::Duration& d);
@@ -414,7 +414,7 @@ class TLatencyBudget : public dds::core::Value<D>
 template<typename D>
 class TTimeBasedFilter : public dds::core::Value<D>
 {
-    public:
+public:
 
     /**
      * Create a time based filter with infinite duration.
@@ -436,7 +436,7 @@ class TTimeBasedFilter : public dds::core::Value<D>
 template<typename D>
 class TPartition : public dds::core::Value<D>
 {
-    public:
+public:
 
     TPartition();
 
@@ -463,7 +463,7 @@ class TPartition : public dds::core::Value<D>
 template<typename D>
 class TOwnership : public dds::core::Value<D>
 {
-    public:
+public:
 
     /**
      * Create an ownership policy set to shared.
@@ -489,7 +489,7 @@ class TOwnership : public dds::core::Value<D>
 template<typename D>
 class TOwnershipStrength : public dds::core::Value<D>
 {
-    public:
+public:
 
     explicit TOwnershipStrength(
             int32_t s);
@@ -508,7 +508,7 @@ class TOwnershipStrength : public dds::core::Value<D>
 template<typename D>
 class TWriterDataLifecycle : public dds::core::Value<D>
 {
-    public:
+public:
 
     TWriterDataLifecycle();
 
@@ -531,7 +531,7 @@ class TWriterDataLifecycle : public dds::core::Value<D>
 template<typename D>
 class TReaderDataLifecycle : public dds::core::Value<D>
 {
-    public:
+public:
 
     /**
      * Create a reder data lifecycle with infinite delays for no-writer
@@ -565,7 +565,7 @@ class TReaderDataLifecycle : public dds::core::Value<D>
 template<typename D>
 class TDurability : public dds::core::Value<D>
 {
-    public:
+public:
 
     /**
      * Create a volatile durability.
@@ -595,7 +595,7 @@ class TDurability : public dds::core::Value<D>
 template<typename D>
 class TPresentation : public dds::core::Value<D>
 {
-    public:
+public:
 
     /**
      * Create a presentation policy with <code>Instance</code> access scope
@@ -643,7 +643,7 @@ class TPresentation : public dds::core::Value<D>
 template<typename D>
 class TReliability : public dds::core::Value<D>
 {
-    public:
+public:
 
     /**
      * Create a best effort reliability policy.
@@ -676,7 +676,7 @@ class TReliability : public dds::core::Value<D>
 template<typename D>
 class TDestinationOrder : public dds::core::Value<D>
 {
-    public:
+public:
 
     /**
      * Create a by-source-timestamp destination order policy.
@@ -702,7 +702,7 @@ class TDestinationOrder : public dds::core::Value<D>
 template<typename D>
 class THistory : public dds::core::Value<D>
 {
-    public:
+public:
 
     /**
      * Creates a keep-last one history policy.
@@ -735,7 +735,7 @@ class THistory : public dds::core::Value<D>
 template<typename D>
 class TResourceLimits : public dds::core::Value<D>
 {
-    public:
+public:
 
     /**
      * Create unlimited resource limit policy;
@@ -769,7 +769,7 @@ class TResourceLimits : public dds::core::Value<D>
 template<typename D>
 class TLiveliness : public dds::core::Value<D>
 {
-    public:
+public:
 
     /**
      * Create automatic liveliness policy with infinite lease duration.
@@ -807,7 +807,7 @@ class TLiveliness : public dds::core::Value<D>
 template<typename D>
 class TDurabilityService : public dds::core::Value<D>
 {
-    public:
+public:
 
     TDurabilityService();
 
@@ -860,7 +860,7 @@ class TDurabilityService : public dds::core::Value<D>
 template<typename D>
 class TDataRepresentation : public dds::core::Value<D>
 {
-    public:
+public:
 
     explicit TDataRepresentation(
             const dds::core::policy::DataRepresentationIdSeq& value);
@@ -885,7 +885,7 @@ class TDataRepresentation : public dds::core::Value<D>
 template<typename D>
 class TTypeConsistencyEnforcement : public dds::core::Value<D>
 {
-    public:
+public:
 
     explicit TTypeConsistencyEnforcement(
             dds::core::policy::TypeConsistencyEnforcementKind::type kind);

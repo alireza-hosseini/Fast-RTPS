@@ -18,19 +18,19 @@ class LoanedSamples;
 // and SharedSamples in a range based for-loop.
 template<typename T>
 typename T::iterator begin(
-    T& t);
+        T& t);
 
 template<typename T>
 typename T::iterator end(
-    T& t);
+        T& t);
 
 template<typename T>
 typename T::const_iterator cbegin(
-    const T& t);
+        const T& t);
 
 template<typename T>
 typename T::const_iterator cend(
-    const T& t);
+        const T& t);
 
 }
 }
@@ -46,7 +46,7 @@ template<
     template<typename Q> class DELEGATE>
 class dds::sub::LoanedSamples
 {
-  public:
+public:
 
     typedef T DataType;
 
@@ -56,16 +56,12 @@ class dds::sub::LoanedSamples
 
     typedef typename dds::core::smart_ptr_traits< DELEGATE<T> >::ref_type DELEGATE_REF_T;
 
-  public:
-
     LoanedSamples();
 
     /**
      * Implicitly return the loan.
      */
     ~LoanedSamples();
-
-  public:
 
     const_iterator begin() const;
 
@@ -77,7 +73,7 @@ class dds::sub::LoanedSamples
 
     uint32_t length() const;
 
-  private:
+private:
 
     DELEGATE_REF_T delegate_;
 };
@@ -89,7 +85,7 @@ template<
     typename T,
     template<typename Q> class D>
 LoanedSamples<T, D<T> > move(
-    LoanedSamples<T, D<T> >& a);
+        LoanedSamples<T, D<T> >& a);
 
 }
 }

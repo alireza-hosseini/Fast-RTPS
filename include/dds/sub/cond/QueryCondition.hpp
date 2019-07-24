@@ -50,30 +50,24 @@ class QueryCondition;
  */
 class dds::sub::cond::QueryCondition : public dds::sub::cond::TReadCondition<detail::QueryCondition>
 {
-  public:
+public:
 
     typedef detail::QueryCondition DELEGATE;
-
-  public:
 
     // Random access iterators
     typedef DELEGATE::iterator iterator;
     typedef DELEGATE::const_iterator const_iterator;
 
-  public:
-
     // OMG_DDS_REF_TYPE(TQueryCondition, dds::sub::cond::TReadCondition, DELEGATE)
 
     QueryCondition(
-        const dds::sub::Query& query,
-        const dds::sub::status::DataState& status);
+            const dds::sub::Query& query,
+            const dds::sub::status::DataState& status);
 
     ~QueryCondition();
 
-  public:
-
     void expression(
-        const std::string& expr);
+            const std::string& expr);
 
     const std::string& expression();
 
@@ -99,11 +93,11 @@ class dds::sub::cond::QueryCondition : public dds::sub::cond::TReadCondition<det
 
     template<typename FWIterator>
     void parameters(
-        const FWIterator& begin,
-        const FWIterator end);
+            const FWIterator& begin,
+            const FWIterator end);
 
     void add_parameter(
-        const std::string& param);
+            const std::string& param);
 
     uint32_t parameters_length() const;
 

@@ -43,7 +43,7 @@ class TEntity;
 template<typename DELEGATE>
 class dds::core::TEntity : public dds::core::Reference<DELEGATE>
 {
-    public:
+public:
 
     OMG_DDS_REF_TYPE(
             TEntity,

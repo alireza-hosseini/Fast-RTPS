@@ -26,17 +26,17 @@ class TStringType;
 template<typename DELEGATE>
 class dds::core::xtypes::TCollectionType : public dds::core::xtypes::TDynamicType<DELEGATE>
 {
-    public:
+public:
 
     const uint32_t UNBOUNDED = 0xFFFFFFFF;
 
-    protected:
+protected:
 
     TCollectionType(
             const std::string& name,
             TypeKind kind);
 
-    public:
+public:
 
     uint32_t bounds() const;
 };
@@ -44,7 +44,7 @@ class dds::core::xtypes::TCollectionType : public dds::core::xtypes::TDynamicTyp
 template<typename DELEGATE>
 class dds::core::xtypes::TMapType : public dds::core::xtypes::TCollectionType<DELEGATE>
 {
-    public:
+public:
 
     /**
     * Create an unbounded Map with the given key/value type.
@@ -67,7 +67,7 @@ class dds::core::xtypes::TMapType : public dds::core::xtypes::TCollectionType<DE
 template<typename DELEGATE>
 class dds::core::xtypes::TSequenceType : public dds::core::xtypes::TCollectionType<DELEGATE>
 {
-    public:
+public:
 
     /**
     * Create an unbounded sequence for the given type.
@@ -88,7 +88,7 @@ class dds::core::xtypes::TSequenceType : public dds::core::xtypes::TCollectionTy
 template<typename CHAR_T, template<typename C> class DELEGATE>
 class dds::core::xtypes::TStringType : public dds::core::xtypes::TCollectionType<DELEGATE>
 {
-    public:
+public:
 
     TStringType(
             uint32_t bounds);

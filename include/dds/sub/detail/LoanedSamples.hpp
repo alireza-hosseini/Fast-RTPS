@@ -11,4 +11,5 @@ class LoanedSamples {};
 }
 }
 }
+
 #endif // OMG_SUB_DETAIL_LOANED_SAMPLES_HPP_

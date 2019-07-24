@@ -1,10 +1,3 @@
-/*
- * Query.hpp
- *
- *  Created on: Oct 10, 2012
- *      Author: angelo
- */
-
 #ifndef DDS_SUB_DETAIL_QUERY_HPP_
 #define DDS_SUB_DETAIL_QUERY_HPP_
 

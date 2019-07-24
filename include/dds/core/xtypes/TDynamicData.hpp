@@ -53,7 +53,7 @@ T value(
 template<typename DELEGATE>
 class dds::code::xtypes::TDynamicData : dds::core::Reference<DELEGATE>
 {
-    public:
+public:
 
     OMG_DDS_REF_TYPE(
             TDynamicData,

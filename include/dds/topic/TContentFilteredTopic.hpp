@@ -47,15 +47,13 @@ template<
     template<typename Q> class DELEGATE>
 class dds::topic::ContentFilteredTopic : public TopicDescription <T, DELEGATE>
 {
-  public:
+public:
 
     OMG_DDS_REF_TYPE_T(
-        ContentFilteredTopic,
-        TopicDescription,
-        T,
-        DELEGATE)
-
-  public:
+            ContentFilteredTopic,
+            TopicDescription,
+            T,
+            DELEGATE)
 
     /**
      * Creates a <code>ContentFilteredTopic</code> be used as to
@@ -70,13 +68,11 @@ class dds::topic::ContentFilteredTopic : public TopicDescription <T, DELEGATE>
      *
      */
     ContentFilteredTopic(
-        const Topic<T>& topic,
-        const std::string& name,
-        const dds::topic::Filter& filter);
+            const Topic<T>& topic,
+            const std::string& name,
+            const dds::topic::Filter& filter);
 
     virtual ~ContentFilteredTopic();
-
-  public:
 
     /**
      * Get the filter expression.
@@ -93,8 +89,8 @@ class dds::topic::ContentFilteredTopic : public TopicDescription <T, DELEGATE>
      */
     template<typename FWDIterator>
     void filter_parameters(
-        const FWDIterator& begin,
-        const FWDIterator& end);
+            const FWDIterator& begin,
+            const FWDIterator& end);
 
     /**
      * Get the related topic.

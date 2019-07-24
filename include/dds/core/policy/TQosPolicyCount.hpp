@@ -28,7 +28,7 @@ namespace policy {
 template<typename D>
 class TQosPolicyCount : public dds::core::Value<D>
 {
-    public:
+public:
 
     TQosPolicyCount(
             QosPolicyId policy_id,

@@ -42,33 +42,33 @@ template<
     template<typename Q> class DELEGATE>
 class dds::sub::Sample : public dds::core::Value< DELEGATE<T> >
 {
-  public:
+public:
     typedef T DataType;
-
-  public:
 
     /**
      * Create a sample with invalid data.
      */
     Sample()
-      : dds::core::Value< DELEGATE<T> >();
+        : dds::core::Value< DELEGATE<T> >()
+    {
+    }
 
     Sample(
-        const T& data,
-        const SampleInfo& info);
+            const T& data,
+            const SampleInfo& info);
 
     Sample(
-        const Sample& other);
+            const Sample& other);
 
     const DataType& data() const;
 
     void data(
-        const DataType& d);
+            const DataType& d);
 
     const SampleInfo& info() const;
 
     void info(
-        const SampleInfo& i);
+            const SampleInfo& i);
 
 };
 
