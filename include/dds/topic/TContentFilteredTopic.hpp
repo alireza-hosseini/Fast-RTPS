@@ -33,7 +33,7 @@ namespace topic {
 
 template<
     typename T,
-    template <typename Q> class DELEGATE>
+    template<typename Q> class DELEGATE>
 class ContentFilteredTopic;
 
 }
@@ -44,7 +44,7 @@ class ContentFilteredTopic;
  */
 template<
     typename T,
-    template <typename Q> class DELEGATE>
+    template<typename Q> class DELEGATE>
 class dds::topic::ContentFilteredTopic : public TopicDescription <T, DELEGATE>
 {
   public:

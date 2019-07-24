@@ -11,7 +11,7 @@ namespace sub {
 
 template<
     typename T,
-    template <typename Q> class DELEGATE = detail::SharedSamples>
+    template<typename Q> class DELEGATE = detail::SharedSamples>
 class SharedSamples;
 
 }
@@ -25,7 +25,7 @@ class SharedSamples;
  */
 template<
     typename T,
-    template <typename Q> class DELEGATE>
+    template<typename Q> class DELEGATE>
 class dds::sub::SharedSamples : public dds::core::Reference< DELEGATE<T> >
 {
   public:

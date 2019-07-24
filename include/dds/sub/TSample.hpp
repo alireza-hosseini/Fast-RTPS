@@ -27,7 +27,7 @@ namespace sub {
 
 template<
     typename T,
-    template <typename Q> class DELEGATE>
+    template<typename Q> class DELEGATE>
 class Sample;
 
 }
@@ -39,7 +39,7 @@ class Sample;
  */
 template<
     typename T,
-    template <typename Q> class DELEGATE>
+    template<typename Q> class DELEGATE>
 class dds::sub::Sample : public dds::core::Value< DELEGATE<T> >
 {
   public:

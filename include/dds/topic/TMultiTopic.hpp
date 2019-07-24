@@ -32,7 +32,7 @@ namespace topic {
 
 template<
     typename T,
-    template <typename Q> class DELEGATE>
+    template<typename Q> class DELEGATE>
 class MultiTopic : public TopicDescription <T, DELEGATE>
 {
   public:

@@ -31,7 +31,7 @@ class Query;
 
 template<
     typename T,
-    template <typename Q> class DELEGATE>
+    template<typename Q> class DELEGATE>
 class DataReader;
 
 template<typename T>
@@ -42,7 +42,7 @@ class DataReaderListener;
 
 template<
     typename T,
-    template <typename Q> class DELEGATE>
+    template<typename Q> class DELEGATE>
 class dds::sub::DataReader : public dds::core::TEntity< DELEGATE<T> >
 {
 

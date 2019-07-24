@@ -7,9 +7,9 @@
 namespace dds {
 namespace sub {
 
-template <
+template<
     typename T,
-    template <typename Q> class DELEGATE = dds::sub::detail::DataReader>
+    template<typename Q> class DELEGATE = dds::sub::detail::DataReader>
 class DataReader;
 
 class Query;
@@ -35,11 +35,11 @@ typedef dds::sub::functors::detail::NextInstanceManipulatorFunctor NextInstanceM
 namespace dds {
 namespace sub {
 
-template <typename SELECTOR>
+template<typename SELECTOR>
 SELECTOR& read(
     SELECTOR& selector);
 
-template <typename SELECTOR>
+template<typename SELECTOR>
 SELECTOR& take(
     SELECTOR& selector);
 

@@ -32,7 +32,7 @@ namespace pub {
 
 template<
     typename T,
-    template <typename Q> class DELEGATE = dds::pub::detail::DataWriter >
+    template<typename Q> class DELEGATE = dds::pub::detail::DataWriter >
 class DataWriter;
 
 template<typename T>
@@ -41,9 +41,9 @@ class DataWriterListener;
 }
 }
 
-template <
+template<
     typename T,
-    template <typename Q> class DELEGATE>
+    template<typename Q> class DELEGATE>
 class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
 {
 

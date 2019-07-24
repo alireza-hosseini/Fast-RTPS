@@ -32,7 +32,8 @@ namespace pub {
 namespace detail {
 
 class DWHolderBase;
-template <typename T>
+
+template<typename T>
 class DWHolder;
 
 }
@@ -64,7 +65,7 @@ class dds::pub::detail::DWHolderBase
         virtual void retain(bool b) = 0;
 };
 
-template <typename T>
+template<typename T>
 class dds::pub::detail::DWHolder : public DWHolderBase
 {
     public:

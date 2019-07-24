@@ -45,7 +45,8 @@ class dds::core::cond::TCondition : public dds::core::Reference<DELEGATE>
     public:
 
     OMG_DDS_REF_TYPE(
-            TCondition, dds::core::Reference,
+            TCondition,
+            dds::core::Reference,
             DELEGATE)
 
     ~TCondition();
