@@ -19,7 +19,6 @@
  * limitations under the License.
  */
 
-
 namespace dds {
 namespace sub {
 

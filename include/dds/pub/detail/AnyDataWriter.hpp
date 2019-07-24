@@ -65,7 +65,6 @@ class dds::pub::detail::DWHolderBase
         virtual void retain(bool b) = 0;
 };
 
-
 template<typename T>
 class dds::pub::detail::DWHolder : public DWHolderBase
 {
@@ -133,6 +132,5 @@ class dds::pub::detail::DWHolder : public DWHolderBase
 
         dds::pub::DataWriter<T> dw_;
 };
-
 
 #endif // OMG_DDS_PUB_DETAIL_ANY_DATA_WRITER_HPP_

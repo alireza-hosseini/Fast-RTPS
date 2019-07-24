@@ -140,7 +140,6 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
         const ::dds::core::InstanceHandle& instance,
         const dds::core::Time& timestamp);
 
-
     /**
      * Write a topic instance -- a class that encapsulate the
      * sample and its associated instance handle.
@@ -204,7 +203,6 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
         const HandlesFWIterator& handle_begin,
         const HandlesFWIterator& handle_end,
         const dds::core::Time& timestamp);
-
 
     DataWriter& operator << (
         const T& data);
@@ -345,7 +343,6 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
     const DataWriter& operator >> (
         ::dds::pub::qos::DataWriterQos& the_qos) const;
 
-
     //==========================================================================
     //== Entity Navigation
 
@@ -418,7 +415,6 @@ class dds::pub::DataWriter : public ::dds::core::TEntity< DELEGATE<T> >
      * Get the <code>PublicationMatchedStatus</code>.
      */
     const ::dds::core::status::PublicationMatchedStatus publication_matched_status();
-
 
     //==========================================================================
     //== Liveliness Management

@@ -53,7 +53,6 @@ class TSampleLostStatus : public dds::core::Value<D>
     int32_t total_count_change() const;
 };
 
-
 template<typename D>
 class TSampleRejectedStatus : public dds::core::Value<D>
 {

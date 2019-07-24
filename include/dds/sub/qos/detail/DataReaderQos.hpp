@@ -36,5 +36,4 @@ namespace detail {
 }
 }
 
-
 #endif // OMG_DDS_SUB_QOS_DETAIL_DATA_READER_QOS_HPP_

@@ -104,7 +104,6 @@ class dds::sub::TSubscriber : public dds::core::TEntity<DELEGATE>
      */
     Listener* listener() const;
 
-
     /**
      * Get the <code>Subscriber</code> QoS.
      */

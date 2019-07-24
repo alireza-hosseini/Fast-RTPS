@@ -50,7 +50,6 @@ struct dds::core::smart_ptr_traits
     typedef std::weak_ptr<T> weak_ref_type;
 };
 
-
 template<
     typename TO,
     typename FROM>

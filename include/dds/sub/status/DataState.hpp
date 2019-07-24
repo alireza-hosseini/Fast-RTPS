@@ -23,7 +23,6 @@
 
 #include <dds/core/types.hpp>
 
-
 namespace dds {
 namespace sub {
 namespace status {
@@ -63,7 +62,6 @@ class dds::sub::status::SampleState : public std::bitset<OMG_DDS_STATE_BIT_COUNT
 
 };
 
-
 class ViewState : public std::bitset<OMG_DDS_STATE_BIT_COUNT>
 {
   public:
@@ -92,7 +90,6 @@ class ViewState : public std::bitset<OMG_DDS_STATE_BIT_COUNT>
     inline static const ViewState any();
 
 };
-
 
 class InstanceState : public std::bitset<OMG_DDS_STATE_BIT_COUNT>
 {
@@ -287,6 +284,5 @@ class DataState
     dds::sub::status::InstanceState is_;
 
 };
-
 
 #endif // OMG_DDS_SUB_DATA_STATE_HPP_

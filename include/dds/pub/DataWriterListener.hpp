@@ -19,7 +19,6 @@
  * limitations under the License.
  */
 
-
 #include <dds/pub/DataWriter.hpp>
 
 namespace dds {
@@ -52,7 +51,6 @@ class DataWriterListener
         dds::pub::DataWriter<T>& writer,
         const dds::core::status::PublicationMatchedStatus& status) = 0;
 };
-
 
 template<typename T>
 class NoOpDataWriterListener : public virtual DataWriterListener<T>

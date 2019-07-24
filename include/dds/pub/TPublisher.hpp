@@ -26,8 +26,6 @@
 #include <dds/pub/qos/PublisherQos.hpp>
 #include <dds/domain/DomainParticipant.hpp>
 
-
-
 namespace dds {
 namespace pub {
 
@@ -60,7 +58,6 @@ class dds::pub::TPublisher : public dds::core::TEntity<DELEGATE>
         TPublisher,
         dds::core::TEntity,
         DELEGATE)
-
 
     /**
      * Create a new <code>Publisher</code>.
@@ -95,7 +92,6 @@ class dds::pub::TPublisher : public dds::core::TEntity<DELEGATE>
      */
     const dds::pub::qos::PublisherQos qos() const;
 
-
     /**
      * Set the new qos policies for this publisher.
      *
@@ -103,7 +99,6 @@ class dds::pub::TPublisher : public dds::core::TEntity<DELEGATE>
      */
     void qos(
         const dds::pub::qos::PublisherQos& pqos);
-
 
     /**
      * Set the new qos policies for this publisher.

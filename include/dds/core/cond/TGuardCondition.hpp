@@ -21,7 +21,6 @@
 
 #include <dds/core/cond/TCondition.hpp>
 
-
 namespace dds {
 namespace core {
 namespace cond {

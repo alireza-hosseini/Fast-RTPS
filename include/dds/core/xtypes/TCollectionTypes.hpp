@@ -41,7 +41,6 @@ class dds::core::xtypes::TCollectionType : public dds::core::xtypes::TDynamicTyp
     uint32_t bounds() const;
 };
 
-
 template<typename DELEGATE>
 class dds::core::xtypes::TMapType : public dds::core::xtypes::TCollectionType<DELEGATE>
 {

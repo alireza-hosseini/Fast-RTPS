@@ -30,7 +30,6 @@ class TCoherentSet;
 }
 }
 
-
 template<typename DELEGATE>
 class dds::pub::TCoherentSet : public dds::core::Value<DELEGATE>
 {
@@ -87,7 +86,6 @@ class dds::pub::TCoherentSet : public dds::core::Value<DELEGATE>
      */
     ~TCoherentSet();
 };
-
 
 #endif // OMG_TDDS_PUB_COHERENT_SET_HPP_
 

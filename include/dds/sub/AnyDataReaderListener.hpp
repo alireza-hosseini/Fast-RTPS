@@ -19,7 +19,6 @@
  * limitations under the License.
  */
 
-
 namespace dds {
 namespace sub {
 
@@ -65,7 +64,6 @@ class AnyDataReaderListener
             const dds::core::status::SampleLostStatus& status) = 0;
 
 };
-
 
 class NoOpAnyDataReaderListener : public virtual AnyDataReaderListener
 {

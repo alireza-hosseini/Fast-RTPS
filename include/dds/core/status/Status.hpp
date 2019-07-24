@@ -31,7 +31,6 @@ class DataAvailableStatus
     // empty
 };
 
-
 class DataOnReadersStatus
 {
     // empty

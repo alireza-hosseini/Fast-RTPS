@@ -19,7 +19,6 @@
  * limitations under the License.
  */
 
-
 namespace dds {
 namespace sub {
 
@@ -50,7 +49,6 @@ namespace sub {
             const dds::domain::DomainParticipant& dp,
             FwdIterator begin,
             FwdIterator end);
-
 
     //==========================================================================
     //== Discovery Management

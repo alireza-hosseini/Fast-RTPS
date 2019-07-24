@@ -33,7 +33,6 @@
 #include <dds/pub/qos/PublisherQos.hpp>
 #include <dds/sub/qos/SubscriberQos.hpp>
 
-
 namespace dds {
 namespace domain {
 
@@ -133,7 +132,6 @@ class dds::domain::TDomainParticipant : public ::dds::core::TEntity<DELEGATE>
      */
     Listener* listener() const;
 
-
     /**
      * Return the <code>DomainParticipantQos</code> setting for this instance.
      *
@@ -156,7 +154,6 @@ class dds::domain::TDomainParticipant : public ::dds::core::TEntity<DELEGATE>
      */
     uint32_t domain_id() const;
 
-
     /**
      * This operation manually asserts the liveliness of the DataWriter.
      * This is used in combination with the LIVELINESS QoS policy
@@ -171,7 +168,6 @@ class dds::domain::TDomainParticipant : public ::dds::core::TEntity<DELEGATE>
      * application is not writing data regularly.
      */
     void assert_liveliness();
-
 
     /**
      * This operation checks whether or not the given a_handle represents
@@ -225,6 +221,5 @@ class dds::domain::TDomainParticipant : public ::dds::core::TEntity<DELEGATE>
 
   //=============================================================================
 };
-
 
 #endif // OMG_TDDS_DOMAIN_DOMAIN_PARTICIPANT_HPP_

@@ -21,7 +21,6 @@
 
 #include <dds/core/Value.hpp>
 
-
 namespace dds {
 namespace sub {
 

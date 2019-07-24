@@ -23,7 +23,6 @@
 #include <dds/core/ref_traits.hpp>
 #include <dds/topic/detail/AnyTopicDescription.hpp>
 
-
 namespace dds {
 namespace topic {
 

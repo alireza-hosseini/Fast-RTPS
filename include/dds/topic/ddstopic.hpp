@@ -7,5 +7,4 @@
 #include <dds/topic/AnyTopic.hpp>
 #include <dds/topic/ContentFilteredTopic.hpp>
 
-
 #endif // OMG_DDS_TOPIC_PACKAGE_INCLUDE_HPP_

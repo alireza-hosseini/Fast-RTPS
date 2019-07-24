@@ -25,7 +25,6 @@
 // -- Status Includes
 #include <dds/sub/status/DataState.hpp>
 
-
 /////////////////////////////////////////////////////////////////////////////
 // -- QoS Includes
 #include <dds/sub/qos/DataReaderQos.hpp>
@@ -42,7 +41,6 @@
  */
 #include <dds/sub/AnyDataReaderListener.hpp>
 
-
 /*
  * Depends on:
  *  <dds/sub/GenerationCount.hpp>
@@ -53,13 +51,11 @@
 
 #include <dds/sub/LoanedSamples.hpp>
 
-
 /* Depends on:
  *  <dds/sub/qos/SubscriberQos.hpp>
  *  <dds/sub/qos/DataReaderQos.hpp>
  */
 #include <dds/sub/Subscriber.hpp>
-
 
 /* Depends on:
  *    <dds/sub/Subscriber.hpp>
@@ -79,7 +75,6 @@
  *   <dds/sub/LoanedSamples.hpp>
  */
 #include <dds/sub/DataReader.hpp>
-
 
 /* Depends on:
  *    <dds/sub/AnyDataReaderListener.hpp>

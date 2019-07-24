@@ -65,7 +65,6 @@ class dds::topic::TTopicBuiltinTopicData : public ::dds::core::Value<D>
 
     const ::dds::core::policy::Durability& durability() const;
 
-
 #ifdef OMG_DDS_PERSISTENCE_SUPPORT
 
     const ::dds::core::policy::DurabilityService& durability_service() const
@@ -169,7 +168,6 @@ class dds::topic::TPublicationBuiltinTopicData  : public ::dds::core::Value<D>
     {
       return this->delegate()->ownership();
     }
-
 
 #ifdef OMG_DDS_OWNERSHIP_SUPPORT
 
@@ -286,7 +284,6 @@ class dds::topic::TSubscriptionBuiltinTopicData  : public ::dds::core::Value<D>
     {
       return this->delegate()->partition();
     }
-
 
     const ::dds::core::policy::TopicData& topic_data() const
     {

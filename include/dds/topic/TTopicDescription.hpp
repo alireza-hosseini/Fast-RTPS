@@ -33,7 +33,6 @@ class TopicDescription;
 }
 }
 
-
 /**
  * TopicDescription represents the fact that both publications and
  * subscriptions are tied to a single data-type. Its attribute

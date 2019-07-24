@@ -1,7 +1,6 @@
 #ifndef OMG_DDS_SUB_SHARED_SAMPLES_HPP_
 #define OMG_DDS_SUB_SHARED_SAMPLES_HPP__
 
-
 #include <dds/core/Reference.hpp>
 #include <dds/sub/Sample.hpp>
 #include <dds/sub/LoanedSamples.hpp>

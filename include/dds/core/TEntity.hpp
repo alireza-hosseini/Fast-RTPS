@@ -100,7 +100,6 @@ class dds::core::TEntity : public dds::core::Reference<DELEGATE>
      */
     const dds::core::InstanceHandle instance_handle() const;
 
-
     /**
      * This method closes the entity and releases all resources associated with
      * DDS, such as threads, sockets, buffers, etc. Any attempt to invoke

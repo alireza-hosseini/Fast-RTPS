@@ -49,7 +49,6 @@ class dds::topic::AnyTopic
     AnyTopic(
         const dds::topic::Topic<T>& t);
 
-
   public:
 
     const dds::domain::DomainParticipant& domain_participant() const;

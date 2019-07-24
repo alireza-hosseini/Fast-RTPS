@@ -26,7 +26,6 @@
 #include <dds/core/ref_traits.hpp>
 #include <dds/sub/detail/find.hpp>
 
-
 namespace dds {
 namespace sub {
 

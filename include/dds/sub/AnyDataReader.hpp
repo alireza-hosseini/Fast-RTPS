@@ -23,7 +23,6 @@
 #include <dds/core/ref_traits.hpp>
 #include <dds/sub/detail/AnyDataReader.hpp>
 
-
 namespace dds {
 namespace sub {
 

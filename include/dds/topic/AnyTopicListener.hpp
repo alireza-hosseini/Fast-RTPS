@@ -19,7 +19,6 @@
  * limitations under the License.
  */
 
-
 namespace dds {
 namespace topic {
 
@@ -35,7 +34,6 @@ class AnyTopicListener
         AnyTopic& topic,
         const dds::core::status::InconsistentTopicStatus& status) = 0;
 };
-
 
 class NoOpAnyTopicListener : public virtual AnyTopicListener
 {

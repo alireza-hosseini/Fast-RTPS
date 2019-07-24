@@ -19,8 +19,6 @@
  * limitations under the License.
  */
 
-
-
 namespace dds {
 namespace topic {
 

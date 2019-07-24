@@ -22,5 +22,4 @@ namespace detail {
 }
 }
 
-
 #endif // DDS_SUB_DETAIL_QUERY_HPP_

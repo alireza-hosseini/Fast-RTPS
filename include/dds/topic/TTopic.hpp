@@ -27,7 +27,6 @@
 #include <dds/topic/qos/TopicQos.hpp>
 #include <dds/topic/TopicDescription.hpp>
 
-
 namespace dds {
 namespace topic {
 
@@ -183,7 +182,6 @@ class dds::topic::Topic : public dds::topic::TopicDescription <T, DELEGATE>
      * Get the <code>Topic</code> listener.
      */
     Listener* listener() const;
-
 
     /**
      * Get the <code>Topic</code> QoS.

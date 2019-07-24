@@ -19,9 +19,7 @@
  * limitations under the License.
  */
 
-
 #include <dds/sub/Subscriber.hpp>
-
 
 namespace dds {
 namespace domain {

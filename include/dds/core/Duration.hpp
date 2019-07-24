@@ -134,7 +134,6 @@ const Duration operator*(
         const Duration& lhs,
         uint32_t rhs);
 
-
 const Duration operator/(
         const Duration& lhs,
         uint32_t rhs);
