@@ -302,6 +302,7 @@ class RTPSWithRegistrationReader
             return *this;
         }
 
+#if HAVE_SQLITE3
         RTPSWithRegistrationReader& make_persistent(const std::string& filename, const eprosima::fastrtps::rtps::GuidPrefix_t& guidPrefix)
         {
             reader_attr_.endpoint.persistence_guid.guidPrefix = guidPrefix;
@@ -313,6 +314,7 @@ class RTPSWithRegistrationReader
                 .add_property("dds.persistence.plugin", "builtin.SQLITE3")
                 .add_property("dds.persistence.sqlite3.filename", filename);
         }
+#endif
 
     private:
 

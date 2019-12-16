@@ -14,6 +14,8 @@
 
 #include "BlackboxTests.hpp"
 
+#if HAVE_SQLITE3
+
 #include "RTPSAsSocketReader.hpp"
 #include "RTPSAsSocketWriter.hpp"
 #include "RTPSWithRegistrationReader.hpp"
@@ -302,3 +304,5 @@ INSTANTIATE_TEST_CASE_P(Persistence,
             return "NonIntraprocess";
         });
 
+
+#endif
