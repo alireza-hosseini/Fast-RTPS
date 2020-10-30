@@ -659,7 +659,8 @@ void ParticipantProxyData::clear()
     m_VendorId = c_VendorId_Unknown;
     m_expectsInlineQos = false;
     m_availableBuiltinEndpoints = 0;
-    metatraffic_locators.unicast.clear();
+//!FIXMe https://github.com/eProsima/Fast-DDS/issues/1529
+//  metatraffic_locators.unicast.clear();
     metatraffic_locators.multicast.clear();
     default_locators.unicast.clear();
     default_locators.multicast.clear();
